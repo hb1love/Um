@@ -5,6 +5,15 @@
       location = "group:Um/Um.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Sharing/Sharing.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Chat/Chat.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Common/Common.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
