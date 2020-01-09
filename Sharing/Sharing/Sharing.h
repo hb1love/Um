@@ -2,7 +2,7 @@
 //  Sharing.h
 //  Sharing
 //
-//  Created by NHNEnt on 2020/01/09.
+//  Created by hb1love on 2020/01/09.
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 
