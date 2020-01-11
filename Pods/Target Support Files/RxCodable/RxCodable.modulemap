@@ -1,0 +1,6 @@
+framework module RxCodable {
+  umbrella header "RxCodable-umbrella.h"
+
+  export *
+  module * { export * }
+}
