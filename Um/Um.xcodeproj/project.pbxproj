@@ -114,13 +114,9 @@
 		2D13D3AC23C648A8001C91C2 /* Um */ = {
 			isa = PBXGroup;
 			children = (
-				2D13D3AD23C648A8001C91C2 /* AppDelegate.swift */,
-				2D13D3AF23C648A8001C91C2 /* SceneDelegate.swift */,
-				2D13D3B123C648A8001C91C2 /* ViewController.swift */,
-				2D13D3B323C648A8001C91C2 /* Main.storyboard */,
-				2D13D3B623C648AA001C91C2 /* Assets.xcassets */,
-				2D13D3B823C648AA001C91C2 /* LaunchScreen.storyboard */,
-				2D13D3BB23C648AA001C91C2 /* Info.plist */,
+				2D3F99BF23C9F7CB007A4863 /* App */,
+				2D3F99C323C9F8EF007A4863 /* Configuration */,
+				2D3F99C023C9F7DC007A4863 /* Resources */,
 			);
 			path = Um;
 			sourceTree = "<group>";
@@ -132,6 +128,34 @@
 				2D13D3C623C648AA001C91C2 /* Info.plist */,
 			);
 			path = UmTests;
+			sourceTree = "<group>";
+		};
+		2D3F99BF23C9F7CB007A4863 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2D13D3AD23C648A8001C91C2 /* AppDelegate.swift */,
+				2D13D3AF23C648A8001C91C2 /* SceneDelegate.swift */,
+				2D13D3B123C648A8001C91C2 /* ViewController.swift */,
+				2D13D3B323C648A8001C91C2 /* Main.storyboard */,
+				2D13D3B823C648AA001C91C2 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2D3F99C023C9F7DC007A4863 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D13D3B623C648AA001C91C2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2D3F99C323C9F8EF007A4863 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2D13D3BB23C648AA001C91C2 /* Info.plist */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		334D72B85F7C7216195B9731 /* Frameworks */ = {
@@ -467,12 +491,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
-				INFOPLIST_FILE = Um/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Um/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.depromeet.um";
@@ -490,12 +515,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
-				INFOPLIST_FILE = Um/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Um/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.depromeet.um";
