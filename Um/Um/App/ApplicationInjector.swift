@@ -46,13 +46,7 @@ struct ApplicationInjector {
   }
 
   static func configureAnalytics() {
-//    let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist")
-//    guard let fileopts = FirebaseOptions(contentsOfFile: filePath!)
-//      else { assert(false, "Couldn't load config file") }
-//    FirebaseApp.configure(options: fileopts)
-//    Fabric.with([Crashlytics.self])
-//    FirebaseApp.configure()
-//    analytics.register(provider: FirebaseProvider())
+    FirebaseApp.configure()
   }
 
   static func configureAppearance() {

@@ -1,8 +1,5 @@
 PODS:
   - Alamofire (4.9.1)
-  - Crashlytics (3.14.0):
-    - Fabric (~> 1.10.2)
-  - Fabric (1.10.2)
   - Firebase/Analytics (6.14.0):
     - Firebase/Core
   - Firebase/Core (6.14.0):
@@ -99,8 +96,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - Crashlytics
-  - Fabric
   - Firebase/Analytics
   - Firebase/Core
   - Moya
@@ -118,8 +113,6 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
-    - Crashlytics
-    - Fabric
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -144,8 +137,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
-  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   Firebase: 0219bb4782eb1406f1b9b0628a2e625484ce910d
   FirebaseAnalytics: f68b9f3f1241385129ae0a83b63627fc420c05e5
   FirebaseCore: 632e05cc5e1199d9147122c16d92305eb04c34bd
@@ -168,6 +159,6 @@ SPEC CHECKSUMS:
   SwiftyBeaver: f9a9aba96a6a6166e21682377804d728b0d20b95
   Umbrella: d5b508a0efea3c50f4764ad96035d08eafee26bc
 
-PODFILE CHECKSUM: f4b66d28ae5274362eb3bf16919532ffef518e13
+PODFILE CHECKSUM: da0a5065862edbfb3273afa1a8fc8b58bffae540
 
 COCOAPODS: 1.8.4

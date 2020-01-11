@@ -13,8 +13,8 @@ def common
   # SDK
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
-  pod 'Fabric'
-  pod 'Crashlytics'
+#  pod 'Fabric'
+#  pod 'Crashlytics'
 end
 
 def rx
@@ -44,13 +44,13 @@ target 'Um' do
   networking
 end
 
-#target 'UmTests' do
-#  project 'Um/Um'
-#  common
-#  rx
-#  ui
-#  networking
-#end
+target 'UmTests' do
+  project 'Um/Um'
+  common
+  rx
+  ui
+  networking
+end
 
 target 'Sharing' do
   project 'Sharing/Sharing'
@@ -60,13 +60,13 @@ target 'Sharing' do
   networking
 end
 
-#target 'SharingTests' do
-#  project 'Sharing/Sharing'
-#  common
-#  rx
-#  ui
-#  networking
-#end
+target 'SharingTests' do
+  project 'Sharing/Sharing'
+  common
+  rx
+  ui
+  networking
+end
 
 target 'Chat' do
   project 'Chat/Chat'
@@ -76,13 +76,13 @@ target 'Chat' do
   networking
 end
 
-#target 'ChatTests' do
-#  project 'Chat/Chat'
-#  common
-#  rx
-#  ui
-#  networking
-#end
+target 'ChatTests' do
+  project 'Chat/Chat'
+  common
+  rx
+  ui
+  networking
+end
 
 target 'Common' do
   project 'Common/Common'
@@ -90,8 +90,8 @@ target 'Common' do
   rx
 end
 
-#target 'CommonTests' do
-#  project 'Common/Common'
-#  common
-#  rx
-#end
+target 'CommonTests' do
+  project 'Common/Common'
+  common
+  rx
+end
