@@ -1,0 +1,6 @@
+framework module Pods_ShareUI {
+  umbrella header "Pods-ShareUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

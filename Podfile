@@ -5,12 +5,12 @@ inhibit_all_warnings!
 use_frameworks!
 
 def common
-  # Logging
   pod 'SwiftyBeaver'
   pod 'Umbrella'
   pod 'Umbrella/Firebase'
+end
 
-  # SDK
+def sdk
 #  pod 'Fabric'
 #  pod 'Crashlytics'
   pod 'Firebase/Core'
@@ -42,39 +42,46 @@ target 'Um' do
   rx
   ui
   networking
+  sdk
 
   target 'UmTests' do
     inherit! :search_paths
   end
 end
 
-#target 'UmTests' do
-#  project 'Um/Um'
-#  common
-#  rx
-#  ui
-#  networking
-#end
-
-target 'Sharing' do
-  project 'Sharing/Sharing'
+target 'Share' do
+  project 'Share/Share'
   common
   rx
   ui
   networking
 
-  target 'SharingTests' do
+  target 'ShareTests' do
     inherit! :search_paths
   end
 end
 
-#target 'SharingTests' do
-#  project 'Sharing/Sharing'
-#  common
-#  rx
-#  ui
-#  networking
-#end
+target 'ShareUI' do
+  project 'Share/Share'
+  common
+  rx
+  ui
+
+  target 'ShareUITests' do
+    inherit! :search_paths
+  end
+end
+
+target 'ShareService' do
+  project 'Share/Share'
+  common
+  rx
+  networking
+
+  target 'ShareServiceTests' do
+    inherit! :search_paths
+  end
+end
 
 target 'Chat' do
   project 'Chat/Chat'
@@ -88,26 +95,58 @@ target 'Chat' do
   end
 end
 
-#target 'ChatTests' do
-#  project 'Chat/Chat'
-#  common
-#  rx
-#  ui
-#  networking
-#end
+target 'Account' do
+  project 'Account/Account'
+  common
+  rx
+  ui
+  networking
+
+  target 'AccountTests' do
+    inherit! :search_paths
+  end
+end
+
+target 'AccountUI' do
+  project 'Account/Account'
+  common
+  rx
+  ui
+
+  target 'AccountUITests' do
+    inherit! :search_paths
+  end
+end
+
+target 'AuthService' do
+  project 'Account/Account'
+  common
+  rx
+  networking
+
+  target 'AuthServiceTests' do
+    inherit! :search_paths
+  end
+end
+
+target 'UserService' do
+  project 'Account/Account'
+  common
+  rx
+  networking
+
+  target 'UserServiceTests' do
+    inherit! :search_paths
+  end
+end
 
 target 'Common' do
   project 'Common/Common'
   common
   rx
+  networking
 
   target 'CommonTests' do
     inherit! :search_paths
   end
 end
-
-#target 'CommonTests' do
-#  project 'Common/Common'
-#  common
-#  rx
-#end

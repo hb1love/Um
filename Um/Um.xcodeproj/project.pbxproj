@@ -10,19 +10,37 @@
 		06F4DDF266FFD20F33EC754C /* Pods_UmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F4CA84705EAEF317369F65 /* Pods_UmTests.framework */; };
 		2D01332D23CA113D003C3DCA /* ApplicationInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D01332C23CA113D003C3DCA /* ApplicationInjector.swift */; };
 		2D01332F23CA1156003C3DCA /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D01332E23CA1156003C3DCA /* ApplicationCoordinator.swift */; };
+		2D095A8023D497D000EA2161 /* AccountUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7D23D497D000EA2161 /* AccountUI.framework */; };
+		2D095A8123D497D000EA2161 /* AccountUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7D23D497D000EA2161 /* AccountUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D095A8223D497D000EA2161 /* AuthService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7E23D497D000EA2161 /* AuthService.framework */; };
+		2D095A8323D497D000EA2161 /* AuthService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7E23D497D000EA2161 /* AuthService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D095A8423D497D000EA2161 /* UserService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7F23D497D000EA2161 /* UserService.framework */; };
+		2D095A8523D497D000EA2161 /* UserService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7F23D497D000EA2161 /* UserService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D13D3AE23C648A8001C91C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13D3AD23C648A8001C91C2 /* AppDelegate.swift */; };
-		2D13D3B223C648A8001C91C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13D3B123C648A8001C91C2 /* ViewController.swift */; };
 		2D13D3B523C648A8001C91C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D13D3B323C648A8001C91C2 /* Main.storyboard */; };
 		2D13D3B723C648AA001C91C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D13D3B623C648AA001C91C2 /* Assets.xcassets */; };
 		2D13D3BA23C648AA001C91C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D13D3B823C648AA001C91C2 /* LaunchScreen.storyboard */; };
 		2D13D3C523C648AA001C91C2 /* UmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13D3C423C648AA001C91C2 /* UmTests.swift */; };
 		2D13D3F423C649A4001C91C2 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13D3F323C649A4001C91C2 /* Common.framework */; };
 		2D13D3F523C649A4001C91C2 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13D3F323C649A4001C91C2 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2D13D41C23C64A02001C91C2 /* Sharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13D41B23C64A01001C91C2 /* Sharing.framework */; };
-		2D13D41D23C64A02001C91C2 /* Sharing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13D41B23C64A01001C91C2 /* Sharing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D13D44B23C64A96001C91C2 /* Chat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13D44A23C64A96001C91C2 /* Chat.framework */; };
 		2D13D44C23C64A96001C91C2 /* Chat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D13D44A23C64A96001C91C2 /* Chat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D2BBC2723CCC0AF0052394B /* ShareService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2BBC2523CCC0AE0052394B /* ShareService.framework */; };
+		2D2BBC2823CCC0AF0052394B /* ShareService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2BBC2523CCC0AE0052394B /* ShareService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D2BBC2923CCC0AF0052394B /* ShareUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2BBC2623CCC0AF0052394B /* ShareUI.framework */; };
+		2D2BBC2A23CCC0AF0052394B /* ShareUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2BBC2623CCC0AF0052394B /* ShareUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D2BBC2C23CCC27B0052394B /* ApplicationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC2B23CCC27B0052394B /* ApplicationConfiguration.swift */; };
+		2D2BBC3223CCC46D0052394B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC3123CCC46D0052394B /* MainTabBarController.swift */; };
+		2D7795C523CCCE57005B84A9 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795C423CCCE57005B84A9 /* MainTabCoordinator.swift */; };
+		2D7795C923CCCEA0005B84A9 /* MainModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795C823CCCEA0005B84A9 /* MainModuleFactory.swift */; };
+		2D7795CB23CCCEBF005B84A9 /* MainModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795CA23CCCEBF005B84A9 /* MainModuleFactoryType.swift */; };
+		2D7795CE23CCCF2B005B84A9 /* MainCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795CD23CCCF2B005B84A9 /* MainCoordinatorFactory.swift */; };
+		2D7795D023CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift */; };
 		2D91E7EC23CA3C2E00446794 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D01333023CA1A1B003C3DCA /* GoogleService-Info.plist */; };
+		2DD4294623CC98A900544117 /* Share.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4294523CC98A900544117 /* Share.framework */; };
+		2DD4294723CC98A900544117 /* Share.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4294523CC98A900544117 /* Share.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DD4297223CC995A00544117 /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4297123CC995A00544117 /* Account.framework */; };
+		2DD4297323CC995A00544117 /* Account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4297123CC995A00544117 /* Account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5C7CDF8E277C90E5545F0B2F /* Pods_Um.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794682E0008EEB0C5BFE294D /* Pods_Um.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,9 +61,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2D095A8523D497D000EA2161 /* UserService.framework in Embed Frameworks */,
+				2D2BBC2823CCC0AF0052394B /* ShareService.framework in Embed Frameworks */,
+				2D095A8123D497D000EA2161 /* AccountUI.framework in Embed Frameworks */,
 				2D13D44C23C64A96001C91C2 /* Chat.framework in Embed Frameworks */,
+				2DD4294723CC98A900544117 /* Share.framework in Embed Frameworks */,
+				2D095A8323D497D000EA2161 /* AuthService.framework in Embed Frameworks */,
+				2DD4297323CC995A00544117 /* Account.framework in Embed Frameworks */,
+				2D2BBC2A23CCC0AF0052394B /* ShareUI.framework in Embed Frameworks */,
 				2D13D3F523C649A4001C91C2 /* Common.framework in Embed Frameworks */,
-				2D13D41D23C64A02001C91C2 /* Sharing.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,9 +80,11 @@
 		2D01332C23CA113D003C3DCA /* ApplicationInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInjector.swift; sourceTree = "<group>"; };
 		2D01332E23CA1156003C3DCA /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		2D01333023CA1A1B003C3DCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D095A7D23D497D000EA2161 /* AccountUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AccountUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D095A7E23D497D000EA2161 /* AuthService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D095A7F23D497D000EA2161 /* UserService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UserService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D13D3AA23C648A8001C91C2 /* Um.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Um.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D13D3AD23C648A8001C91C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2D13D3B123C648A8001C91C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D13D3B423C648A8001C91C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D13D3B623C648AA001C91C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D13D3B923C648AA001C91C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,8 +93,18 @@
 		2D13D3C423C648AA001C91C2 /* UmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmTests.swift; sourceTree = "<group>"; };
 		2D13D3C623C648AA001C91C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D13D3F323C649A4001C91C2 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D13D41B23C64A01001C91C2 /* Sharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Sharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D13D44A23C64A96001C91C2 /* Chat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2BBC2523CCC0AE0052394B /* ShareService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ShareService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2BBC2623CCC0AF0052394B /* ShareUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ShareUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2BBC2B23CCC27B0052394B /* ApplicationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfiguration.swift; sourceTree = "<group>"; };
+		2D2BBC3123CCC46D0052394B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2D7795C423CCCE57005B84A9 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
+		2D7795C823CCCEA0005B84A9 /* MainModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactory.swift; sourceTree = "<group>"; };
+		2D7795CA23CCCEBF005B84A9 /* MainModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactoryType.swift; sourceTree = "<group>"; };
+		2D7795CD23CCCF2B005B84A9 /* MainCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactory.swift; sourceTree = "<group>"; };
+		2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
+		2DD4294523CC98A900544117 /* Share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DD4297123CC995A00544117 /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		794682E0008EEB0C5BFE294D /* Pods_Um.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Um.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		858ABA52857DBE0F5CBF4D4D /* Pods-UmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UmTests.release.xcconfig"; path = "Target Support Files/Pods-UmTests/Pods-UmTests.release.xcconfig"; sourceTree = "<group>"; };
 		96F4CA84705EAEF317369F65 /* Pods_UmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,9 +118,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D2BBC2923CCC0AF0052394B /* ShareUI.framework in Frameworks */,
+				2D2BBC2723CCC0AF0052394B /* ShareService.framework in Frameworks */,
+				2D095A8023D497D000EA2161 /* AccountUI.framework in Frameworks */,
+				2DD4297223CC995A00544117 /* Account.framework in Frameworks */,
+				2D095A8223D497D000EA2161 /* AuthService.framework in Frameworks */,
+				2D095A8423D497D000EA2161 /* UserService.framework in Frameworks */,
 				2D13D3F423C649A4001C91C2 /* Common.framework in Frameworks */,
 				2D13D44B23C64A96001C91C2 /* Chat.framework in Frameworks */,
-				2D13D41C23C64A02001C91C2 /* Sharing.framework in Frameworks */,
+				2DD4294623CC98A900544117 /* Share.framework in Frameworks */,
 				5C7CDF8E277C90E5545F0B2F /* Pods_Um.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,7 +151,9 @@
 				334D72B85F7C7216195B9731 /* Frameworks */,
 				37F8AB0370B05962E168A95C /* Pods */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		2D13D3AB23C648A8001C91C2 /* Products */ = {
 			isa = PBXGroup;
@@ -139,15 +183,58 @@
 			path = UmTests;
 			sourceTree = "<group>";
 		};
+		2D2BBC2D23CCC3E60052394B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2D2BBC2E23CCC4150052394B /* Coordinators */,
+				2D7795C623CCCE76005B84A9 /* Factories */,
+				2D2BBC2F23CCC4230052394B /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2D2BBC2E23CCC4150052394B /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				2D7795C423CCCE57005B84A9 /* MainTabCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		2D2BBC2F23CCC4230052394B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D2BBC3323CCC4C10052394B /* Launch */,
+				2D2BBC3023CCC42E0052394B /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D2BBC3023CCC42E0052394B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2D13D3B323C648A8001C91C2 /* Main.storyboard */,
+				2D2BBC3123CCC46D0052394B /* MainTabBarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		2D2BBC3323CCC4C10052394B /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				2D13D3B823C648AA001C91C2 /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 		2D3F99BF23C9F7CB007A4863 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				2D13D3AD23C648A8001C91C2 /* AppDelegate.swift */,
 				2D01332C23CA113D003C3DCA /* ApplicationInjector.swift */,
 				2D01332E23CA1156003C3DCA /* ApplicationCoordinator.swift */,
-				2D13D3B123C648A8001C91C2 /* ViewController.swift */,
-				2D13D3B323C648A8001C91C2 /* Main.storyboard */,
-				2D13D3B823C648AA001C91C2 /* LaunchScreen.storyboard */,
+				2D2BBC2B23CCC27B0052394B /* ApplicationConfiguration.swift */,
+				2D2BBC2D23CCC3E60052394B /* UI */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -169,11 +256,44 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		2D7795C623CCCE76005B84A9 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				2D7795CC23CCCF1A005B84A9 /* Coordinator */,
+				2D7795C723CCCE8A005B84A9 /* Module */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		2D7795C723CCCE8A005B84A9 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2D7795C823CCCEA0005B84A9 /* MainModuleFactory.swift */,
+				2D7795CA23CCCEBF005B84A9 /* MainModuleFactoryType.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2D7795CC23CCCF1A005B84A9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2D7795CD23CCCF2B005B84A9 /* MainCoordinatorFactory.swift */,
+				2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		334D72B85F7C7216195B9731 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D095A7D23D497D000EA2161 /* AccountUI.framework */,
+				2D095A7E23D497D000EA2161 /* AuthService.framework */,
+				2D095A7F23D497D000EA2161 /* UserService.framework */,
+				2D2BBC2523CCC0AE0052394B /* ShareService.framework */,
+				2D2BBC2623CCC0AF0052394B /* ShareUI.framework */,
+				2DD4297123CC995A00544117 /* Account.framework */,
+				2DD4294523CC98A900544117 /* Share.framework */,
 				2D13D44A23C64A96001C91C2 /* Chat.framework */,
-				2D13D41B23C64A01001C91C2 /* Sharing.framework */,
 				2D13D3F323C649A4001C91C2 /* Common.framework */,
 				794682E0008EEB0C5BFE294D /* Pods_Um.framework */,
 				96F4CA84705EAEF317369F65 /* Pods_UmTests.framework */,
@@ -382,8 +502,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7795CE23CCCF2B005B84A9 /* MainCoordinatorFactory.swift in Sources */,
+				2D7795D023CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift in Sources */,
 				2D01332F23CA1156003C3DCA /* ApplicationCoordinator.swift in Sources */,
-				2D13D3B223C648A8001C91C2 /* ViewController.swift in Sources */,
+				2D7795CB23CCCEBF005B84A9 /* MainModuleFactoryType.swift in Sources */,
+				2D2BBC2C23CCC27B0052394B /* ApplicationConfiguration.swift in Sources */,
+				2D2BBC3223CCC46D0052394B /* MainTabBarController.swift in Sources */,
+				2D7795C523CCCE57005B84A9 /* MainTabCoordinator.swift in Sources */,
+				2D7795C923CCCEA0005B84A9 /* MainModuleFactory.swift in Sources */,
 				2D13D3AE23C648A8001C91C2 /* AppDelegate.swift in Sources */,
 				2D01332D23CA113D003C3DCA /* ApplicationInjector.swift in Sources */,
 			);

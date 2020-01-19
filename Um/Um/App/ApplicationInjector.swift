@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Common
+import ShareUI
 import Firebase
 import SwiftyBeaver
 import Umbrella
@@ -26,7 +28,11 @@ struct ApplicationInjector {
     window.backgroundColor = .white
     window.makeKeyAndVisible()
 
-    let coordinator = ApplicationCoordinator(window: window)
+    let coordinator = ApplicationCoordinator(
+      mainCoordinatorFactor: ApplicationConfiguration.mainCoordinatorFactory,
+      shareCoordinatorFactory: ApplicationConfiguration.shareCoordinatorFactory,
+      router: Router(rootController: rootController)
+    )
     return AppDependency(
       window: window,
       coordinator: coordinator,

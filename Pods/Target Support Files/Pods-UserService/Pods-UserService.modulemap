@@ -1,0 +1,6 @@
+framework module Pods_UserService {
+  umbrella header "Pods-UserService-umbrella.h"
+
+  export *
+  module * { export * }
+}

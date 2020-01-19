@@ -1,0 +1,6 @@
+framework module Pods_AccountUI {
+  umbrella header "Pods-AccountUI-umbrella.h"
+
+  export *
+  module * { export * }
+}
