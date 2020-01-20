@@ -347,14 +347,14 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		2D2BBC0323CCA3CC0052394B /* Views */ = {
+		2D2BBC0323CCA3CC0052394B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				2D095AA223D4B93700EA2161 /* Common */,
 				2D2BBC0523CCA4B20052394B /* Edit */,
 				2D2BBC0423CCA4AD0052394B /* List */,
 			);
-			path = Views;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		2D2BBC0423CCA4AD0052394B /* List */ = {
@@ -485,7 +485,7 @@
 				2D2BBBEF23CC9D990052394B /* Configuration */,
 				2D2BBC1023CCA6610052394B /* Coordinators */,
 				2D2BBC1323CCA6E70052394B /* Factories */,
-				2D2BBC0323CCA3CC0052394B /* Views */,
+				2D2BBC0323CCA3CC0052394B /* Modules */,
 				2D2BBC2323CCBEF40052394B /* ShareUIInjector.swift */,
 			);
 			path = ShareUI;

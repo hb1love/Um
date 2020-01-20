@@ -41,6 +41,16 @@
 		2D095AAD23D4C6E500EA2161 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095AAB23D4C6E500EA2161 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D095AAF23D4C71300EA2161 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095AAE23D4C71300EA2161 /* Common.framework */; };
 		2D095AB023D4C71300EA2161 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095AAE23D4C71300EA2161 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D7EC43B23D5E8C400D4C775 /* MyPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC43A23D5E8C400D4C775 /* MyPageCoordinator.swift */; };
+		2D7EC43C23D5E8EF00D4C775 /* AuthService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A3123D44AD800EA2161 /* AuthService.framework */; };
+		2D7EC43D23D5E8EF00D4C775 /* AuthService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A3123D44AD800EA2161 /* AuthService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D7EC44023D5E8EF00D4C775 /* UserService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A5023D44B6B00EA2161 /* UserService.framework */; };
+		2D7EC44123D5E8EF00D4C775 /* UserService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A5023D44B6B00EA2161 /* UserService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D7EC44623D5E98E00D4C775 /* AccountCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */; };
+		2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */; };
+		2D7EC44B23D5EA0000D4C775 /* AccountModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44A23D5EA0000D4C775 /* AccountModuleFactory.swift */; };
+		2D7EC44D23D5EA7400D4C775 /* MyPageModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44C23D5EA7400D4C775 /* MyPageModuleFactoryType.swift */; };
+		2D7EC45023D5EAB700D4C775 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44F23D5EAB700D4C775 /* MyPageViewController.swift */; };
 		2DD4296023CC990100544117 /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4295623CC990100544117 /* Account.framework */; };
 		2DD4296523CC990100544117 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4296423CC990100544117 /* AccountTests.swift */; };
 		2DD4296723CC990100544117 /* Account.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD4295923CC990100544117 /* Account.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -84,6 +94,20 @@
 			remoteGlobalIDString = 2D095A3023D44AD800EA2161;
 			remoteInfo = AuthService;
 		};
+		2D7EC43E23D5E8EF00D4C775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DD4294D23CC990100544117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D095A3023D44AD800EA2161;
+			remoteInfo = AuthService;
+		};
+		2D7EC44223D5E8F000D4C775 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DD4294D23CC990100544117 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D095A4F23D44B6B00EA2161;
+			remoteInfo = UserService;
+		};
 		2DD4296123CC990100544117 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2DD4294D23CC990100544117 /* Project object */;
@@ -123,6 +147,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2D7EC44123D5E8EF00D4C775 /* UserService.framework in Embed Frameworks */,
+				2D7EC43D23D5E8EF00D4C775 /* AuthService.framework in Embed Frameworks */,
 				2D095AB023D4C71300EA2161 /* Common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -183,6 +209,12 @@
 		2D095AA723D4C63900EA2161 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095AAB23D4C6E500EA2161 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095AAE23D4C71300EA2161 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7EC43A23D5E8C400D4C775 /* MyPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCoordinator.swift; sourceTree = "<group>"; };
+		2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactory.swift; sourceTree = "<group>"; };
+		2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactoryType.swift; sourceTree = "<group>"; };
+		2D7EC44A23D5EA0000D4C775 /* AccountModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModuleFactory.swift; sourceTree = "<group>"; };
+		2D7EC44C23D5EA7400D4C775 /* MyPageModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModuleFactoryType.swift; sourceTree = "<group>"; };
+		2D7EC44F23D5EAB700D4C775 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		2DD4295623CC990100544117 /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD4295923CC990100544117 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		2DD4295A23CC990100544117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -224,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				901DED7B0E46AA80B29E6EED /* Pods_AccountUI.framework in Frameworks */,
+				2D7EC44023D5E8EF00D4C775 /* UserService.framework in Frameworks */,
+				2D7EC43C23D5E8EF00D4C775 /* AuthService.framework in Frameworks */,
 				2D095AAF23D4C71300EA2161 /* Common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,8 +381,10 @@
 		2D095A0A23D4485800EA2161 /* AccountUI */ = {
 			isa = PBXGroup;
 			children = (
-				2D095A0B23D4485800EA2161 /* AccountUI.h */,
-				2D095A0C23D4485800EA2161 /* Info.plist */,
+				2D7EC43623D5E82300D4C775 /* Configuration */,
+				2D7EC43723D5E84900D4C775 /* Coordinators */,
+				2D7EC43823D5E85400D4C775 /* Factories */,
+				2D7EC43923D5E85D00D4C775 /* Modules */,
 			);
 			path = AccountUI;
 			sourceTree = "<group>";
@@ -510,6 +546,66 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		2D7EC43623D5E82300D4C775 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2D095A0B23D4485800EA2161 /* AccountUI.h */,
+				2D095A0C23D4485800EA2161 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		2D7EC43723D5E84900D4C775 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				2D7EC43A23D5E8C400D4C775 /* MyPageCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		2D7EC43823D5E85400D4C775 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				2D7EC44423D5E95600D4C775 /* Coordinator */,
+				2D7EC44923D5E9EA00D4C775 /* Module */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		2D7EC43923D5E85D00D4C775 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2D7EC44E23D5EAA800D4C775 /* MyPage */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		2D7EC44423D5E95600D4C775 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */,
+				2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		2D7EC44923D5E9EA00D4C775 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2D7EC44A23D5EA0000D4C775 /* AccountModuleFactory.swift */,
+				2D7EC44C23D5EA7400D4C775 /* MyPageModuleFactoryType.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2D7EC44E23D5EAA800D4C775 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				2D7EC44F23D5EAB700D4C775 /* MyPageViewController.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		2DD4294C23CC990100544117 = {
 			isa = PBXGroup;
 			children = (
@@ -614,6 +710,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				2D7EC43F23D5E8EF00D4C775 /* PBXTargetDependency */,
+				2D7EC44323D5E8F000D4C775 /* PBXTargetDependency */,
 			);
 			name = AccountUI;
 			productName = AccountUI;
@@ -770,6 +868,7 @@
 				TargetAttributes = {
 					2D095A0823D4485800EA2161 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					2D095A1023D4485800EA2161 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -1082,6 +1181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7EC44B23D5EA0000D4C775 /* AccountModuleFactory.swift in Sources */,
+				2D7EC45023D5EAB700D4C775 /* MyPageViewController.swift in Sources */,
+				2D7EC43B23D5E8C400D4C775 /* MyPageCoordinator.swift in Sources */,
+				2D7EC44623D5E98E00D4C775 /* AccountCoordinatorFactory.swift in Sources */,
+				2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift in Sources */,
+				2D7EC44D23D5EA7400D4C775 /* MyPageModuleFactoryType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,6 +1282,16 @@
 			target = 2D095A3023D44AD800EA2161 /* AuthService */;
 			targetProxy = 2D095A9523D4AE3A00EA2161 /* PBXContainerItemProxy */;
 		};
+		2D7EC43F23D5E8EF00D4C775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D095A3023D44AD800EA2161 /* AuthService */;
+			targetProxy = 2D7EC43E23D5E8EF00D4C775 /* PBXContainerItemProxy */;
+		};
+		2D7EC44323D5E8F000D4C775 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D095A4F23D44B6B00EA2161 /* UserService */;
+			targetProxy = 2D7EC44223D5E8F000D4C775 /* PBXContainerItemProxy */;
+		};
 		2DD4296223CC990100544117 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2DD4295523CC990100544117 /* Account */;
@@ -1189,13 +1304,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB2EE675DEC01A0A149F679D /* Pods-AccountUI.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AccountUI/Info.plist;
+				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1206,6 +1322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.AccountUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1215,13 +1332,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 35B13BA183EA150E529F5C66 /* Pods-AccountUI.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AccountUI/Info.plist;
+				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1241,6 +1359,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D19ABA7480CE23558750974C /* Pods-AccountUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				INFOPLIST_FILE = AccountUITests/Info.plist;
@@ -1261,6 +1380,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1996E94F7D07CEC9835ED660 /* Pods-AccountUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				INFOPLIST_FILE = AccountUITests/Info.plist;
@@ -1385,6 +1505,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1400,6 +1521,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UserService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1413,6 +1535,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1428,6 +1551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UserService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
