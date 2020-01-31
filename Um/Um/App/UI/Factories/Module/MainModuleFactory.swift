@@ -19,16 +19,4 @@ final class MainModuleFactory: MainModuleFactoryType {
   func makeMainTabModule() -> MainTabBarController {
     return MainTabBarController(serviceMap: serviceMap)
   }
-
-//  public init(shareUseCase: ShareUseCase) {
-//    self.shareUseCase = shareUseCase
-//  }
-
-//  public func makeShareEditModule() -> ShareEditViewController {
-//    return ShareEditViewController()
-//  }
-//
-//  public func makeShareListModule() -> ShareListViewController {
-//    return ShareListViewController()
-//  }
 }

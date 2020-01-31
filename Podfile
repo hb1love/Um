@@ -21,12 +21,14 @@ def rx
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxCodable'
+  pod 'RxDataSources'
   pod 'RxGesture'
 end
 
 def ui
   pod 'ReactorKit'
   pod 'SnapKit'
+  pod 'Kingfisher'
 end
 
 def networking

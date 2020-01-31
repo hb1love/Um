@@ -47,8 +47,8 @@ struct ApplicationInjector {
   }
 
   static func configureLogger() {
-//    let console = ConsoleDestination()
-//    log.addDestination(console)
+    let console = ConsoleDestination()
+    log.addDestination(console)
   }
 
   static func configureAnalytics() {

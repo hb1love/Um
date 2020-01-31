@@ -10,7 +10,7 @@ import Common
 
 public protocol ShareCoordinatorFactoryProtocol {
   func makeEditCoordinator(router: Routable) ->
-    Coordinator & ShareEditCoordinatorOutput
+    RootCoordinator & ShareEditCoordinatorOutput
 
   func makeListCoordinator(router: Routable) ->
     RootCoordinator & ShareListCoordinatorOutput

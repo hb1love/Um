@@ -6,6 +6,7 @@
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 
+import Common
 import RxSwift
 
 public class ShareRepository: Share {

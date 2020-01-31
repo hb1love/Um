@@ -6,12 +6,14 @@
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 
+import Common
 import RxSwift
 
 public protocol UserUseCase {
   var currentUser: Observable<User?> { get }
 
   func fetchMe() -> Single<Void>
+  func hotTalents() -> Single<[Member]>
 }
 
 public final class UserService: UserUseCase {
@@ -32,5 +34,9 @@ public final class UserService: UserUseCase {
         self?.userSubject.onNext(user)
       })
       .map { _ in }
+  }
+
+  public func hotTalents() -> Single<[Member]> {
+    .just(Member.mock.shuffled() + Member.mock.shuffled() + Member.mock.shuffled())
   }
 }

@@ -8,22 +8,42 @@
 
 import Common
 import ShareService
+import UserService
 
 public final class ShareModuleFactory
   : ShareEditModuleFactoryType
   , ShareListModuleFactoryType {
 
   private let shareUseCase: ShareUseCase
+  private let userUseCase: UserUseCase
 
-  public init(shareUseCase: ShareUseCase) {
+  public init(shareUseCase: ShareUseCase, userUseCase: UserUseCase) {
     self.shareUseCase = shareUseCase
+    self.userUseCase = userUseCase
   }
 
   public func makeShareEditModule() -> ShareEditViewController {
-    return ShareEditViewController()
+    let shareEditViewReactor = ShareEditViewReactor(
+      shareUseCase: shareUseCase
+    )
+    let shareEditViewController = ShareEditViewController.controllerFromStoryboard(
+      "ShareEdit",
+      bundleIdentifier: "com.depromeet.um.shareui"
+    )
+    shareEditViewController.reactor = shareEditViewReactor
+    return shareEditViewController
   }
 
   public func makeShareListModule() -> ShareListViewController {
-    return ShareListViewController()
+    let shareListViewReactor = ShareListViewReactor(
+      shareUseCase: shareUseCase,
+      userUseCase: userUseCase
+    )
+    let shareListViewController = ShareListViewController.controllerFromStoryboard(
+      "ShareList",
+      bundleIdentifier: "com.depromeet.um.shareui"
+    )
+    shareListViewController.reactor = shareListViewReactor
+    return shareListViewController
   }
 }

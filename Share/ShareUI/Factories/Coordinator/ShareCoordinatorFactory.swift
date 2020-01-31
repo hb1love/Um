@@ -16,7 +16,8 @@ public final class ShareCoordinatorFactory: ShareCoordinatorFactoryProtocol {
     self.moduleFactory = moduleFactory
   }
 
-  public func makeEditCoordinator(router: Routable) -> Coordinator & ShareEditCoordinatorOutput {
+  public func makeEditCoordinator(router: Routable)
+    -> RootCoordinator & ShareEditCoordinatorOutput {
     return ShareEditCoordinator(
       with: moduleFactory,
       router: router

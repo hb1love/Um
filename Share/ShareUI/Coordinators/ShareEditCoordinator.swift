@@ -6,17 +6,19 @@
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 
+import UIKit
 import Common
 
 public protocol ShareEditCoordinatorOutput: AnyObject {
   var finishFlow: (() -> Void)? { get set }
 }
 
-final class ShareEditCoordinator: BaseCoordinator, ShareEditCoordinatorOutput {
+final class ShareEditCoordinator: BaseCoordinator, ShareEditCoordinatorOutput, RootCoordinator {
 
   var finishFlow: (() -> Void)?
   private let moduleFactory: ShareEditModuleFactoryType
   private let router: Routable
+  public let rootViewController: UINavigationController
 
   init(
     with factory: ShareEditModuleFactoryType,
@@ -24,6 +26,7 @@ final class ShareEditCoordinator: BaseCoordinator, ShareEditCoordinatorOutput {
     ) {
     self.moduleFactory = factory
     self.router = router
+    self.rootViewController = router.rootController
   }
 
   override func start() {
@@ -35,6 +38,6 @@ final class ShareEditCoordinator: BaseCoordinator, ShareEditCoordinatorOutput {
 //    editModule.onFinish = {
 //
 //    }
-    router.setRoot(editModule)
+    router.present(editModule, animated: true)
   }
 }

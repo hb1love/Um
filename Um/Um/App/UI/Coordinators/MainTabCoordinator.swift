@@ -7,6 +7,7 @@
 //
 
 import Common
+import ShareUI
 
 public protocol MainTabCoordinatorOutput: AnyObject {
   var finishFlow: (() -> Void)? { get set }
@@ -15,16 +16,17 @@ public protocol MainTabCoordinatorOutput: AnyObject {
 final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorOutput {
 
   var finishFlow: (() -> Void)?
-  private let moduleFactory: MainModuleFactoryType
+  private let mainModuleFactory: MainModuleFactoryType
+  private let shareModuleFactory: ShareEditModuleFactoryType
   private let router: Routable
 
-//  var serviceMap: [String: RootCoordinator] = [:]
-
   init(
-    with factory: MainModuleFactoryType,
+    mainModuleFactory: MainModuleFactoryType,
+    shareModuleFactory: ShareEditModuleFactoryType,
     router: Routable
     ) {
-    self.moduleFactory = factory
+    self.mainModuleFactory = mainModuleFactory
+    self.shareModuleFactory = shareModuleFactory
     self.router = router
   }
 
@@ -33,10 +35,22 @@ final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorOutput {
   }
 
   private func showMainTab() {
-    let mainTabModule = moduleFactory.makeMainTabModule()
-//    mainTabModule.onFinish = {
-//
-//    }
+    let mainTabModule = mainModuleFactory.makeMainTabModule()
+    mainTabModule.onNewPost = { [weak self] in
+      self?.showEdit()
+    }
     router.setRoot(mainTabModule)
+  }
+
+  private func showEdit() {
+    let signUpModule = shareModuleFactory.makeShareEditModule()
+//    signUpModule.onCompleteSignUp = { [weak self] in
+//      self?.router.dismiss()
+//      self?.finishFlow?()
+//    }
+//    signUpModule.onCancel = { [weak self] in
+//      self?.router.dismiss()
+//    }
+    router.present(signUpModule)
   }
 }

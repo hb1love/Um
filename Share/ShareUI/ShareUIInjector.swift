@@ -8,6 +8,7 @@
 
 import Common
 import ShareService
+import UserService
 
 public protocol ShareUIConfiguration {
   static var shareUIDependency: ShareUIDependency { get }
@@ -17,14 +18,17 @@ public struct ShareUIDependency {
 //  public let window: NSWindow
 //  public let navigationController: UINavigationController
   public let shareUseCase: ShareUseCase
+  public let userUseCase: UserUseCase
 
   public init(
 //    window: NSWindow,
-    shareUseCase: ShareUseCase
+    shareUseCase: ShareUseCase,
+    userUseCase: UserUseCase
 //    navigationController: UINavigationController,
   ) {
 //    self.window = window
     self.shareUseCase = shareUseCase
+    self.userUseCase = userUseCase
 //    self.navigationController = navigationController
   }
 }
@@ -32,12 +36,13 @@ public struct ShareUIDependency {
 public class ShareUIInjector {
   public static func resolve(
     with config: ShareUIConfiguration.Type
-  ) -> ShareCoordinatorFactoryProtocol {
+  ) -> (ShareCoordinatorFactoryProtocol, ShareEditModuleFactoryType) {
     let shareUseCase = config.shareUIDependency.shareUseCase
-    return ShareCoordinatorFactory(
-      moduleFactory: ShareModuleFactory(
-        shareUseCase: shareUseCase
-      )
+    let userUseCase = config.shareUIDependency.userUseCase
+    let factory = ShareModuleFactory(shareUseCase: shareUseCase, userUseCase: userUseCase)
+    return (
+      coordinatorFactory: ShareCoordinatorFactory(moduleFactory: factory),
+      moduleFactory: factory
     )
   }
 }

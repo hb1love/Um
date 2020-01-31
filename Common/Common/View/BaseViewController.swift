@@ -23,8 +23,9 @@ open class BaseViewController: UIViewController {
   }
 
   open override func viewDidLoad() {
-    super.viewDidLoad()
     setupSubviews()
+
+    super.viewDidLoad()
   }
 
   public override func viewSafeAreaInsetsDidChange() {

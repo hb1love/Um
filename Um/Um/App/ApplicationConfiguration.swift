@@ -8,61 +8,86 @@
 
 import UIKit
 import Common
+import AccountUI
 import AuthService
 import UserService
 import ShareUI
 import ShareService
 
 enum ServiceType: String, CaseIterable {
-  case home
   case share
+  case search
+  case write
   case chat
-  case account
+  case mypage
 }
 
 struct ApplicationConfiguration:
+  AccountUIConfiguration,
   ShareUIConfiguration,
   AuthServiceConfiguration,
   UserServiceConfiguration,
   ShareServiceConfiguration {
 
-  static let root: UINavigationController = {
-    return UINavigationController()
-  }()
+  static var root: UINavigationController {
+    get {
+      UINavigationController()
+    }
+  }
 
   static let serviceMap: [ServiceType: RootCoordinator]
-    = [.home: shareCoordinatorFactory.makeListCoordinator(router: Router(rootController: root))]
-//  ,
-//       .share: shareCoordinatorFactory.makeEditCoordinator(router: Router(rootController: root))]
+    = [.share: shareCoordinatorFactory.makeListCoordinator(router: Router(rootController: root)),
+       .search: accountCoordinatorFactory.makeMyPageCoordinator(router: Router(rootController: root)),
+       .write: shareCoordinatorFactory.makeEditCoordinator(router: Router(rootController: root)),
+       .chat: accountCoordinatorFactory.makeMyPageCoordinator(router: Router(rootController: root)),
+       .mypage: accountCoordinatorFactory.makeMyPageCoordinator(router: Router(rootController: root))]
 
   static let mainCoordinatorFactory = MainCoordinatorFactory(
-    moduleFactory: MainModuleFactory(serviceMap: serviceMap)
+    mainModuleFactory: MainModuleFactory(serviceMap: serviceMap),
+    shareModuleFactory: shareModuleFactory
   )
 
   static let authPlugin = AuthPlugin(authUseCase: authUseCase)
 
+  static let accountCoordinatorFactory = AccountUIInjector.resolve(
+    with: ApplicationConfiguration.self
+  )
   static let authUseCase = AuthServiceInjector.resolve(
     with: ApplicationConfiguration.self
   )
   static let userUseCase = UserServiceInjector.resolve(
     with: ApplicationConfiguration.self
   )
-  static let shareCoordinatorFactory = ShareUIInjector.resolve(
+  static let shareUI = ShareUIInjector.resolve(
     with: ApplicationConfiguration.self
   )
   static let shareUseCase = ShareServiceInjector.resolve(
     with: ApplicationConfiguration.self
   )
 
+  static let shareCoordinatorFactory = shareUI.0
+  static let shareModuleFactory = shareUI.1
+
+  // MARK: - AccountUIConfiguration
+
+  static let accountUIDependency: AccountUIDependency = {
+    return AccountUIDependency(
+      authUseCase: authUseCase,
+      userUseCase: userUseCase
+    )
+  }()
 
   // MARK: - ShareUIConfiguration
 
   static let shareUIDependency: ShareUIDependency = {
-    return ShareUIDependency(shareUseCase: shareUseCase)
+    return ShareUIDependency(
+      shareUseCase: shareUseCase,
+      userUseCase: userUseCase
+    )
   }()
 
 
-  // MARK: - Serivce Common
+  // MARK: - Common ServiceConfiguration
 
   static let baseUrl: String = {
     return "http://test.team4.ryulth.com/"

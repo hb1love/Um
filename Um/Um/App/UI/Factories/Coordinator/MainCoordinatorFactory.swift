@@ -7,17 +7,24 @@
 //
 
 import Common
+import ShareUI
 
 final class MainCoordinatorFactory: MainCoordinatorFactoryProtocol {
-  private let moduleFactory: MainModuleFactoryType
+  private let mainModuleFactory: MainModuleFactoryType
+  private let shareModuleFactory: ShareEditModuleFactoryType
 
-  init(moduleFactory: MainModuleFactoryType) {
-    self.moduleFactory = moduleFactory
+  init(
+    mainModuleFactory: MainModuleFactoryType,
+    shareModuleFactory: ShareEditModuleFactoryType
+  ) {
+    self.mainModuleFactory = mainModuleFactory
+    self.shareModuleFactory = shareModuleFactory
   }
 
   func makeMainCoordinator(router: Routable) -> Coordinator & MainTabCoordinatorOutput {
     return MainTabCoordinator(
-      with: moduleFactory,
+      mainModuleFactory: mainModuleFactory,
+      shareModuleFactory: shareModuleFactory,
       router: router
     )
   }

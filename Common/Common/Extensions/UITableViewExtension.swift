@@ -41,4 +41,3 @@ public extension Reusable where Self: UIView {
 
 extension UITableViewHeaderFooterView: Reusable {}
 extension UITableViewCell: Reusable {}
-extension UICollectionViewCell: Reusable {}

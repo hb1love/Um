@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PostView" customModule="ShareUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="381" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GtV-l2-RJe" customClass="ProfileThumbnailView" customModule="ShareUI" customModuleProvider="target">
+                    <rect key="frame" x="29" y="10" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="UBI-p8-egZ"/>
+                        <constraint firstAttribute="height" constant="60" id="qme-Lt-7IJ"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="T3W-cZ-KlM">
+                    <rect key="frame" x="108" y="8" width="257" height="84"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{영어회화} 배우고 싶어요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aI-DK-R9Z">
+                            <rect key="frame" x="0.0" y="0.0" width="257" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="19" id="qTy-G9-tT0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여해주" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8X6-2a-S9a">
+                            <rect key="frame" x="0.0" y="21" width="257" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="TXz-hf-cD5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LcJ-mb-Ngr" userLabel="Padding">
+                            <rect key="frame" x="0.0" y="38" width="257" height="28"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q98-N9-chc">
+                            <rect key="frame" x="0.0" y="68" width="257" height="16"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="강남 . 3시간 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujU-Rg-rfO">
+                                    <rect key="frame" x="0.0" y="0.0" width="71" height="16"/>
+                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                    <color key="textColor" name="post_area_text"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeJ-E4-e0s">
+                                    <rect key="frame" x="71" y="0.0" width="186" height="16"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="9Bw-Gk-8lF"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GtV-l2-RJe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="0B4-CP-eRb"/>
+                <constraint firstItem="T3W-cZ-KlM" firstAttribute="leading" secondItem="GtV-l2-RJe" secondAttribute="trailing" constant="19" id="a9w-ng-ngu"/>
+                <constraint firstItem="GtV-l2-RJe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="29" id="bWc-IS-Jh3"/>
+                <constraint firstItem="GtV-l2-RJe" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="-10" id="hAq-Ot-U2P"/>
+                <constraint firstAttribute="trailing" secondItem="T3W-cZ-KlM" secondAttribute="trailing" constant="16" id="i0D-QK-EPb"/>
+                <constraint firstItem="T3W-cZ-KlM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="lS5-aV-CQO"/>
+                <constraint firstAttribute="bottom" secondItem="T3W-cZ-KlM" secondAttribute="bottom" constant="8" id="ta3-1X-Oq6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="areaLabel" destination="ujU-Rg-rfO" id="fnK-s6-WR0"/>
+                <outlet property="authorLabel" destination="8X6-2a-S9a" id="JBx-Fd-FiP"/>
+                <outlet property="profileThumbnailView" destination="GtV-l2-RJe" id="FSU-tL-JfC"/>
+                <outlet property="titleLabel" destination="2aI-DK-R9Z" id="aXm-bx-3go"/>
+            </connections>
+            <point key="canvasLocation" x="100" y="136.73163418290855"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="post_area_text">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
