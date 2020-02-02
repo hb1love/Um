@@ -7,6 +7,7 @@
 //
 
 import Common
+import struct Common.Category
 import ShareService
 import UserService
 import RxSwift
@@ -20,7 +21,7 @@ public final class ShareListViewReactor: Reactor {
 
   public enum Mutation {
     case setRefreshing(Bool)
-    case setFeeds([Member], [Post])
+    case setFeeds([Member], [Category], [Post])
     case appendFeeds([Post])
   }
 
@@ -47,6 +48,7 @@ public final class ShareListViewReactor: Reactor {
       let endRefreshing = Observable<Mutation>.just(.setRefreshing(false))
       let setFeed = Observable
         .zip(userUseCase.hotTalents().asObservable(),
+             shareUseCase.recommendCategories().asObservable(),
              shareUseCase.hotPosts().asObservable())
         .map(Mutation.setFeeds)
 
@@ -74,10 +76,15 @@ public final class ShareListViewReactor: Reactor {
 //        state.isLoading = isLoading
 //        return state
 
-      case .setFeeds(let talents, let posts):
+      case .setFeeds(let talents, let categories, let posts):
         let talentsSectionItems = self.talentsSectionItems(with: talents)
+        let categoriesSectionItems = self.categoriesSectionItems(with: categories)
         let postSectionItems = self.postSectionItems(with: posts)
-        state.sections = [.hotTalents(talentsSectionItems), .recommendCategories([]), .hotPosts(postSectionItems)]
+        state.sections = [
+          .hotTalents(talentsSectionItems),
+          .recommendCategories(categoriesSectionItems),
+          .hotPosts(postSectionItems)
+        ]
         return state
 
       case .appendFeeds(let posts):
@@ -89,6 +96,10 @@ public final class ShareListViewReactor: Reactor {
 
   private func talentsSectionItems(with members: [Member]) -> [ShareListViewSectionItem] {
     [.hotTalents(TalentsCellReactor(members: members))]
+  }
+
+  private func categoriesSectionItems(with categories: [Category]) -> [ShareListViewSectionItem] {
+    [.recommendCategories(RecommendCategoriesCellReactor(categories: categories))]
   }
 
   private func postSectionItems(with posts: [Post]) -> [ShareListViewSectionItem] {

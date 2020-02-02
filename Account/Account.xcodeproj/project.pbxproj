@@ -736,6 +736,7 @@
 				2D095A0623D4485800EA2161 /* Frameworks */,
 				2D095A0723D4485800EA2161 /* Resources */,
 				2D095AB123D4C71300EA2161 /* Embed Frameworks */,
+				2DE977B223E5951B00E1BA98 /* Resolve ITMS-90205 */,
 			);
 			buildRules = (
 			);
@@ -777,6 +778,7 @@
 				2D095A2E23D44AD800EA2161 /* Frameworks */,
 				2D095A2F23D44AD800EA2161 /* Resources */,
 				2D095AAA23D4C63900EA2161 /* Embed Frameworks */,
+				2DE977B323E5952100E1BA98 /* Resolve ITMS-90205 */,
 			);
 			buildRules = (
 			);
@@ -816,6 +818,7 @@
 				2D095A4D23D44B6B00EA2161 /* Frameworks */,
 				2D095A4E23D44B6B00EA2161 /* Resources */,
 				2D095A9723D4AE3B00EA2161 /* Embed Frameworks */,
+				2DE977B423E5952700E1BA98 /* Resolve ITMS-90205 */,
 			);
 			buildRules = (
 			);
@@ -1033,6 +1036,60 @@
 			showEnvVarsInLog = 0;
 		};
 		2DD4297023CC991400544117 /* Resolve ITMS-90205 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Resolve ITMS-90205";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
+		};
+		2DE977B223E5951B00E1BA98 /* Resolve ITMS-90205 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Resolve ITMS-90205";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
+		};
+		2DE977B323E5952100E1BA98 /* Resolve ITMS-90205 */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Resolve ITMS-90205";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then \n    rm -fr Frameworks\nfi\n";
+		};
+		2DE977B423E5952700E1BA98 /* Resolve ITMS-90205 */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1351,7 +1408,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.AccountUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1379,7 +1436,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.AccountUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1550,7 +1607,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UserService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.userservice;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -1580,7 +1637,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UserService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.userservice;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -1968,7 +2025,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.AccountUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2069,7 +2126,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UserService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.userservice;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
@@ -2221,7 +2278,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.AccountUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -2320,7 +2377,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UserService;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.userservice;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;

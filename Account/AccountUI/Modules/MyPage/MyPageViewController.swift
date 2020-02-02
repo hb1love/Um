@@ -36,16 +36,16 @@ public final class MyPageViewController: BaseViewController, StoryboardView {
   }
 
   public override func setupConstraints() {
-    logoutButton.snp.makeConstraints {
-      $0.leading.top.equalToSuperview().offset(100)
-      $0.size.equalTo(CGSize(width: 50, height: 50))
-    }
+//    logoutButton.snp.makeConstraints {
+//      $0.leading.top.equalToSuperview().offset(100)
+//      $0.size.equalTo(CGSize(width: 50, height: 50))
+//    }
   }
 
   public func bind(reactor: MyPageViewReactor) {
-    logoutButton.rx.tap
-      .subscribe(onNext: { [weak self] in
-        self?.didLogout?()
-      }).disposed(by: disposeBag)
+//    logoutButton.rx.tap
+//      .subscribe(onNext: { [weak self] in
+//        self?.didLogout?()
+//      }).disposed(by: disposeBag)
   }
 }

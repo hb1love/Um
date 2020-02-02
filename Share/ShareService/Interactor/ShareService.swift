@@ -7,10 +7,12 @@
 //
 
 import Common
+import struct Common.Category
 import RxSwift
 
 public protocol ShareUseCase {
   func hotPosts() -> Single<[Post]>
+  func recommendCategories() -> Single<[Category]>
 }
 
 public final class ShareService: ShareUseCase {
@@ -23,5 +25,9 @@ public final class ShareService: ShareUseCase {
 
   public func hotPosts() -> Single<[Post]> {
     .just(Post.mock.shuffled() + Post.mock.shuffled() + Post.mock.shuffled() + Post.mock.shuffled())
+  }
+
+  public func recommendCategories() -> Single<[Category]> {
+    .just(Category.mock)
   }
 }
