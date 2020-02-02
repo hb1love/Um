@@ -8,11 +8,28 @@
 
 import Common
 
-public final class AccountCoordinatorFactory: AccountCoordinatorFactoryType {
+public final class AccountCoordinatorFactory: AccountCoordinatorFactoryProtocol {
+
   private let moduleFactory: AccountModuleFactory
 
   public init(moduleFactory: AccountModuleFactory) {
     self.moduleFactory = moduleFactory
+  }
+
+  public func makeLaunchCoordinator(router: Routable) -> Coordinator & LaunchCoordinatorOutput {
+    return LaunchCoordinator(
+      coordinatorFactory: self,
+      moduleFactory: moduleFactory,
+      router: router
+    )
+  }
+
+  public func makeLoginCoordinator(router: Routable) -> Coordinator & LoginCoordinatorOutput {
+    return LoginCoordinator(
+      coordinatorFactory: self,
+      moduleFactory: moduleFactory,
+      router: router
+    )
   }
 
   public func makeMyPageCoordinator(router: Routable) -> RootCoordinator & MyPageCoordinatorOutput {

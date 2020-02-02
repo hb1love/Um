@@ -7,32 +7,30 @@
 //
 
 import Common
+import AccountUI
 import ShareUI
 
 var isLaunched = false
 var isAuthorized = false
-var onboardingWasShown = true
 
 enum LaunchInstructor {
-  case launch, auth, onboarding, main
+  case launch, auth, main
 
   static func configure(
     isLaunched: Bool = isLaunched,
-    isAuthorized: Bool = isAuthorized,
-    tutorialWasShown: Bool = onboardingWasShown
+    isAuthorized: Bool = isAuthorized
     ) -> LaunchInstructor {
-    switch (isLaunched, isAuthorized, tutorialWasShown) {
-    case (false, _, _): return .launch
-    case (true, false, _): return .auth
-    case (true, true, false): return .onboarding
-    case (true, true, true): return .main
+    switch (isLaunched, isAuthorized) {
+    case (false, _): return .launch
+    case (true, _): return .main
     }
   }
 }
 
 final class ApplicationCoordinator: BaseCoordinator {
 
-  private let mainCoordinatorFactor: MainCoordinatorFactoryProtocol
+  private let mainCoordinatorFactory: MainCoordinatorFactoryProtocol
+  private let accountCoordinatorFactory: AccountCoordinatorFactoryProtocol
   private let shareCoordinatorFactory: ShareCoordinatorFactoryProtocol
   private let router: Routable
 
@@ -41,62 +39,52 @@ final class ApplicationCoordinator: BaseCoordinator {
   }
 
   init(
-    mainCoordinatorFactor: MainCoordinatorFactoryProtocol,
+    mainCoordinatorFactory: MainCoordinatorFactoryProtocol,
+    accountCoordinatorFactory: AccountCoordinatorFactoryProtocol,
     shareCoordinatorFactory: ShareCoordinatorFactoryProtocol,
     router: Routable
     ) {
-    self.mainCoordinatorFactor = mainCoordinatorFactor
+    self.mainCoordinatorFactory = mainCoordinatorFactory
+    self.accountCoordinatorFactory = accountCoordinatorFactory
     self.shareCoordinatorFactory = shareCoordinatorFactory
     self.router = router
   }
 
   override func start() {
-//    switch instructor {
-//    case .launch: runLaunchFlow()
-//    case .auth: runAuthFlow()
-//    case .onboarding: runOnboardingFlow()
-//    case .main: runMainFlow()
-//    }
-    runMainFlow()
+    switch instructor {
+    case .launch: runLaunchFlow()
+    case .auth: runAuthFlow()
+    case .main: runMainFlow()
+    }
   }
 
-//  private func runLaunchFlow() {
-//    let coordinator = coordinatorFactory.makeLaunchCoordinator(router: router)
-//    coordinator.finishFlow = { [weak self, weak coordinator] authorized, isFirst in
-//      isLaunched = true
+  private func runLaunchFlow() {
+    let coordinator = accountCoordinatorFactory.makeLaunchCoordinator(router: router)
+    coordinator.finishFlow = { [weak self, weak coordinator] authorized in
+      isLaunched = true
+      isAuthorized = false
 //      isAuthorized = authorized
-//      onboardingWasShown = !isFirst
-//      self?.start()
-//      self?.removeDependency(coordinator)
-//    }
-//    addDependency(coordinator)
-//    coordinator.start()
-//  }
-//
-//  private func runAuthFlow() {
-//    let coordinator = coordinatorFactory.makeAuthCoordinator(router: router)
-//    coordinator.finishFlow = { [weak self, weak coordinator] in
-//      isAuthorized = true
-//      self?.start()
-//      self?.removeDependency(coordinator)
-//    }
-//    addDependency(coordinator)
-//    coordinator.start()
-//  }
-//
-//  private func runOnboardingFlow() {
-//    let coordinator = coordinatorFactory.makeOnboardingCoordinator(router: router)
-//    coordinator.finishFlow = { [weak self, weak coordinator] in
-//      onboardingWasShown = true
-//      self?.start()
-//      self?.removeDependency(coordinator)
-//    }
-//    addDependency(coordinator)
-//    coordinator.start()
-//  }
-//
+      self?.start()
+      self?.removeDependency(coordinator)
+    }
+    addDependency(coordinator)
+    coordinator.start()
+  }
+
+  private func runAuthFlow() {
+    let coordinator = accountCoordinatorFactory.makeLoginCoordinator(router: router)
+    coordinator.finishFlow = { [weak self, weak coordinator] in
+      isAuthorized = true
+      self?.start()
+      self?.removeDependency(coordinator)
+    }
+    addDependency(coordinator)
+    coordinator.start()
+  }
+
   private func runMainFlow() {
-    let coordinator = mainCoordinatorFactor.makeMainCoordinator(router: router)
+    let coordinator = mainCoordinatorFactory.makeMainCoordinator(router: router)
+    coordinator.isAuthorized = isAuthorized
     coordinator.finishFlow = { [weak self, weak coordinator] in
       self?.start()
       self?.removeDependency(coordinator)

@@ -30,7 +30,7 @@ public struct AccountUIDependency {
 public class AccountUIInjector {
   public static func resolve(
     with config: AccountUIConfiguration.Type
-  ) -> AccountCoordinatorFactoryType {
+  ) -> AccountCoordinatorFactoryProtocol {
     let authUseCase = config.accountUIDependency.authUseCase
     let userUseCase = config.accountUIDependency.userUseCase
     return AccountCoordinatorFactory(

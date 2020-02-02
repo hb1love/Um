@@ -9,16 +9,22 @@
 import Common
 import ShareUI
 
+public protocol MainTabCoordinatorInput: AnyObject {
+  var isAuthorized: Bool? { get set }
+}
+
 public protocol MainTabCoordinatorOutput: AnyObject {
   var finishFlow: (() -> Void)? { get set }
 }
 
-final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorOutput {
+final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorInput, MainTabCoordinatorOutput {
 
-  var finishFlow: (() -> Void)?
   private let mainModuleFactory: MainModuleFactoryType
   private let shareModuleFactory: ShareEditModuleFactoryType
   private let router: Routable
+
+  public var isAuthorized: Bool?
+  public var finishFlow: (() -> Void)?
 
   init(
     mainModuleFactory: MainModuleFactoryType,
@@ -35,7 +41,7 @@ final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorOutput {
   }
 
   private func showMainTab() {
-    let mainTabModule = mainModuleFactory.makeMainTabModule()
+    let mainTabModule = mainModuleFactory.makeMainTabModule(isAuthorized: isAuthorized ?? false)
     mainTabModule.onNewPost = { [weak self] in
       self?.showEdit()
     }

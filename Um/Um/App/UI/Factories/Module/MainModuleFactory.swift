@@ -16,7 +16,10 @@ final class MainModuleFactory: MainModuleFactoryType {
     self.serviceMap = serviceMap
   }
 
-  func makeMainTabModule() -> MainTabBarController {
-    return MainTabBarController(serviceMap: serviceMap)
+  func makeMainTabModule(isAuthorized: Bool) -> MainTabBarController {
+    return MainTabBarController(
+      serviceMap: serviceMap,
+      isAuthorized: isAuthorized
+    )
   }
 }

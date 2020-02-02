@@ -11,7 +11,6 @@
 		2D01332D23CA113D003C3DCA /* ApplicationInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D01332C23CA113D003C3DCA /* ApplicationInjector.swift */; };
 		2D01332F23CA1156003C3DCA /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D01332E23CA1156003C3DCA /* ApplicationCoordinator.swift */; };
 		2D087D7423DDB054006AA5E7 /* FloatingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087D7323DDB054006AA5E7 /* FloatingTabBar.swift */; };
-		2D087D7623DDB150006AA5E7 /* FloatingTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D087D7523DDB150006AA5E7 /* FloatingTabBar.xib */; };
 		2D095A8023D497D000EA2161 /* AccountUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7D23D497D000EA2161 /* AccountUI.framework */; };
 		2D095A8123D497D000EA2161 /* AccountUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7D23D497D000EA2161 /* AccountUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D095A8223D497D000EA2161 /* AuthService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7E23D497D000EA2161 /* AuthService.framework */; };
@@ -43,6 +42,7 @@
 		2DD4294723CC98A900544117 /* Share.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4294523CC98A900544117 /* Share.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DD4297223CC995A00544117 /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4297123CC995A00544117 /* Account.framework */; };
 		2DD4297323CC995A00544117 /* Account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4297123CC995A00544117 /* Account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DE977D123E7240600E1BA98 /* LoginTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977D023E7240600E1BA98 /* LoginTabBar.swift */; };
 		5C7CDF8E277C90E5545F0B2F /* Pods_Um.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794682E0008EEB0C5BFE294D /* Pods_Um.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +85,6 @@
 		2D01332E23CA1156003C3DCA /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		2D01333023CA1A1B003C3DCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2D087D7323DDB054006AA5E7 /* FloatingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBar.swift; sourceTree = "<group>"; };
-		2D087D7523DDB150006AA5E7 /* FloatingTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingTabBar.xib; sourceTree = "<group>"; };
 		2D095A7D23D497D000EA2161 /* AccountUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AccountUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A7E23D497D000EA2161 /* AuthService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A7F23D497D000EA2161 /* UserService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UserService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +110,7 @@
 		2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
 		2DD4294523CC98A900544117 /* Share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD4297123CC995A00544117 /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE977D023E7240600E1BA98 /* LoginTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTabBar.swift; sourceTree = "<group>"; };
 		32AA34C4D085A8DC421F1A0F /* Pods-UmTests.release(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UmTests.release(prod).xcconfig"; path = "Target Support Files/Pods-UmTests/Pods-UmTests.release(prod).xcconfig"; sourceTree = "<group>"; };
 		727D95BF153452BFF4DDEDFC /* Pods-Um.release(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Um.release(dev).xcconfig"; path = "Target Support Files/Pods-Um/Pods-Um.release(dev).xcconfig"; sourceTree = "<group>"; };
 		794682E0008EEB0C5BFE294D /* Pods_Um.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Um.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				2D087D7323DDB054006AA5E7 /* FloatingTabBar.swift */,
-				2D087D7523DDB150006AA5E7 /* FloatingTabBar.xib */,
+				2DE977D023E7240600E1BA98 /* LoginTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -424,7 +424,6 @@
 				2D13D3BA23C648AA001C91C2 /* LaunchScreen.storyboard in Resources */,
 				2D91E7EC23CA3C2E00446794 /* GoogleService-Info.plist in Resources */,
 				2D13D3B723C648AA001C91C2 /* Assets.xcassets in Resources */,
-				2D087D7623DDB150006AA5E7 /* FloatingTabBar.xib in Resources */,
 				2D13D3B523C648A8001C91C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +533,7 @@
 				2D2BBC3223CCC46D0052394B /* MainTabBarController.swift in Sources */,
 				2D7795C523CCCE57005B84A9 /* MainTabCoordinator.swift in Sources */,
 				2D7795C923CCCEA0005B84A9 /* MainModuleFactory.swift in Sources */,
+				2DE977D123E7240600E1BA98 /* LoginTabBar.swift in Sources */,
 				2D13D3AE23C648A8001C91C2 /* AppDelegate.swift in Sources */,
 				2D01332D23CA113D003C3DCA /* ApplicationInjector.swift in Sources */,
 			);

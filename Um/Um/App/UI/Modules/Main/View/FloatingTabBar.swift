@@ -25,6 +25,8 @@ final class FloatingTabBar: BaseView {
     static let buttonWidth = 44.f
   }
 
+  // MARK: - Subviews
+
   var containerView: UIStackView!
   var tabButtons: [FloatingTabButton] = []
 
