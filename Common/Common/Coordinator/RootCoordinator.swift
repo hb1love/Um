@@ -12,4 +12,8 @@ public protocol RootExportable {
   var rootViewController: UINavigationController { get }
 }
 
-public protocol RootCoordinator: Coordinator, RootExportable {}
+public protocol TabController {
+  var changeTabBar: ((Bool) -> Void)? { get set }
+}
+
+public protocol RootCoordinator: Coordinator, RootExportable, TabController {}

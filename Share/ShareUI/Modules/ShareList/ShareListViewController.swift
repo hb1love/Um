@@ -21,6 +21,8 @@ public final class ShareListViewController: BaseViewController, StoryboardView {
 
   // MARK: - Properties
 
+  var changeTabBar: ((Bool) -> Void)?
+
   private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<ShareListViewSection>(
     configureCell: { dataSource, collectionView, indexPath, sectionItem in
       switch sectionItem {
@@ -28,8 +30,9 @@ public final class ShareListViewController: BaseViewController, StoryboardView {
         let cell = collectionView.dequeue(TalentsCell.self, for: indexPath)!
         cell.reactor = reactor
         return cell
-      case .recommendCategory:
-        let cell = collectionView.dequeue(RecommendCategoryCell.self, for: indexPath)!
+      case .recommendCategories(let reactor):
+        let cell = collectionView.dequeue(RecommendCategoriesCell.self, for: indexPath)!
+        cell.reactor = reactor
         return cell
       case .post(let reactor):
         let cell = collectionView.dequeue(PostCell.self, for: indexPath)!
@@ -41,11 +44,11 @@ public final class ShareListViewController: BaseViewController, StoryboardView {
       switch dataSource[indexPath.section] {
       case .hotTalents:
         let headerView = collectionView.dequeue(CollectionHeaderView.self, kind: kind, for: indexPath)!
-        headerView.titleLabel.text = "급상승 재능러"
+        headerView.titleLabel.text = "요즘 핫한 재능러"
         return headerView
       case .recommendCategories:
         let headerView = collectionView.dequeue(CollectionHeaderView.self, kind: kind, for: indexPath)!
-        headerView.titleLabel.text = "추천 카테고리"
+        headerView.titleLabel.text = "이런 재능은 어때요?"
         return headerView
       case .hotPosts:
         let headerView = collectionView.dequeue(CollectionHeaderView.self, kind: kind, for: indexPath)!
@@ -64,7 +67,7 @@ public final class ShareListViewController: BaseViewController, StoryboardView {
     super.setupSubviews()
     feedCollectionView.register(cell: CollectionHeaderView.self)
     feedCollectionView.register(cell: TalentsCell.self)
-    feedCollectionView.register(cell: RecommendCategoryCell.self)
+    feedCollectionView.register(cell: RecommendCategoriesCell.self)
     feedCollectionView.register(cell: PostCell.self)
     let collectionEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 44, right: 0)
     feedCollectionView.contentInset = collectionEdgeInsets
@@ -141,9 +144,16 @@ extension ShareListViewController: UICollectionViewDelegate, UICollectionViewDel
     case .hotTalents:
       return CGSize(width: collectionView.frame.width, height: TalentsCell.defaultHeight)
     case .recommendCategories:
-      return CGSize(width: collectionView.frame.width, height: PostCell.defaultHeight)
+      return CGSize(width: collectionView.frame.width, height: RecommendCategoriesCell.defaultHeight)
     case .hotPosts:
       return CGSize(width: collectionView.frame.width, height: PostCell.defaultHeight)
     }
+  }
+}
+
+extension ShareListViewController: UIScrollViewDelegate {
+  public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let hidden = scrollView.panGestureRecognizer.translation(in: scrollView).y < 0
+    changeTabBar?(hidden)
   }
 }

@@ -39,6 +39,7 @@ final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorOutput {
     mainTabModule.onNewPost = { [weak self] in
       self?.showEdit()
     }
+    
     router.setRoot(mainTabModule)
   }
 

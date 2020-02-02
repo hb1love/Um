@@ -20,6 +20,8 @@ final class CollectionHeaderView: BaseCollectionReusableView {
     static let titleHeight = 24.f
   }
 
+  // MARK: - Subviews
+
   var titleLabel: UILabel!
 
   override func setupSubviews() {

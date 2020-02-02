@@ -34,6 +34,6 @@ extension ShareListViewSection: SectionModelType {
 
 enum ShareListViewSectionItem {
   case hotTalents(TalentsCellReactor)
-  case recommendCategory
+  case recommendCategories(RecommendCategoriesCellReactor)
   case post(PostCellReactor)
 }

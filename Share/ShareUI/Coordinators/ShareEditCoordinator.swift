@@ -15,9 +15,11 @@ public protocol ShareEditCoordinatorOutput: AnyObject {
 
 final class ShareEditCoordinator: BaseCoordinator, ShareEditCoordinatorOutput, RootCoordinator {
 
-  var finishFlow: (() -> Void)?
   private let moduleFactory: ShareEditModuleFactoryType
   private let router: Routable
+  
+  public var finishFlow: (() -> Void)?
+  public var changeTabBar: ((Bool) -> Void)?
   public let rootViewController: UINavigationController
 
   init(

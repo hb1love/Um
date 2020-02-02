@@ -15,10 +15,12 @@ public protocol MyPageCoordinatorOutput: AnyObject {
 
 public final class MyPageCoordinator: BaseCoordinator, MyPageCoordinatorOutput, RootCoordinator {
 
-  public var finishFlow: (() -> Void)?
   private let coordinatorFactory: AccountCoordinatorFactoryType
   private let moduleFactory: MyPageModuleFactoryType
   private let router: Routable
+  
+  public var finishFlow: (() -> Void)?
+  public var changeTabBar: ((Bool) -> Void)?
   public let rootViewController: UINavigationController
 
   init(

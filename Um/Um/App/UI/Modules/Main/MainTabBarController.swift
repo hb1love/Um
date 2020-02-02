@@ -54,7 +54,7 @@ final class MainTabBarController: UITabBarController {
     var serviceViews = [UIViewController]()
     var tabBarItems = [UITabBarItem]()
     ServiceType.allCases.forEach { service in
-      if let coordinator = self.serviceMap[service] {
+      if var coordinator = self.serviceMap[service] {
         let tabBarItem = UITabBarItem()
         tabBarItem.title = service.rawValue
         switch service {
@@ -79,6 +79,7 @@ final class MainTabBarController: UITabBarController {
             .withRenderingMode(.alwaysTemplate)
           tabBarItem.tag = 4
         }
+        coordinator.changeTabBar = changeTabBar
         let navigationController = coordinator.rootViewController
         navigationController.tabBarItem = tabBarItem
         tabBarItems.append(tabBarItem)
@@ -122,6 +123,13 @@ final class MainTabBarController: UITabBarController {
     floatingTabBar.snp.makeConstraints {
       $0.centerX.equalToSuperview()
       $0.bottom.equalToSuperview().offset(-Metric.floatingBottom)
+    }
+  }
+
+  func changeTabBar(_ hidden: Bool) {
+    let transform: CGAffineTransform = hidden ? .init(translationX: 0, y: 150) : .identity
+    UIView.animate(withDuration: 0.5) {
+      self.floatingTabBar.transform = transform
     }
   }
 }

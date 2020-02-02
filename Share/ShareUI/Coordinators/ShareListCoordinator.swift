@@ -15,10 +15,12 @@ public protocol ShareListCoordinatorOutput: AnyObject {
 
 public final class ShareListCoordinator: BaseCoordinator, ShareListCoordinatorOutput, RootCoordinator {
 
-  public var finishFlow: (() -> Void)?
   private let coordinatorFactory: ShareCoordinatorFactoryProtocol
   private let moduleFactory: ShareListModuleFactoryType
   private let router: Routable
+
+  public var finishFlow: (() -> Void)?
+  public var changeTabBar: ((Bool) -> Void)?
   public let rootViewController: UINavigationController
 
   init(
@@ -38,7 +40,7 @@ public final class ShareListCoordinator: BaseCoordinator, ShareListCoordinatorOu
 
   private func showList() {
     let listModule = moduleFactory.makeShareListModule()
-
+    listModule.changeTabBar = changeTabBar
     router.setRoot(listModule)
   }
 
