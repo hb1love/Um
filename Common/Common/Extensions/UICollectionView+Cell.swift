@@ -1,5 +1,5 @@
 //
-//  UICollectionViewExtension.swift
+//  UICollectionView+Cell.swift
 //  SeasonsBase
 //
 //  Created by hb1love on 2020/01/30.

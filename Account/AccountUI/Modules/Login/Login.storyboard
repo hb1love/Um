@@ -42,7 +42,7 @@
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 재능러를 만나보세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zi-9v-LUJ">
-                                                        <rect key="frame" x="89.666666666666686" y="85" width="234.33333333333337" height="21"/>
+                                                        <rect key="frame" x="89.6666666666667" y="85" width="234.33333333333337" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="7fQ-ws-32w"/>
                                                         </constraints>
