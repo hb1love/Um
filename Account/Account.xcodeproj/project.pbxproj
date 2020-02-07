@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A156ECFD4D1D91B0FC0EF85 /* Pods_UserServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FCC4632DDE5B8F51D59E95 /* Pods_UserServiceTests.framework */; };
+		2D05E2D523EDC83200FC058D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */; };
+		2D05E2D623EDC83200FC058D /* KakaoOpenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D095A1223D4485800EA2161 /* AccountUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A0923D4485800EA2161 /* AccountUI.framework */; };
 		2D095A1723D4485800EA2161 /* AccountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A1623D4485800EA2161 /* AccountUITests.swift */; };
 		2D095A1923D4485800EA2161 /* AccountUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D095A0B23D4485800EA2161 /* AccountUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -162,6 +164,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2D7EC44123D5E8EF00D4C775 /* UserService.framework in Embed Frameworks */,
+				2D05E2D623EDC83200FC058D /* KakaoOpenSDK.framework in Embed Frameworks */,
 				2D7EC43D23D5E8EF00D4C775 /* AuthService.framework in Embed Frameworks */,
 				2D095AB023D4C71300EA2161 /* Common.framework in Embed Frameworks */,
 			);
@@ -187,6 +190,7 @@
 		17081E6C5C0EF6621DDEC761 /* Pods_AuthServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B01164D87CF37DDF719F7E1 /* Pods-UserServiceTests.debug(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserServiceTests.debug(prod).xcconfig"; path = "Target Support Files/Pods-UserServiceTests/Pods-UserServiceTests.debug(prod).xcconfig"; sourceTree = "<group>"; };
 		21FD95EC0C148BA339B242F4 /* Pods-Account.debug(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Account.debug(dev).xcconfig"; path = "Target Support Files/Pods-Account/Pods-Account.debug(dev).xcconfig"; sourceTree = "<group>"; };
+		2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = ../lib/KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		2D095A0923D4485800EA2161 /* AccountUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A0B23D4485800EA2161 /* AccountUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountUI.h; sourceTree = "<group>"; };
 		2D095A0C23D4485800EA2161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,6 +301,7 @@
 			files = (
 				901DED7B0E46AA80B29E6EED /* Pods_AccountUI.framework in Frameworks */,
 				2D7EC44023D5E8EF00D4C775 /* UserService.framework in Frameworks */,
+				2D05E2D523EDC83200FC058D /* KakaoOpenSDK.framework in Frameworks */,
 				2D7EC43C23D5E8EF00D4C775 /* AuthService.framework in Frameworks */,
 				2D095AAF23D4C71300EA2161 /* Common.framework in Frameworks */,
 			);
@@ -412,6 +417,7 @@
 		1F41311B82EDA6A3BA57A4F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */,
 				2D095AAE23D4C71300EA2161 /* Common.framework */,
 				2D095AAB23D4C6E500EA2161 /* Common.framework */,
 				2D095AA723D4C63900EA2161 /* Common.framework */,
@@ -1480,6 +1486,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1487,6 +1497,40 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1508,6 +1552,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1515,6 +1563,40 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2097,6 +2179,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2104,6 +2190,40 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2350,6 +2470,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2357,6 +2481,40 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

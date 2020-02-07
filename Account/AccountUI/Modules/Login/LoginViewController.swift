@@ -9,6 +9,7 @@
 import UIKit
 import AuthenticationServices
 import Common
+import KakaoOpenSDK
 import ReactorKit
 import SnapKit
 import RxCocoa
@@ -58,11 +59,18 @@ public final class LoginViewController: BaseViewController, StoryboardView {
       .when(.recognized)
       .debounce(0.5, scheduler: MainScheduler.instance)
       .subscribe(onNext: { [weak self] _ in
-        self?.handleAuthorizationAppleIDButtonPress()
+        self?.handleAppleLoginRequest()
+      }).disposed(by: disposeBag)
+
+    kakaoLogin.rx.tapGesture()
+      .when(.recognized)
+      .debounce(0.5, scheduler: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] _ in
+        self?.handleKakaoLoginRequest()
       }).disposed(by: disposeBag)
   }
 
-  func handleAuthorizationAppleIDButtonPress() {
+  func handleAppleLoginRequest() {
     let appleIDProvider = ASAuthorizationAppleIDProvider()
     let request = appleIDProvider.createRequest()
     request.requestedScopes = [.fullName, .email]
@@ -71,6 +79,24 @@ public final class LoginViewController: BaseViewController, StoryboardView {
     authorizationController.delegate = self
     authorizationController.presentationContextProvider = self
     authorizationController.performRequests()
+  }
+
+  func handleKakaoLoginRequest() {
+    getkakaoSession { [weak self] token in
+      guard let token = token else { return }
+      log.debug("token : " + token)
+
+//        let provider = AuthProvider.kakao(token)
+//        self?.authService.authorize(provider) { result in
+//            switch result {
+//            case .success:
+//                analytics.log(.login(provider))
+//                self?.presenter?.completeLogin()
+//            case .failure:
+//                break
+//            }
+//        }
+    }
   }
 //
 //  func performExistingAccountSetupFlows() {
@@ -141,5 +167,28 @@ extension LoginViewController: ASAuthorizationControllerPresentationContextProvi
     for controller: ASAuthorizationController
   ) -> ASPresentationAnchor {
     return self.view.window!
+  }
+}
+
+extension LoginViewController {
+  func getkakaoSession(_ completion: @escaping (String?) -> Void) {
+    guard let session = KOSession.shared() else {
+      completion(nil)
+      log.debug("Invalid kakao session")
+      return
+    }
+
+    if session.isOpen() {
+      session.close()
+    }
+
+    session.open { error in
+      guard session.isOpen() else {
+        log.debug("Invalid kakao state")
+        completion(nil)
+        return
+      }
+      completion(session.token?.accessToken)
+    }
   }
 }

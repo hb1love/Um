@@ -2,7 +2,7 @@
 //  Bouncing.swift
 //  Common
 //
-//  Created by NHNEnt on 2020/02/04.
+//  Created by hb1love on 2020/02/04.
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 

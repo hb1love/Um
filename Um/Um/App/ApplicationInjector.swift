@@ -10,6 +10,7 @@ import UIKit
 import Common
 import ShareUI
 import Firebase
+import KakaoOpenSDK
 import SwiftyBeaver
 import Umbrella
 
@@ -45,6 +46,7 @@ struct ApplicationInjector {
   static func configureSDKs() {
     configureLogger()
     configureAnalytics()
+    configureOAuth()
   }
 
   static func configureLogger() {
@@ -54,6 +56,16 @@ struct ApplicationInjector {
 
   static func configureAnalytics() {
     FirebaseApp.configure()
+  }
+
+  static func configureOAuth() {
+    #if DEBUG
+    #else
+      guard
+        let clientSecret = Bundle.main.infoDictionary?["KAKAO_CLIENT_SECRET"] as? String
+      else { return }
+      KOSession.shared()?.clientSecret = clientSecret
+    #endif
   }
 
   static func configureAppearance() {

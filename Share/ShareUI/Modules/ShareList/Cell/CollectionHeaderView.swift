@@ -2,7 +2,7 @@
 //  CollectionHeaderView.swift
 //  ShareUI
 //
-//  Created by NHNEnt on 2020/01/30.
+//  Created by hb1love on 2020/01/30.
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 

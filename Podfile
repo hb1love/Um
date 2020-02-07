@@ -115,6 +115,7 @@ target 'AccountUI' do
   common
   rx
   ui
+  sdk
 
   target 'AccountUITests' do
     inherit! :search_paths
