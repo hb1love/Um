@@ -16,7 +16,7 @@ import ShareService
 
 enum ServiceType: String, CaseIterable {
   case share
-  case search
+  case browsing
   case write
   case chat
   case mypage
@@ -37,7 +37,7 @@ struct ApplicationConfiguration:
 
   static let serviceMap: [ServiceType: RootCoordinator]
     = [.share: shareCoordinatorFactory.makeListCoordinator(router: Router(rootController: root)),
-       .search: accountCoordinatorFactory.makeMyPageCoordinator(router: Router(rootController: root)),
+       .browsing: shareCoordinatorFactory.makeBrowsingCoordinator(router: Router(rootController: root)),
        .write: shareCoordinatorFactory.makeEditCoordinator(router: Router(rootController: root)),
        .chat: accountCoordinatorFactory.makeMyPageCoordinator(router: Router(rootController: root)),
        .mypage: accountCoordinatorFactory.makeMyPageCoordinator(router: Router(rootController: root))]

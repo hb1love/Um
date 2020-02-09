@@ -10,7 +10,7 @@ import UIKit
 import Common
 
 public protocol LoginCoordinatorOutput: AnyObject {
-  var finishFlow: (() -> Void)? { get set }
+  var finishFlow: ((_ loggedIn: Bool) -> Void)? { get set }
 }
 
 public final class LoginCoordinator: BaseCoordinator, LoginCoordinatorOutput {
@@ -19,7 +19,7 @@ public final class LoginCoordinator: BaseCoordinator, LoginCoordinatorOutput {
   private let moduleFactory: LoginModuleFactoryType
   private let router: Routable
 
-  public var finishFlow: (() -> Void)?
+  public var finishFlow: ((Bool) -> Void)?
 
   init(
     coordinatorFactory: AccountCoordinatorFactoryProtocol,
@@ -37,13 +37,20 @@ public final class LoginCoordinator: BaseCoordinator, LoginCoordinatorOutput {
 
   private func showLogin() {
     let loginModule = moduleFactory.makeLoginModule()
-//    myPageModule.didLogout = {
-//
-//    }
+    loginModule.onFinish = { [weak self] loggedIn, isFirst in
+      guard loggedIn else {
+        self?.finishFlow?(loggedIn)
+        return
+      }
+      if isFirst {
+        self?.showRegister()
+      }
+      self?.finishFlow?(loggedIn)
+    }
     router.setRoot(loginModule)
   }
 
-  private func runLoginFlow() {
+  private func showRegister() {
 
   }
 }

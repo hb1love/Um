@@ -34,7 +34,7 @@ public final class LoginViewController: BaseViewController, StoryboardView {
 
   // MARK: - Properties
 
-  var didLogout: (() -> Void)?
+  var onFinish: ((_ loggedIn: Bool, _ isFirst: Bool) -> Void)?
 
   public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
     return .portrait
@@ -68,6 +68,13 @@ public final class LoginViewController: BaseViewController, StoryboardView {
       .subscribe(onNext: { [weak self] _ in
         self?.handleKakaoLoginRequest()
       }).disposed(by: disposeBag)
+
+    noLogin.rx.tapGesture()
+      .when(.recognized)
+      .debounce(0.5, scheduler: MainScheduler.instance)
+      .subscribe(onNext: { [weak self] _ in
+        self?.handleNoLoginRequest()
+      }).disposed(by: disposeBag)
   }
 
   func handleAppleLoginRequest() {
@@ -82,34 +89,17 @@ public final class LoginViewController: BaseViewController, StoryboardView {
   }
 
   func handleKakaoLoginRequest() {
-    getkakaoSession { [weak self] token in
-      guard let token = token else { return }
-      log.debug("token : " + token)
-
-//        let provider = AuthProvider.kakao(token)
-//        self?.authService.authorize(provider) { result in
-//            switch result {
-//            case .success:
-//                analytics.log(.login(provider))
-//                self?.presenter?.completeLogin()
-//            case .failure:
-//                break
-//            }
-//        }
-    }
+//    getkakaoSession { [weak self] token in
+//      guard let `self` = self else { return }
+//      guard let token = token else { return }
+//      log.debug("token : " + token)
+//    }
+    self.onFinish?(true, true)
   }
-//
-//  func performExistingAccountSetupFlows() {
-//    let requests = [
-//      ASAuthorizationAppleIDProvider().createRequest(),
-//      ASAuthorizationPasswordProvider().createRequest()
-//    ]
-//
-//    let authorizationController = ASAuthorizationController(authorizationRequests: requests)
-//    authorizationController.delegate = self
-//    authorizationController.presentationContextProvider = self
-//    authorizationController.performRequests()
-//  }
+
+  func handleNoLoginRequest() {
+    onFinish?(false, false)
+  }
 }
 
 extension LoginViewController: ASAuthorizationControllerDelegate {
@@ -184,7 +174,7 @@ extension LoginViewController {
 
     session.open { error in
       guard session.isOpen() else {
-        log.debug("Invalid kakao state")
+        log.debug("Invoked kakao login")
         completion(nil)
         return
       }

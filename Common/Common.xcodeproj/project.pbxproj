@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D05E2F923F0179B00FC058D /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E2F823F0179B00FC058D /* XibView.swift */; };
 		2D087D8223DE0F48006AA5E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D087D8123DE0F48006AA5E7 /* Assets.xcassets */; };
 		2D0959E223D43A6200EA2161 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0959E123D43A6200EA2161 /* Networking.swift */; };
 		2D0959E523D43B0F00EA2161 /* UmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0959E423D43B0F00EA2161 /* UmError.swift */; };
@@ -64,6 +65,7 @@
 		0908EA7CCB176F760B2A8C69 /* Pods_CommonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C84AE00ABCC40C8100A316F /* Pods-CommonTests.debug(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTests.debug(dev).xcconfig"; path = "Target Support Files/Pods-CommonTests/Pods-CommonTests.debug(dev).xcconfig"; sourceTree = "<group>"; };
 		1F00B2C8F308BA19C77413AB /* Pods-Common.debug(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug(prod).xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.debug(prod).xcconfig"; sourceTree = "<group>"; };
+		2D05E2F823F0179B00FC058D /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		2D087D8123DE0F48006AA5E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D0959E123D43A6200EA2161 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		2D0959E423D43B0F00EA2161 /* UmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmError.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				2D894C2D23E30135008991E1 /* BaseCollectionViewCell.swift */,
 				2D894C2F23E301B3008991E1 /* BaseCollectionReusableView.swift */,
 				2D095AA023D4B78100EA2161 /* BaseTableViewCell.swift */,
+				2D05E2F823F0179B00FC058D /* XibView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				2D2BBBE623CC9CAA0052394B /* BaseCoordinator.swift in Sources */,
 				2D8745A023E9A30F006CF795 /* Bouncing.swift in Sources */,
 				2D75327F23D42BE000E94D78 /* UIViewController+Load.swift in Sources */,
+				2D05E2F923F0179B00FC058D /* XibView.swift in Sources */,
 				2D2BBBE023CC9C310052394B /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

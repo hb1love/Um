@@ -81,7 +81,7 @@ final class MainTabBarController: UITabBarController {
           tabBarItem.image = UIImage(named: "tab_home_active")?
             .withRenderingMode(.alwaysTemplate)
           tabBarItem.tag = 0
-        case .search:
+        case .browsing:
           tabBarItem.image = UIImage(named: "tab_search_inactive")?
             .withRenderingMode(.alwaysTemplate)
           tabBarItem.tag = 1

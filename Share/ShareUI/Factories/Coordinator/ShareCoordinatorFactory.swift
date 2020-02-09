@@ -10,6 +10,7 @@ import Common
 import ShareService
 
 public final class ShareCoordinatorFactory: ShareCoordinatorFactoryProtocol {
+
   private let moduleFactory: ShareModuleFactory
 
   public init(moduleFactory: ShareModuleFactory) {
@@ -18,18 +19,27 @@ public final class ShareCoordinatorFactory: ShareCoordinatorFactoryProtocol {
 
   public func makeEditCoordinator(router: Routable)
     -> RootCoordinator & ShareEditCoordinatorOutput {
-    return ShareEditCoordinator(
-      with: moduleFactory,
-      router: router
-    )
+      return ShareEditCoordinator(
+        with: moduleFactory,
+        router: router
+      )
   }
 
   public func makeListCoordinator(router: Routable)
     -> RootCoordinator & ShareListCoordinatorOutput {
-    return ShareListCoordinator(
-      coordinatorFactory: self,
-      moduleFactory: moduleFactory,
-      router: router
-    )
+      return ShareListCoordinator(
+        coordinatorFactory: self,
+        moduleFactory: moduleFactory,
+        router: router
+      )
+  }
+
+  public func makeBrowsingCoordinator(router: Routable)
+    -> RootCoordinator & BrowsingCoordinatorOutput {
+      return BrowsingCoordinator(
+        coordinatorFactory: self,
+        moduleFactory: moduleFactory,
+        router: router
+      )
   }
 }

@@ -12,7 +12,7 @@ import ReactorKit
 
 public final class LoginViewReactor: Reactor {
   public enum Action {
-
+    case kakaoLogin
   }
 
   public struct State {

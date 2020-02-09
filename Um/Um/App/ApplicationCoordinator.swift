@@ -77,8 +77,9 @@ final class ApplicationCoordinator: BaseCoordinator {
 
   private func runAuthFlow() {
     let coordinator = accountCoordinatorFactory.makeLoginCoordinator(router: router)
-    coordinator.finishFlow = { [weak self, weak coordinator] in
-      isAuthorized = true
+    coordinator.finishFlow = { [weak self, weak coordinator] loggedIn in
+      isAuthorized = loggedIn
+      needToAuthorize = loggedIn
       self?.start()
       self?.removeDependency(coordinator)
     }

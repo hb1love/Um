@@ -23,10 +23,7 @@ final class PostCell: BaseCollectionViewCell, View {
 
   override func setupSubviews() {
     super.setupSubviews()
-    let bundle = Bundle(identifier: "com.depromeet.um.shareui")
-    let nibName = "PostView"
-    let nib = UINib(nibName: nibName, bundle: bundle)
-    postView = nib.instantiate(withOwner: self, options: nil).first as? PostView
+    postView = PostView.loadNib()
     contentView.addSubview(postView)
   }
 

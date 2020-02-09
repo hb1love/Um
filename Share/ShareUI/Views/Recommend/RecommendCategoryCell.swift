@@ -31,10 +31,7 @@ final class RecommendCategoryCell: BaseCollectionViewCell, View {
   override func setupSubviews() {
     super.setupSubviews()
     contentView.cornerRadius = 10
-    let bundle = Bundle(identifier: "com.depromeet.um.shareui")
-    let nibName = "RecommendCategoryView"
-    let nib = UINib(nibName: nibName, bundle: bundle)
-    recommendCategoryView = nib.instantiate(withOwner: self, options: nil).first as? RecommendCategoryView
+    recommendCategoryView = RecommendCategoryView.loadNib()
     contentView.addSubview(recommendCategoryView)
   }
 

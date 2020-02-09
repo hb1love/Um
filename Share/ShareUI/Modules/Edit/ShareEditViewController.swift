@@ -10,7 +10,7 @@ import UIKit
 import Common
 import ReactorKit
 
-public final class ShareEditViewController: BaseViewController, View {
+public final class ShareEditViewController: BaseViewController, StoryboardView {
 
   public override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)

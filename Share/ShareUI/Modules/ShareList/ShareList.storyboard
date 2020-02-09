@@ -31,7 +31,7 @@
                                             <constraint firstAttribute="width" constant="24" id="gbx-xj-eDs"/>
                                             <constraint firstAttribute="height" constant="24" id="puq-jU-pZ5"/>
                                         </constraints>
-                                        <state key="normal" image="ic_search"/>
+                                        <state key="normal" image="ic_list_search"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -98,7 +98,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_list_search" width="24" height="24"/>
         <image name="ic_logo" width="21" height="20"/>
-        <image name="ic_search" width="24" height="24"/>
     </resources>
 </document>

@@ -92,7 +92,7 @@
 		2D095A7D23D497D000EA2161 /* AccountUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AccountUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A7E23D497D000EA2161 /* AuthService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A7F23D497D000EA2161 /* UserService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UserService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D13D3AA23C648A8001C91C2 /* Um.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Um.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D13D3AA23C648A8001C91C2 /* 움.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "움.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D13D3AD23C648A8001C91C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D13D3B423C648A8001C91C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D13D3B623C648AA001C91C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		2D13D3AB23C648A8001C91C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D13D3AA23C648A8001C91C2 /* Um.app */,
+				2D13D3AA23C648A8001C91C2 /* 움.app */,
 				2D13D3C023C648AA001C91C2 /* UmTests.xctest */,
 			);
 			name = Products;
@@ -367,7 +367,7 @@
 			);
 			name = Um;
 			productName = Um;
-			productReference = 2D13D3AA23C648A8001C91C2 /* Um.app */;
+			productReference = 2D13D3AA23C648A8001C91C2 /* 움.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D13D3BF23C648AA001C91C2 /* UmTests */ = {
@@ -802,7 +802,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "움";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Um/Configuration/Um-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -909,7 +909,7 @@
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "움";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Um/Configuration/Um-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1124,7 +1124,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEV -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.test;
-				PRODUCT_NAME = "$(TARGET_NAME) Dev";
+				PRODUCT_NAME = "움 Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Um/Configuration/Um-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1310,7 +1310,7 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.test;
-				PRODUCT_NAME = "$(TARGET_NAME) Dev";
+				PRODUCT_NAME = "움 Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Um/Configuration/Um-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
