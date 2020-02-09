@@ -9,7 +9,7 @@
 import AVFoundation
 import UIKit
 
-enum Vibration {
+public enum Vibration {
   case error
   case success
   case warning
@@ -19,8 +19,7 @@ enum Vibration {
   case selection
   case oldSchool
 
-  func vibrate() {
-
+  public func vibrate() {
     switch self {
     case .error:
       let generator = UINotificationFeedbackGenerator()

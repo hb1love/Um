@@ -12,7 +12,8 @@ import UserService
 
 public final class ShareModuleFactory
   : ShareEditModuleFactoryType
-  , ShareListModuleFactoryType {
+  , ShareListModuleFactoryType
+  , BrowsingModuleFactoryType {
 
   private let shareUseCase: ShareUseCase
   private let userUseCase: UserUseCase
@@ -45,5 +46,15 @@ public final class ShareModuleFactory
     )
     shareListViewController.reactor = shareListViewReactor
     return shareListViewController
+  }
+
+  public func makeBrowsingModule() -> BrowsingViewController {
+    let browsingViewReactor = BrowsingViewReactor(shareUseCase: shareUseCase)
+    let browsingViewController = BrowsingViewController.controllerFromStoryboard(
+      "Browsing",
+      bundleIdentifier: "com.depromeet.um.shareui"
+    )
+    browsingViewController.reactor = browsingViewReactor
+    return browsingViewController
   }
 }

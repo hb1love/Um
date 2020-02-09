@@ -8,10 +8,13 @@
 
 import Common
 import ShareUI
+import AccountUI
 
 final class MainCoordinatorFactory: MainCoordinatorFactoryProtocol {
   private let mainModuleFactory: MainModuleFactoryType
   private let shareModuleFactory: ShareEditModuleFactoryType
+
+  public var isAuthorized: Bool?
 
   init(
     mainModuleFactory: MainModuleFactoryType,
@@ -21,7 +24,8 @@ final class MainCoordinatorFactory: MainCoordinatorFactoryProtocol {
     self.shareModuleFactory = shareModuleFactory
   }
 
-  func makeMainCoordinator(router: Routable) -> Coordinator & MainTabCoordinatorOutput {
+  func makeMainCoordinator(router: Routable) ->
+    Coordinator & MainTabCoordinatorInput & MainTabCoordinatorOutput {
     return MainTabCoordinator(
       mainModuleFactory: mainModuleFactory,
       shareModuleFactory: shareModuleFactory,

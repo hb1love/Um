@@ -10,5 +10,5 @@ import Common
 
 protocol MainCoordinatorFactoryProtocol {
   func makeMainCoordinator(router: Routable) ->
-    Coordinator & MainTabCoordinatorOutput
+    Coordinator & MainTabCoordinatorInput & MainTabCoordinatorOutput
 }

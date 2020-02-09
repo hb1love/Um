@@ -22,6 +22,7 @@ def rx
   pod 'RxCocoa'
   pod 'RxCodable'
   pod 'RxDataSources'
+  pod 'RxSwiftExt'
   pod 'RxGesture'
 end
 
@@ -114,6 +115,7 @@ target 'AccountUI' do
   common
   rx
   ui
+  sdk
 
   target 'AccountUITests' do
     inherit! :search_paths

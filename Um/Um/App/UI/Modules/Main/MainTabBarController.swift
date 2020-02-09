@@ -20,6 +20,7 @@ final class MainTabBarController: UITabBarController {
 
   // MARK: - Subviews
 
+  private var tabBarView: UIView!
   lazy var floatingTabBar: FloatingTabBar = {
     let view = FloatingTabBar()
     view.delegate = self
@@ -28,16 +29,29 @@ final class MainTabBarController: UITabBarController {
     return view
   }()
 
-  // MARK: - Properties
+  lazy var loginTabBar: LoginTabBar = {
+    let view = LoginTabBar()
+    view.delegate = self
+    view.cornerRadius = 28
+    self.view.addSubview(view)
+    return view
+  }()
+
+  // MARK: - Flow handler
 
   var onNewPost: (() -> Void)?
+  var onSignUp: (() -> Void)?
+
+  // MARK: - Properties
 
   var serviceMap = [ServiceType: RootCoordinator]()
   var serviceViews = [UIViewController]()
+  var isAuthorized: Bool = false
 
-  init(serviceMap: [ServiceType: RootCoordinator]) {
+  init(serviceMap: [ServiceType: RootCoordinator], isAuthorized: Bool) {
     super.init(nibName: nil, bundle: nil)
     self.serviceMap = serviceMap
+    self.isAuthorized = isAuthorized
     setupSubviews()
   }
 
@@ -51,6 +65,11 @@ final class MainTabBarController: UITabBarController {
   }
 
   func setupSubviews() {
+    isAuthorized ? makeFloatingTabBar() : makeLoginTabBar()
+    setupConstraints()
+  }
+
+  func makeFloatingTabBar() {
     var serviceViews = [UIViewController]()
     var tabBarItems = [UITabBarItem]()
     ServiceType.allCases.forEach { service in
@@ -62,7 +81,7 @@ final class MainTabBarController: UITabBarController {
           tabBarItem.image = UIImage(named: "tab_home_active")?
             .withRenderingMode(.alwaysTemplate)
           tabBarItem.tag = 0
-        case .search:
+        case .browsing:
           tabBarItem.image = UIImage(named: "tab_search_inactive")?
             .withRenderingMode(.alwaysTemplate)
           tabBarItem.tag = 1
@@ -95,6 +114,21 @@ final class MainTabBarController: UITabBarController {
 
     setViewControllers(serviceViews, animated: false)
     tabBar.isHidden = true
+
+    tabBarView = floatingTabBar
+  }
+
+  func makeLoginTabBar() {
+    guard var coordinator = self.serviceMap[.share] else { return }
+
+    coordinator.changeTabBar = changeTabBar
+    let navigationController = coordinator.rootViewController
+    coordinator.start()
+
+    setViewControllers([navigationController], animated: false)
+    tabBar.isHidden = true
+
+    tabBarView = loginTabBar
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -102,14 +136,9 @@ final class MainTabBarController: UITabBarController {
     self.navigationController?.setNavigationBarHidden(true, animated: false)
   }
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setupConstraints()
-  }
-
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    floatingTabBar.shadow(
+    tabBarView.shadow(
       color: .gray,
       opacity: 0.5,
       offSet: CGSize(width: 1, height: 1),
@@ -120,7 +149,7 @@ final class MainTabBarController: UITabBarController {
   }
 
   func setupConstraints() {
-    floatingTabBar.snp.makeConstraints {
+    tabBarView.snp.makeConstraints {
       $0.centerX.equalToSuperview()
       $0.bottom.equalToSuperview().offset(-Metric.floatingBottom)
     }
@@ -129,7 +158,7 @@ final class MainTabBarController: UITabBarController {
   func changeTabBar(_ hidden: Bool) {
     let transform: CGAffineTransform = hidden ? .init(translationX: 0, y: 150) : .identity
     UIView.animate(withDuration: 0.5) {
-      self.floatingTabBar.transform = transform
+      self.tabBarView.transform = transform
     }
   }
 }
@@ -144,5 +173,11 @@ extension MainTabBarController: FloatingTabBarDelegate {
         floatingTabBar.refreshTabBar(index: index)
       }
     }
+  }
+}
+
+extension MainTabBarController: LoginTabBarDelegate {
+  func didTap() {
+    onSignUp?()
   }
 }

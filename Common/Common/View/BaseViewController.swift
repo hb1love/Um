@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 
 open class BaseViewController: UIViewController {
+
   public var disposeBag = DisposeBag()
 
   public var safeAreaInset: UIEdgeInsets = .zero {
@@ -18,12 +19,9 @@ open class BaseViewController: UIViewController {
     }
   }
 
-  public override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
-  }
-
   open override func viewDidLoad() {
     setupSubviews()
+    self.navigationController?.delegate = self
 
     super.viewDidLoad()
   }
@@ -35,4 +33,10 @@ open class BaseViewController: UIViewController {
 
   open func setupSubviews() {}
   open func setupConstraints() {}
+}
+
+extension BaseViewController: UINavigationControllerDelegate {
+  public func navigationControllerSupportedInterfaceOrientations(_ navigationController: UINavigationController) -> UIInterfaceOrientationMask {
+    return navigationController.topViewController?.supportedInterfaceOrientations ?? .all
+  }
 }

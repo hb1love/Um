@@ -11,7 +11,6 @@
 		2D01332D23CA113D003C3DCA /* ApplicationInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D01332C23CA113D003C3DCA /* ApplicationInjector.swift */; };
 		2D01332F23CA1156003C3DCA /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D01332E23CA1156003C3DCA /* ApplicationCoordinator.swift */; };
 		2D087D7423DDB054006AA5E7 /* FloatingTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087D7323DDB054006AA5E7 /* FloatingTabBar.swift */; };
-		2D087D7623DDB150006AA5E7 /* FloatingTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D087D7523DDB150006AA5E7 /* FloatingTabBar.xib */; };
 		2D095A8023D497D000EA2161 /* AccountUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7D23D497D000EA2161 /* AccountUI.framework */; };
 		2D095A8123D497D000EA2161 /* AccountUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7D23D497D000EA2161 /* AccountUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D095A8223D497D000EA2161 /* AuthService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7E23D497D000EA2161 /* AuthService.framework */; };
@@ -19,7 +18,6 @@
 		2D095A8423D497D000EA2161 /* UserService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7F23D497D000EA2161 /* UserService.framework */; };
 		2D095A8523D497D000EA2161 /* UserService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A7F23D497D000EA2161 /* UserService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D13D3AE23C648A8001C91C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13D3AD23C648A8001C91C2 /* AppDelegate.swift */; };
-		2D13D3B523C648A8001C91C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D13D3B323C648A8001C91C2 /* Main.storyboard */; };
 		2D13D3B723C648AA001C91C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D13D3B623C648AA001C91C2 /* Assets.xcassets */; };
 		2D13D3BA23C648AA001C91C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D13D3B823C648AA001C91C2 /* LaunchScreen.storyboard */; };
 		2D13D3C523C648AA001C91C2 /* UmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D13D3C423C648AA001C91C2 /* UmTests.swift */; };
@@ -43,6 +41,7 @@
 		2DD4294723CC98A900544117 /* Share.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4294523CC98A900544117 /* Share.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DD4297223CC995A00544117 /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4297123CC995A00544117 /* Account.framework */; };
 		2DD4297323CC995A00544117 /* Account.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4297123CC995A00544117 /* Account.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DE977D123E7240600E1BA98 /* LoginTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977D023E7240600E1BA98 /* LoginTabBar.swift */; };
 		5C7CDF8E277C90E5545F0B2F /* Pods_Um.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 794682E0008EEB0C5BFE294D /* Pods_Um.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,12 +83,16 @@
 		2D01332C23CA113D003C3DCA /* ApplicationInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInjector.swift; sourceTree = "<group>"; };
 		2D01332E23CA1156003C3DCA /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		2D01333023CA1A1B003C3DCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2D05E2C023EDB06800FC058D /* Base.release(Prod).xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Base.release(Prod).xcconfig"; sourceTree = "<group>"; };
+		2D05E2C123EDB06800FC058D /* Base.debug(Prod).xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Base.debug(Prod).xcconfig"; sourceTree = "<group>"; };
+		2D05E2C223EDB06800FC058D /* Base.debug(Dev).xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Base.debug(Dev).xcconfig"; sourceTree = "<group>"; };
+		2D05E2C323EDB06800FC058D /* Base.release(Dev).xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "Base.release(Dev).xcconfig"; sourceTree = "<group>"; };
+		2D05E2CB23EDB8E800FC058D /* Um-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Um-Bridging-Header.h"; sourceTree = "<group>"; };
 		2D087D7323DDB054006AA5E7 /* FloatingTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabBar.swift; sourceTree = "<group>"; };
-		2D087D7523DDB150006AA5E7 /* FloatingTabBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FloatingTabBar.xib; sourceTree = "<group>"; };
 		2D095A7D23D497D000EA2161 /* AccountUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AccountUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A7E23D497D000EA2161 /* AuthService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AuthService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A7F23D497D000EA2161 /* UserService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UserService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D13D3AA23C648A8001C91C2 /* Um.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Um.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D13D3AA23C648A8001C91C2 /* 움.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "움.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D13D3AD23C648A8001C91C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D13D3B423C648A8001C91C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2D13D3B623C648AA001C91C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,8 +112,10 @@
 		2D7795CA23CCCEBF005B84A9 /* MainModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactoryType.swift; sourceTree = "<group>"; };
 		2D7795CD23CCCF2B005B84A9 /* MainCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactory.swift; sourceTree = "<group>"; };
 		2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
+		2D8253A623EB0D1C007EBDD2 /* Um.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Um.entitlements; sourceTree = "<group>"; };
 		2DD4294523CC98A900544117 /* Share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD4297123CC995A00544117 /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE977D023E7240600E1BA98 /* LoginTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTabBar.swift; sourceTree = "<group>"; };
 		32AA34C4D085A8DC421F1A0F /* Pods-UmTests.release(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UmTests.release(prod).xcconfig"; path = "Target Support Files/Pods-UmTests/Pods-UmTests.release(prod).xcconfig"; sourceTree = "<group>"; };
 		727D95BF153452BFF4DDEDFC /* Pods-Um.release(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Um.release(dev).xcconfig"; path = "Target Support Files/Pods-Um/Pods-Um.release(dev).xcconfig"; sourceTree = "<group>"; };
 		794682E0008EEB0C5BFE294D /* Pods_Um.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Um.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				2D087D7323DDB054006AA5E7 /* FloatingTabBar.swift */,
-				2D087D7523DDB150006AA5E7 /* FloatingTabBar.xib */,
+				2DE977D023E7240600E1BA98 /* LoginTabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,7 +180,7 @@
 		2D13D3AB23C648A8001C91C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D13D3AA23C648A8001C91C2 /* Um.app */,
+				2D13D3AA23C648A8001C91C2 /* 움.app */,
 				2D13D3C023C648AA001C91C2 /* UmTests.xctest */,
 			);
 			name = Products;
@@ -268,8 +273,14 @@
 		2D3F99C323C9F8EF007A4863 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
+				2D8253A623EB0D1C007EBDD2 /* Um.entitlements */,
+				2D05E2C223EDB06800FC058D /* Base.debug(Dev).xcconfig */,
+				2D05E2C123EDB06800FC058D /* Base.debug(Prod).xcconfig */,
+				2D05E2C323EDB06800FC058D /* Base.release(Dev).xcconfig */,
+				2D05E2C023EDB06800FC058D /* Base.release(Prod).xcconfig */,
 				2D01333023CA1A1B003C3DCA /* GoogleService-Info.plist */,
 				2D13D3BB23C648AA001C91C2 /* Info.plist */,
+				2D05E2CB23EDB8E800FC058D /* Um-Bridging-Header.h */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -356,7 +367,7 @@
 			);
 			name = Um;
 			productName = Um;
-			productReference = 2D13D3AA23C648A8001C91C2 /* Um.app */;
+			productReference = 2D13D3AA23C648A8001C91C2 /* 움.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D13D3BF23C648AA001C91C2 /* UmTests */ = {
@@ -424,8 +435,6 @@
 				2D13D3BA23C648AA001C91C2 /* LaunchScreen.storyboard in Resources */,
 				2D91E7EC23CA3C2E00446794 /* GoogleService-Info.plist in Resources */,
 				2D13D3B723C648AA001C91C2 /* Assets.xcassets in Resources */,
-				2D087D7623DDB150006AA5E7 /* FloatingTabBar.xib in Resources */,
-				2D13D3B523C648A8001C91C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +543,7 @@
 				2D2BBC3223CCC46D0052394B /* MainTabBarController.swift in Sources */,
 				2D7795C523CCCE57005B84A9 /* MainTabCoordinator.swift in Sources */,
 				2D7795C923CCCEA0005B84A9 /* MainModuleFactory.swift in Sources */,
+				2DE977D123E7240600E1BA98 /* LoginTabBar.swift in Sources */,
 				2D13D3AE23C648A8001C91C2 /* AppDelegate.swift in Sources */,
 				2D01332D23CA113D003C3DCA /* ApplicationInjector.swift in Sources */,
 			);
@@ -579,6 +589,7 @@
 /* Begin XCBuildConfiguration section */
 		2D13D3C723C648AA001C91C2 /* Debug(Prod) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D05E2C123EDB06800FC058D /* Base.debug(Prod).xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -639,6 +650,7 @@
 		};
 		2D13D3C823C648AA001C91C2 /* Release(Prod) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D05E2C023EDB06800FC058D /* Base.release(Prod).xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -696,10 +708,15 @@
 			baseConfigurationReference = C9B5AA5EDDF7BE30F6E2D898 /* Pods-Um.debug(prod).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CODE_SIGN_ENTITLEMENTS = Um/Configuration/Um.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Um/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -707,9 +724,87 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleDataTransportCCTSupport\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-framework",
+					"\"nanopb\"",
+					"-all_load",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.depromeet.um";
+				PRODUCT_NAME = "움";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Um/Configuration/Um-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -721,10 +816,15 @@
 			baseConfigurationReference = 1F1B9B041EC7FAD6BF07C8D9 /* Pods-Um.release(prod).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CODE_SIGN_ENTITLEMENTS = Um/Configuration/Um.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Um/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -732,9 +832,86 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleDataTransportCCTSupport\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-framework",
+					"\"nanopb\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.depromeet.um";
+				PRODUCT_NAME = "움";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Um/Configuration/Um-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -750,13 +927,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				INFOPLIST_FILE = UmTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UmTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.umtests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -773,13 +950,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				INFOPLIST_FILE = UmTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UmTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.umtests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -789,6 +966,7 @@
 		};
 		2DD8D1A523D890AF003A04FB /* Debug(Dev) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D05E2C223EDB06800FC058D /* Base.debug(Dev).xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -852,10 +1030,15 @@
 			baseConfigurationReference = 26D0A39DC5A41E7A6AAE6EE5 /* Pods-Um.debug(dev).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Um/Configuration/Um.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Um/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -863,9 +1046,87 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleDataTransportCCTSupport\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-framework",
+					"\"nanopb\"",
+					"-all_load",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -DDEV -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.test;
-				PRODUCT_NAME = "$(TARGET_NAME) Dev";
+				PRODUCT_NAME = "움 Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Um/Configuration/Um-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -881,22 +1142,23 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				INFOPLIST_FILE = UmTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UmTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.umtests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Um.app/Um";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Um Dev.app/Um Dev";
 			};
 			name = "Debug(Dev)";
 		};
 		2DD8D1A823D890B5003A04FB /* Release(Dev) */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D05E2C323EDB06800FC058D /* Base.release(Dev).xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -954,10 +1216,15 @@
 			baseConfigurationReference = 727D95BF153452BFF4DDEDFC /* Pods-Um.release(dev).xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Um/Configuration/Um.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Um/Configuration/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -965,9 +1232,87 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleDataTransportCCTSupport\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Moya\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"Result\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-framework",
+					"\"nanopb\"",
+					"-all_load",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.test;
-				PRODUCT_NAME = "$(TARGET_NAME) Dev";
+				PRODUCT_NAME = "움 Dev";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Um/Configuration/Um-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -983,17 +1328,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KW522KWZF;
 				INFOPLIST_FILE = UmTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.UmTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.umtests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Um.app/Um";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Um Dev.app/Um Dev";
 			};
 			name = "Release(Dev)";
 		};

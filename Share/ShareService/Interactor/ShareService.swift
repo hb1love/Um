@@ -12,6 +12,8 @@ import RxSwift
 
 public protocol ShareUseCase {
   func hotPosts() -> Single<[Post]>
+
+  func allCategories() -> Single<[Category]>
   func recommendCategories() -> Single<[Category]>
 }
 
@@ -25,6 +27,10 @@ public final class ShareService: ShareUseCase {
 
   public func hotPosts() -> Single<[Post]> {
     .just(Post.mock.shuffled() + Post.mock.shuffled() + Post.mock.shuffled() + Post.mock.shuffled())
+  }
+
+  public func allCategories() -> Single<[Category]> {
+    .just(Category.mock + Category.mock)
   }
 
   public func recommendCategories() -> Single<[Category]> {

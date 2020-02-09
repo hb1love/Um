@@ -11,7 +11,9 @@ import AuthService
 import UserService
 
 public final class AccountModuleFactory
-  : MyPageModuleFactoryType {
+  : LaunchModuleFactoryType
+  , LoginModuleFactoryType
+  , MyPageModuleFactoryType {
 
   private let authUseCase: AuthUseCase
   private let userUseCase: UserUseCase
@@ -19,6 +21,32 @@ public final class AccountModuleFactory
   public init(authUseCase: AuthUseCase, userUseCase: UserUseCase) {
     self.authUseCase = authUseCase
     self.userUseCase = userUseCase
+  }
+
+  public func makeLaunchModule() -> LaunchViewController {
+    let launchViewReactor = LaunchViewReactor(
+      authUseCase: authUseCase,
+      userUseCase: userUseCase
+    )
+    let launchViewController = LaunchViewController.controllerFromStoryboard(
+      "Launch",
+      bundleIdentifier: "com.depromeet.um.accountui"
+    )
+    launchViewController.reactor = launchViewReactor
+    return launchViewController
+  }
+
+  public func makeLoginModule() -> LoginViewController {
+    let loginViewReactor = LoginViewReactor(
+      authUseCase: authUseCase,
+      userUseCase: userUseCase
+    )
+    let loginViewController = LoginViewController.controllerFromStoryboard(
+      "Login",
+      bundleIdentifier: "com.depromeet.um.accountui"
+    )
+    loginViewController.reactor = loginViewReactor
+    return loginViewController
   }
 
   public func makeMyPageModule() -> MyPageViewController {

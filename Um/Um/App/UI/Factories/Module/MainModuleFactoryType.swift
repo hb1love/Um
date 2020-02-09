@@ -9,5 +9,5 @@
 import Common
 
 protocol MainModuleFactoryType {
-  func makeMainTabModule() -> MainTabBarController
+  func makeMainTabModule(isAuthorized: Bool) -> MainTabBarController
 }

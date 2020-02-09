@@ -22,10 +22,7 @@ final class TalentCell: BaseCollectionViewCell, View {
 
   override func setupSubviews() {
     super.setupSubviews()
-    let bundle = Bundle(identifier: "com.depromeet.um.shareui")
-    let nibName = "TalentView"
-    let nib = UINib(nibName: nibName, bundle: bundle)
-    talentView = nib.instantiate(withOwner: self, options: nil).first as? TalentView
+    talentView = TalentView.loadNib()
     contentView.addSubview(talentView)
   }
 

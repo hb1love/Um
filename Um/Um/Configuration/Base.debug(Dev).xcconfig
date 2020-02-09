@@ -1,0 +1,9 @@
+//
+//  Base.debug(Dev).xcconfig
+//  Um
+//
+//  Created by hb1love on 2019/10/20.
+//  Copyright © 2019 depromeet. All rights reserved.
+//
+
+KAKAO_APP_KEY = 8e465664332fca2e3d62b377366fbdc9

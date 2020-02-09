@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hRI-XD-LVK">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="zqe-Hp-bnJ">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SaF-kz-cEv" customClass="LoginViewController" customModule="AccountUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bQx-9P-AB7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GB4-9A-zr0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lu8-l1-T7N" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SsN-Dr-Xmg" userLabel="Intro Stack View">
+                                                <rect key="frame" x="0.0" y="343" width="414" height="132"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_launch_logo" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-rb-p51">
+                                                        <rect key="frame" x="167" y="0.0" width="80" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="OEg-Er-TWC"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="WJ8-bq-7oe"/>
+                                                            <constraint firstAttribute="width" constant="80" id="c2v-AO-h8J"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="pNp-Qg-hIB"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrT-DS-arX" userLabel="Padding">
+                                                        <rect key="frame" x="87" y="60" width="240" height="25"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="Upp-43-wrE"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다양한 재능러를 만나보세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zi-9v-LUJ">
+                                                        <rect key="frame" x="89.6666666666667" y="85" width="234.33333333333337" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="21" id="7fQ-ws-32w"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="21"/>
+                                                        <color key="textColor" name="launch_intro1"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HTz-zR-IbP" userLabel="Padding">
+                                                        <rect key="frame" x="87" y="106" width="240" height="8"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="8" id="ScJ-Z4-esW"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내가 원하는 재능을 배우고 나눌 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksf-Ga-J2O">
+                                                        <rect key="frame" x="68" y="114" width="278" height="18"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="18" id="h2k-De-tTr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                        <color key="textColor" name="launch_intro2"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jQl-Kr-FMe">
+                                                <rect key="frame" x="44" y="649" width="326" height="137"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cy3-RX-4l8" userLabel="Padding">
+                                                        <rect key="frame" x="0.0" y="0.0" width="326" height="15"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="LQr-y6-IJI"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp3-RS-qau" customClass="LoginButton" customModule="AccountUI" customModuleProvider="target">
+                                                        <rect key="frame" x="19" y="15" width="288" height="48"/>
+                                                        <color key="backgroundColor" name="login_kakao_bg"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="48" id="g8Y-wu-4px"/>
+                                                            <constraint firstAttribute="width" constant="288" id="sWe-EC-bo8"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                        <state key="normal" title="Kakao로 시작하기">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oiP-m1-ZIB" userLabel="Padding">
+                                                        <rect key="frame" x="0.0" y="63" width="326" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="4kQ-ch-RKE"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLU-hf-Z62">
+                                                        <rect key="frame" x="96.333333333333314" y="113" width="133" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="Ii6-QW-X25"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="로그인 없이 둘러보기">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="16" name="AppleSDGothicNeo-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="SsN-Dr-Xmg" secondAttribute="trailing" id="0GY-7u-FfQ"/>
+                                            <constraint firstItem="jQl-Kr-FMe" firstAttribute="top" relation="greaterThanOrEqual" secondItem="SsN-Dr-Xmg" secondAttribute="bottom" constant="80" id="GFU-3H-yXf"/>
+                                            <constraint firstItem="SsN-Dr-Xmg" firstAttribute="leading" secondItem="lu8-l1-T7N" secondAttribute="leading" id="NcQ-La-T0j"/>
+                                            <constraint firstItem="SsN-Dr-Xmg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lu8-l1-T7N" secondAttribute="top" constant="60" id="Tgl-Yf-CDN"/>
+                                            <constraint firstItem="SsN-Dr-Xmg" firstAttribute="centerY" secondItem="lu8-l1-T7N" secondAttribute="centerY" priority="999" id="W9d-ww-wYU"/>
+                                            <constraint firstItem="jQl-Kr-FMe" firstAttribute="centerX" secondItem="lu8-l1-T7N" secondAttribute="centerX" id="buX-4Q-RnZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="jQl-Kr-FMe" secondAttribute="bottom" constant="32" id="rLD-Fb-dog"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lu8-l1-T7N" firstAttribute="top" secondItem="eBH-jd-xOA" secondAttribute="top" id="7Di-pl-Vu6"/>
+                                    <constraint firstItem="eBH-jd-xOA" firstAttribute="trailing" secondItem="lu8-l1-T7N" secondAttribute="trailing" id="AmR-ft-Rfn"/>
+                                    <constraint firstItem="EBH-XT-crT" firstAttribute="bottom" secondItem="lu8-l1-T7N" secondAttribute="bottom" id="dcM-2a-jHa"/>
+                                    <constraint firstItem="lu8-l1-T7N" firstAttribute="leading" secondItem="EBH-XT-crT" secondAttribute="leading" id="lcU-d8-yaP"/>
+                                    <constraint firstItem="eBH-jd-xOA" firstAttribute="height" secondItem="lu8-l1-T7N" secondAttribute="height" id="qFb-Ra-mdv"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eBH-jd-xOA"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="EBH-XT-crT"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="N4z-Xt-kmW" firstAttribute="trailing" secondItem="lu8-l1-T7N" secondAttribute="trailing" id="1a6-8j-Blh"/>
+                            <constraint firstItem="lu8-l1-T7N" firstAttribute="leading" secondItem="N4z-Xt-kmW" secondAttribute="leading" id="CMr-7U-Lmk"/>
+                            <constraint firstItem="GB4-9A-zr0" firstAttribute="leading" secondItem="N4z-Xt-kmW" secondAttribute="leading" id="cvS-Ss-2os"/>
+                            <constraint firstItem="GB4-9A-zr0" firstAttribute="bottom" secondItem="N4z-Xt-kmW" secondAttribute="bottom" id="d1O-4O-T5Y"/>
+                            <constraint firstItem="N4z-Xt-kmW" firstAttribute="trailing" secondItem="GB4-9A-zr0" secondAttribute="trailing" id="jom-ky-Dxa"/>
+                            <constraint firstItem="GB4-9A-zr0" firstAttribute="top" secondItem="N4z-Xt-kmW" secondAttribute="top" id="wNX-e0-tt2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="N4z-Xt-kmW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gcU-sa-rrD"/>
+                    <connections>
+                        <outlet property="kakaoLogin" destination="cp3-RS-qau" id="6fD-Lj-tq5"/>
+                        <outlet property="loginProviderStackView" destination="jQl-Kr-FMe" id="f86-ah-0jX"/>
+                        <outlet property="noLogin" destination="XLU-hf-Z62" id="Pwp-CO-7yf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Caz-aD-Thy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.8985507246377" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P8t-jj-w8Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="hRI-XD-LVK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jft-j1-aZm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SaF-kz-cEv" kind="relationship" relationship="rootViewController" id="AqN-eF-IKQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vye-gm-hCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92.753623188405811" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_launch_logo" width="21" height="20"/>
+        <namedColor name="launch_intro1">
+            <color red="0.97600001096725464" green="0.39599999785423279" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="launch_intro2">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="login_kakao_bg">
+            <color red="0.22699999809265137" green="0.22699999809265137" blue="0.22699999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

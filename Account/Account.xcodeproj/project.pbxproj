@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A156ECFD4D1D91B0FC0EF85 /* Pods_UserServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FCC4632DDE5B8F51D59E95 /* Pods_UserServiceTests.framework */; };
+		2D05E2D523EDC83200FC058D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */; };
+		2D05E2D623EDC83200FC058D /* KakaoOpenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D095A1223D4485800EA2161 /* AccountUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A0923D4485800EA2161 /* AccountUI.framework */; };
 		2D095A1723D4485800EA2161 /* AccountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A1623D4485800EA2161 /* AccountUITests.swift */; };
 		2D095A1923D4485800EA2161 /* AccountUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D095A0B23D4485800EA2161 /* AccountUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,17 +49,29 @@
 		2D7EC44023D5E8EF00D4C775 /* UserService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A5023D44B6B00EA2161 /* UserService.framework */; };
 		2D7EC44123D5E8EF00D4C775 /* UserService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A5023D44B6B00EA2161 /* UserService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D7EC44623D5E98E00D4C775 /* AccountCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */; };
-		2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */; };
+		2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift */; };
 		2D7EC44B23D5EA0000D4C775 /* AccountModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44A23D5EA0000D4C775 /* AccountModuleFactory.swift */; };
 		2D7EC44D23D5EA7400D4C775 /* MyPageModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44C23D5EA7400D4C775 /* MyPageModuleFactoryType.swift */; };
 		2D7EC45023D5EAB700D4C775 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44F23D5EAB700D4C775 /* MyPageViewController.swift */; };
 		2D7EC45223D5EEE900D4C775 /* AccountUIInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC45123D5EEE900D4C775 /* AccountUIInjector.swift */; };
 		2D7EC45423D5F45200D4C775 /* MyPageViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC45323D5F45200D4C775 /* MyPageViewReactor.swift */; };
+		2D8253A123EB05F3007EBDD2 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8253A023EB05F3007EBDD2 /* LoginButton.swift */; };
 		2DD4296023CC990100544117 /* Account.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4295623CC990100544117 /* Account.framework */; };
 		2DD4296523CC990100544117 /* AccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4296423CC990100544117 /* AccountTests.swift */; };
 		2DD4296723CC990100544117 /* Account.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD4295923CC990100544117 /* Account.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DD4297523CC997000544117 /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4297423CC997000544117 /* Common.framework */; };
 		2DD4297623CC997000544117 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4297423CC997000544117 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DE977B923E6FD5000E1BA98 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977B823E6FD5000E1BA98 /* LoginViewController.swift */; };
+		2DE977BC23E6FFD300E1BA98 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE977BB23E6FFD300E1BA98 /* Login.storyboard */; };
+		2DE977BE23E6FFE800E1BA98 /* LoginViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977BD23E6FFE800E1BA98 /* LoginViewReactor.swift */; };
+		2DE977C123E7079D00E1BA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE977C023E7079D00E1BA98 /* Assets.xcassets */; };
+		2DE977C323E709DD00E1BA98 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977C223E709DD00E1BA98 /* LaunchViewController.swift */; };
+		2DE977C523E709EF00E1BA98 /* LaunchViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977C423E709EF00E1BA98 /* LaunchViewReactor.swift */; };
+		2DE977C723E709FA00E1BA98 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE977C623E709FA00E1BA98 /* Launch.storyboard */; };
+		2DE977C923E70E3100E1BA98 /* LaunchModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977C823E70E3100E1BA98 /* LaunchModuleFactoryType.swift */; };
+		2DE977CB23E70E7100E1BA98 /* LoginModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977CA23E70E7100E1BA98 /* LoginModuleFactoryType.swift */; };
+		2DE977CD23E70F8800E1BA98 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977CC23E70F8800E1BA98 /* LoginCoordinator.swift */; };
+		2DE977CF23E70F9C00E1BA98 /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977CE23E70F9C00E1BA98 /* LaunchCoordinator.swift */; };
 		3100344AF825D3F5105E50A3 /* Pods_AccountTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A621A0B7E9B458A15EE1C8B1 /* Pods_AccountTests.framework */; };
 		491BEDAF44EB219A663C3EA3 /* Pods_UserService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCDD97A3F1C33E49C7965096 /* Pods_UserService.framework */; };
 		6960BEC9BC1EDBC35352238E /* Pods_AuthService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C4445AEA17B5D8E982081D6 /* Pods_AuthService.framework */; };
@@ -150,6 +164,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2D7EC44123D5E8EF00D4C775 /* UserService.framework in Embed Frameworks */,
+				2D05E2D623EDC83200FC058D /* KakaoOpenSDK.framework in Embed Frameworks */,
 				2D7EC43D23D5E8EF00D4C775 /* AuthService.framework in Embed Frameworks */,
 				2D095AB023D4C71300EA2161 /* Common.framework in Embed Frameworks */,
 			);
@@ -175,6 +190,7 @@
 		17081E6C5C0EF6621DDEC761 /* Pods_AuthServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B01164D87CF37DDF719F7E1 /* Pods-UserServiceTests.debug(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserServiceTests.debug(prod).xcconfig"; path = "Target Support Files/Pods-UserServiceTests/Pods-UserServiceTests.debug(prod).xcconfig"; sourceTree = "<group>"; };
 		21FD95EC0C148BA339B242F4 /* Pods-Account.debug(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Account.debug(dev).xcconfig"; path = "Target Support Files/Pods-Account/Pods-Account.debug(dev).xcconfig"; sourceTree = "<group>"; };
+		2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = ../lib/KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		2D095A0923D4485800EA2161 /* AccountUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A0B23D4485800EA2161 /* AccountUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountUI.h; sourceTree = "<group>"; };
 		2D095A0C23D4485800EA2161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -214,12 +230,13 @@
 		2D095AAE23D4C71300EA2161 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7EC43A23D5E8C400D4C775 /* MyPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCoordinator.swift; sourceTree = "<group>"; };
 		2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactory.swift; sourceTree = "<group>"; };
-		2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactoryType.swift; sourceTree = "<group>"; };
+		2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
 		2D7EC44A23D5EA0000D4C775 /* AccountModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModuleFactory.swift; sourceTree = "<group>"; };
 		2D7EC44C23D5EA7400D4C775 /* MyPageModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModuleFactoryType.swift; sourceTree = "<group>"; };
 		2D7EC44F23D5EAB700D4C775 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		2D7EC45123D5EEE900D4C775 /* AccountUIInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUIInjector.swift; sourceTree = "<group>"; };
 		2D7EC45323D5F45200D4C775 /* MyPageViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewReactor.swift; sourceTree = "<group>"; };
+		2D8253A023EB05F3007EBDD2 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		2DD4295623CC990100544117 /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD4295923CC990100544117 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		2DD4295A23CC990100544117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -227,6 +244,17 @@
 		2DD4296423CC990100544117 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		2DD4296623CC990100544117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DD4297423CC997000544117 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE977B823E6FD5000E1BA98 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2DE977BB23E6FFD300E1BA98 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2DE977BD23E6FFE800E1BA98 /* LoginViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactor.swift; sourceTree = "<group>"; };
+		2DE977C023E7079D00E1BA98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DE977C223E709DD00E1BA98 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		2DE977C423E709EF00E1BA98 /* LaunchViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewReactor.swift; sourceTree = "<group>"; };
+		2DE977C623E709FA00E1BA98 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		2DE977C823E70E3100E1BA98 /* LaunchModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchModuleFactoryType.swift; sourceTree = "<group>"; };
+		2DE977CA23E70E7100E1BA98 /* LoginModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleFactoryType.swift; sourceTree = "<group>"; };
+		2DE977CC23E70F8800E1BA98 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		2DE977CE23E70F9C00E1BA98 /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
 		309B2A762A353B2DDE0E2B0C /* Pods_AccountUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AccountUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C08B377BADE278B5238545C /* Pods-UserServiceTests.release(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserServiceTests.release(prod).xcconfig"; path = "Target Support Files/Pods-UserServiceTests/Pods-UserServiceTests.release(prod).xcconfig"; sourceTree = "<group>"; };
 		3DB9406F45C4C9C280CA9677 /* Pods-AuthService.debug(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AuthService.debug(prod).xcconfig"; path = "Target Support Files/Pods-AuthService/Pods-AuthService.debug(prod).xcconfig"; sourceTree = "<group>"; };
@@ -273,6 +301,7 @@
 			files = (
 				901DED7B0E46AA80B29E6EED /* Pods_AccountUI.framework in Frameworks */,
 				2D7EC44023D5E8EF00D4C775 /* UserService.framework in Frameworks */,
+				2D05E2D523EDC83200FC058D /* KakaoOpenSDK.framework in Frameworks */,
 				2D7EC43C23D5E8EF00D4C775 /* AuthService.framework in Frameworks */,
 				2D095AAF23D4C71300EA2161 /* Common.framework in Frameworks */,
 			);
@@ -388,6 +417,7 @@
 		1F41311B82EDA6A3BA57A4F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */,
 				2D095AAE23D4C71300EA2161 /* Common.framework */,
 				2D095AAB23D4C6E500EA2161 /* Common.framework */,
 				2D095AA723D4C63900EA2161 /* Common.framework */,
@@ -413,6 +443,8 @@
 				2D7EC43723D5E84900D4C775 /* Coordinators */,
 				2D7EC43823D5E85400D4C775 /* Factories */,
 				2D7EC43923D5E85D00D4C775 /* Modules */,
+				2DE977BF23E7077D00E1BA98 /* Resources */,
+				2D82539F23EB05C6007EBDD2 /* Views */,
 				2D7EC45123D5EEE900D4C775 /* AccountUIInjector.swift */,
 			);
 			path = AccountUI;
@@ -587,6 +619,8 @@
 		2D7EC43723D5E84900D4C775 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				2DE977CE23E70F9C00E1BA98 /* LaunchCoordinator.swift */,
+				2DE977CC23E70F8800E1BA98 /* LoginCoordinator.swift */,
 				2D7EC43A23D5E8C400D4C775 /* MyPageCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -604,6 +638,8 @@
 		2D7EC43923D5E85D00D4C775 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2DE977BA23E6FE3400E1BA98 /* Launch */,
+				2DE977B723E6FD3600E1BA98 /* Login */,
 				2D7EC44E23D5EAA800D4C775 /* MyPage */,
 			);
 			path = Modules;
@@ -613,7 +649,7 @@
 			isa = PBXGroup;
 			children = (
 				2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */,
-				2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */,
+				2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -622,6 +658,8 @@
 			isa = PBXGroup;
 			children = (
 				2D7EC44A23D5EA0000D4C775 /* AccountModuleFactory.swift */,
+				2DE977C823E70E3100E1BA98 /* LaunchModuleFactoryType.swift */,
+				2DE977CA23E70E7100E1BA98 /* LoginModuleFactoryType.swift */,
 				2D7EC44C23D5EA7400D4C775 /* MyPageModuleFactoryType.swift */,
 			);
 			path = Module;
@@ -634,6 +672,14 @@
 				2D7EC45323D5F45200D4C775 /* MyPageViewReactor.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		2D82539F23EB05C6007EBDD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D8253A023EB05F3007EBDD2 /* LoginButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2DD4294C23CC990100544117 = {
@@ -686,6 +732,34 @@
 				2DD4296623CC990100544117 /* Info.plist */,
 			);
 			path = AccountTests;
+			sourceTree = "<group>";
+		};
+		2DE977B723E6FD3600E1BA98 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2DE977B823E6FD5000E1BA98 /* LoginViewController.swift */,
+				2DE977BD23E6FFE800E1BA98 /* LoginViewReactor.swift */,
+				2DE977BB23E6FFD300E1BA98 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2DE977BA23E6FE3400E1BA98 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				2DE977C223E709DD00E1BA98 /* LaunchViewController.swift */,
+				2DE977C423E709EF00E1BA98 /* LaunchViewReactor.swift */,
+				2DE977C623E709FA00E1BA98 /* Launch.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		2DE977BF23E7077D00E1BA98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2DE977C023E7079D00E1BA98 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -958,6 +1032,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE977C123E7079D00E1BA98 /* Assets.xcassets in Resources */,
+				2DE977BC23E6FFD300E1BA98 /* Login.storyboard in Resources */,
+				2DE977C723E709FA00E1BA98 /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1268,13 +1345,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE977C923E70E3100E1BA98 /* LaunchModuleFactoryType.swift in Sources */,
+				2DE977CF23E70F9C00E1BA98 /* LaunchCoordinator.swift in Sources */,
+				2DE977C523E709EF00E1BA98 /* LaunchViewReactor.swift in Sources */,
+				2DE977B923E6FD5000E1BA98 /* LoginViewController.swift in Sources */,
 				2D7EC45423D5F45200D4C775 /* MyPageViewReactor.swift in Sources */,
+				2DE977CB23E70E7100E1BA98 /* LoginModuleFactoryType.swift in Sources */,
 				2D7EC44B23D5EA0000D4C775 /* AccountModuleFactory.swift in Sources */,
 				2D7EC45223D5EEE900D4C775 /* AccountUIInjector.swift in Sources */,
 				2D7EC45023D5EAB700D4C775 /* MyPageViewController.swift in Sources */,
+				2DE977BE23E6FFE800E1BA98 /* LoginViewReactor.swift in Sources */,
 				2D7EC43B23D5E8C400D4C775 /* MyPageCoordinator.swift in Sources */,
 				2D7EC44623D5E98E00D4C775 /* AccountCoordinatorFactory.swift in Sources */,
-				2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift in Sources */,
+				2DE977C323E709DD00E1BA98 /* LaunchViewController.swift in Sources */,
+				2DE977CD23E70F8800E1BA98 /* LoginCoordinator.swift in Sources */,
+				2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift in Sources */,
+				2D8253A123EB05F3007EBDD2 /* LoginButton.swift in Sources */,
 				2D7EC44D23D5EA7400D4C775 /* MyPageModuleFactoryType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1400,6 +1486,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1407,6 +1497,40 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1428,6 +1552,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1435,6 +1563,40 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2017,6 +2179,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2024,6 +2190,40 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -2270,6 +2470,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../lib",
+				);
 				INFOPLIST_FILE = AccountUI/Configuration/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -2277,6 +2481,40 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Differentiator\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"ReactorKit\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxCodable\"",
+					"-framework",
+					"\"RxDataSources\"",
+					"-framework",
+					"\"RxGesture\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxSwiftExt\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SwiftyBeaver\"",
+					"-framework",
+					"\"Umbrella\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Um
+@testable import Um_Dev
 
 class UmTests: XCTestCase {
 
