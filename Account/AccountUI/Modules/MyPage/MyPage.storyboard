@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ig8-8y-CVg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Page View Controller-->
+        <scene sceneID="Z7z-lO-7jV">
+            <objects>
+                <viewController storyboardIdentifier="MyPageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UtC-rr-K9H" customClass="MyPageViewController" customModule="AccountUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bnW-cH-1o7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d83-hD-P2W">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IW9-er-PDZ" customClass="UICollectionViewLeftAlignedLayout">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="delegate" destination="UtC-rr-K9H" id="lBu-3u-V0B"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d83-hD-P2W" firstAttribute="leading" secondItem="kWv-cb-gy4" secondAttribute="leading" id="6E8-Ph-PsY"/>
+                            <constraint firstAttribute="bottom" secondItem="d83-hD-P2W" secondAttribute="bottom" id="Dgg-rr-esw"/>
+                            <constraint firstItem="d83-hD-P2W" firstAttribute="top" secondItem="kWv-cb-gy4" secondAttribute="top" id="gtb-ue-8uX"/>
+                            <constraint firstItem="kWv-cb-gy4" firstAttribute="trailing" secondItem="d83-hD-P2W" secondAttribute="trailing" id="zOq-Cd-8KM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kWv-cb-gy4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aab-T7-eHy"/>
+                    <connections>
+                        <outlet property="myPageCollectionView" destination="d83-hD-P2W" id="7io-FH-JDg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPU-qK-NaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1004.3478260869566" y="0.6696428571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xfw-vY-mbd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ig8-8y-CVg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pAr-Xc-33n">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UtC-rr-K9H" kind="relationship" relationship="rootViewController" id="Itn-n4-jjQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gox-ta-w8o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94.20289855072464" y="0.6696428571428571"/>
+        </scene>
+    </scenes>
+</document>

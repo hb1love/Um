@@ -1,5 +1,5 @@
 //
-//  CollectionHeaderView.swift
+//  FeedHeaderView.swift
 //  ShareUI
 //
 //  Created by hb1love on 2020/01/30.
@@ -10,7 +10,7 @@ import UIKit
 import Common
 import SnapKit
 
-final class CollectionHeaderView: BaseCollectionReusableView {
+final class FeedHeaderView: BaseCollectionReusableView {
 
   // MARK: - Constants
 

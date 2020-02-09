@@ -177,6 +177,7 @@ if [[ "$CONFIGURATION" == "Debug(Prod)" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Umbrella/Umbrella.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
 fi
@@ -197,6 +198,7 @@ if [[ "$CONFIGURATION" == "Debug(Dev)" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Umbrella/Umbrella.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
 fi
@@ -217,6 +219,7 @@ if [[ "$CONFIGURATION" == "Release(Prod)" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Umbrella/Umbrella.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
 fi
@@ -237,6 +240,7 @@ if [[ "$CONFIGURATION" == "Release(Dev)" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwiftExt/RxSwiftExt.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UICollectionViewLeftAlignedLayout/UICollectionViewLeftAlignedLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Umbrella/Umbrella.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
 fi

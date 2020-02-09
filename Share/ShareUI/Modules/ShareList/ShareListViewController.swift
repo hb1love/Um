@@ -15,6 +15,13 @@ import ReactorKit
 
 public final class ShareListViewController: BaseViewController, StoryboardView {
 
+  // MARK: - Constants
+
+  private struct Metric {
+    static let defaultHeaderHeight = 36.f
+    static let leading = 28.f
+  }
+
   // MARK: - Subviews
 
   @IBOutlet weak var feedCollectionView: UICollectionView!
@@ -43,15 +50,15 @@ public final class ShareListViewController: BaseViewController, StoryboardView {
     configureSupplementaryView: { dataSource, collectionView, kind, indexPath in
       switch dataSource[indexPath.section] {
       case .hotTalents:
-        let headerView = collectionView.dequeue(CollectionHeaderView.self, kind: kind, for: indexPath)!
+        let headerView = collectionView.dequeue(FeedHeaderView.self, kind: kind, for: indexPath)!
         headerView.titleLabel.text = "요즘 핫한 재능러"
         return headerView
       case .recommendCategories:
-        let headerView = collectionView.dequeue(CollectionHeaderView.self, kind: kind, for: indexPath)!
+        let headerView = collectionView.dequeue(FeedHeaderView.self, kind: kind, for: indexPath)!
         headerView.titleLabel.text = "이런 재능은 어때요?"
         return headerView
       case .hotPosts:
-        let headerView = collectionView.dequeue(CollectionHeaderView.self, kind: kind, for: indexPath)!
+        let headerView = collectionView.dequeue(FeedHeaderView.self, kind: kind, for: indexPath)!
         headerView.titleLabel.text = "인기 게시물"
         return headerView
       }
@@ -65,7 +72,7 @@ public final class ShareListViewController: BaseViewController, StoryboardView {
 
   public override func setupSubviews() {
     super.setupSubviews()
-    feedCollectionView.register(cell: CollectionHeaderView.self)
+    feedCollectionView.register(cell: FeedHeaderView.self)
     feedCollectionView.register(cell: TalentsCell.self)
     feedCollectionView.register(cell: RecommendCategoriesCell.self)
     feedCollectionView.register(cell: PostCell.self)
@@ -103,11 +110,11 @@ extension ShareListViewController: UICollectionViewDelegate, UICollectionViewDel
   ) -> UIEdgeInsets {
     switch dataSource[section] {
     case .hotTalents:
-      return UIEdgeInsets(top: 12, left: 0, bottom: 25, right: 0)
+      return UIEdgeInsets(top: 12, left: Metric.leading, bottom: 25, right: Metric.leading)
     case .recommendCategories:
-      return UIEdgeInsets(top: 2, left: 0, bottom: 22, right: 0)
+      return UIEdgeInsets(top: 2, left: Metric.leading, bottom: 22, right: Metric.leading)
     case .hotPosts:
-      return .zero
+      return UIEdgeInsets(top: 0, left: Metric.leading, bottom: 0, right: Metric.leading)
     }
   }
 

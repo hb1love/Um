@@ -6,6 +6,7 @@
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 
+import Common
 import RxSwift
 
 public class UserRepository: UserRepositoryType {
@@ -15,7 +16,7 @@ public class UserRepository: UserRepositoryType {
     self.remote = remote
   }
 
-  public func me() -> Single<User> {
+  public func me() -> Single<Member> {
     remote.me()
   }
 }

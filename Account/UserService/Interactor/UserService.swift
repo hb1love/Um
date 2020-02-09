@@ -10,7 +10,7 @@ import Common
 import RxSwift
 
 public protocol UserUseCase {
-  var currentUser: Observable<User?> { get }
+  var currentMember: Observable<Member?> { get }
 
   func fetchMe() -> Single<Void>
   func hotTalents() -> Single<[Member]>
@@ -23,17 +23,19 @@ public final class UserService: UserUseCase {
     self.userRepository = userRepository
   }
 
-  private let userSubject = ReplaySubject<User?>.create(bufferSize: 1)
-  public lazy var currentUser: Observable<User?> = self.userSubject.asObservable()
+  private let memberSubject = ReplaySubject<Member?>.create(bufferSize: 1)
+  public lazy var currentMember: Observable<Member?> = self.memberSubject.asObservable()
     .startWith(nil)
     .share(replay: 1)
 
   public func fetchMe() -> Single<Void> {
-    userRepository.me()
-      .do(onSuccess: { [weak self] user in
-        self?.userSubject.onNext(user)
-      })
-      .map { _ in }
+    self.memberSubject.onNext(Member.mock.first)
+    return .just(())
+//    userRepository.me()
+//      .do(onSuccess: { [weak self] user in
+//        self?.memberSubject.onNext(user)
+//      })
+//      .map { _ in }
   }
 
   public func hotTalents() -> Single<[Member]> {

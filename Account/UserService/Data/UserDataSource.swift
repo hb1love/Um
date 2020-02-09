@@ -6,8 +6,9 @@
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 
+import Common
 import RxSwift
 
 public protocol UserDataSource {
-  func me() -> Single<User>
+  func me() -> Single<Member>
 }

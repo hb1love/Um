@@ -44,10 +44,10 @@ public final class LaunchViewReactor: Reactor {
 //        .map { true }
 //        .catchErrorJustReturn(false)
 //        .map(Mutation.isAuthorized)
-
-      let scheduler = SerialDispatchQueueScheduler(qos: .default)
-      let isAuthorized = Observable<Void>.just(())
-        .delay(2, scheduler: scheduler)
+      let isAuthorized = userUseCase.fetchMe().asObservable()
+//      let scheduler = SerialDispatchQueueScheduler(qos: .default)
+//      let isAuthorized = Observable<Void>.just(())
+//        .delay(2, scheduler: scheduler)
         .map { true }
         .catchErrorJustReturn(false)
         .map(Mutation.isAuthorized)

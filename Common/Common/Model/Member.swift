@@ -20,8 +20,8 @@ public struct Member: Codable {
       photoUrl: "https://is.gd/yptK4j",
       nickname: "여신님",
       introduce: "안녕하세요. 재능 교환 언제든 환영합니다 :)",
-      has: [.photoshop],
-      wanna: [.app]
+      has: [.photoshop, .ai, .frontent, .photoshop, .ai, .frontent, .photoshop, .ai, .frontent, .photoshop, .ai, .frontent],
+      wanna: [.app, .backend, .photoshop, .photoshop, .ai, .frontent, .photoshop, .ai, .frontent]
     ),
     Member(
       id: "2",

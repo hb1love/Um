@@ -10,6 +10,13 @@
 		0A156ECFD4D1D91B0FC0EF85 /* Pods_UserServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FCC4632DDE5B8F51D59E95 /* Pods_UserServiceTests.framework */; };
 		2D05E2D523EDC83200FC058D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */; };
 		2D05E2D623EDC83200FC058D /* KakaoOpenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D05E2FB23F02D4600FC058D /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D05E2FA23F02D4600FC058D /* MyPage.storyboard */; };
+		2D05E2FE23F02E9900FC058D /* MyPageViewSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E2FD23F02E9900FC058D /* MyPageViewSection.swift */; };
+		2D05E30123F0312E00FC058D /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E30023F0312E00FC058D /* ProfileCell.swift */; };
+		2D05E30323F0313B00FC058D /* ProfileCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E30223F0313B00FC058D /* ProfileCellReactor.swift */; };
+		2D05E30523F0321400FC058D /* IntroduceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E30423F0321400FC058D /* IntroduceCell.swift */; };
+		2D05E30723F0325700FC058D /* IntroduceCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E30623F0325700FC058D /* IntroduceCellReactor.swift */; };
+		2D05E31B23F072EB00FC058D /* MyPageHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E31A23F072EB00FC058D /* MyPageHeaderView.swift */; };
 		2D095A1223D4485800EA2161 /* AccountUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A0923D4485800EA2161 /* AccountUI.framework */; };
 		2D095A1723D4485800EA2161 /* AccountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A1623D4485800EA2161 /* AccountUITests.swift */; };
 		2D095A1923D4485800EA2161 /* AccountUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D095A0B23D4485800EA2161 /* AccountUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -191,6 +198,13 @@
 		1B01164D87CF37DDF719F7E1 /* Pods-UserServiceTests.debug(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserServiceTests.debug(prod).xcconfig"; path = "Target Support Files/Pods-UserServiceTests/Pods-UserServiceTests.debug(prod).xcconfig"; sourceTree = "<group>"; };
 		21FD95EC0C148BA339B242F4 /* Pods-Account.debug(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Account.debug(dev).xcconfig"; path = "Target Support Files/Pods-Account/Pods-Account.debug(dev).xcconfig"; sourceTree = "<group>"; };
 		2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = ../lib/KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		2D05E2FA23F02D4600FC058D /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		2D05E2FD23F02E9900FC058D /* MyPageViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewSection.swift; sourceTree = "<group>"; };
+		2D05E30023F0312E00FC058D /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		2D05E30223F0313B00FC058D /* ProfileCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellReactor.swift; sourceTree = "<group>"; };
+		2D05E30423F0321400FC058D /* IntroduceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceCell.swift; sourceTree = "<group>"; };
+		2D05E30623F0325700FC058D /* IntroduceCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroduceCellReactor.swift; sourceTree = "<group>"; };
+		2D05E31A23F072EB00FC058D /* MyPageHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageHeaderView.swift; sourceTree = "<group>"; };
 		2D095A0923D4485800EA2161 /* AccountUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AccountUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D095A0B23D4485800EA2161 /* AccountUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountUI.h; sourceTree = "<group>"; };
 		2D095A0C23D4485800EA2161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -436,6 +450,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2D05E2FC23F02E6C00FC058D /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				2D05E2FD23F02E9900FC058D /* MyPageViewSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		2D05E2FF23F0312200FC058D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D05E31A23F072EB00FC058D /* MyPageHeaderView.swift */,
+				2D05E30023F0312E00FC058D /* ProfileCell.swift */,
+				2D05E30223F0313B00FC058D /* ProfileCellReactor.swift */,
+				2D05E30423F0321400FC058D /* IntroduceCell.swift */,
+				2D05E30623F0325700FC058D /* IntroduceCellReactor.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2D095A0A23D4485800EA2161 /* AccountUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -668,8 +702,11 @@
 		2D7EC44E23D5EAA800D4C775 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				2D05E2FF23F0312200FC058D /* Cell */,
+				2D05E2FC23F02E6C00FC058D /* Section */,
 				2D7EC44F23D5EAB700D4C775 /* MyPageViewController.swift */,
 				2D7EC45323D5F45200D4C775 /* MyPageViewReactor.swift */,
+				2D05E2FA23F02D4600FC058D /* MyPage.storyboard */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -1035,6 +1072,7 @@
 				2DE977C123E7079D00E1BA98 /* Assets.xcassets in Resources */,
 				2DE977BC23E6FFD300E1BA98 /* Login.storyboard in Resources */,
 				2DE977C723E709FA00E1BA98 /* Launch.storyboard in Resources */,
+				2D05E2FB23F02D4600FC058D /* MyPage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1347,12 +1385,14 @@
 			files = (
 				2DE977C923E70E3100E1BA98 /* LaunchModuleFactoryType.swift in Sources */,
 				2DE977CF23E70F9C00E1BA98 /* LaunchCoordinator.swift in Sources */,
+				2D05E31B23F072EB00FC058D /* MyPageHeaderView.swift in Sources */,
 				2DE977C523E709EF00E1BA98 /* LaunchViewReactor.swift in Sources */,
 				2DE977B923E6FD5000E1BA98 /* LoginViewController.swift in Sources */,
 				2D7EC45423D5F45200D4C775 /* MyPageViewReactor.swift in Sources */,
 				2DE977CB23E70E7100E1BA98 /* LoginModuleFactoryType.swift in Sources */,
 				2D7EC44B23D5EA0000D4C775 /* AccountModuleFactory.swift in Sources */,
 				2D7EC45223D5EEE900D4C775 /* AccountUIInjector.swift in Sources */,
+				2D05E30323F0313B00FC058D /* ProfileCellReactor.swift in Sources */,
 				2D7EC45023D5EAB700D4C775 /* MyPageViewController.swift in Sources */,
 				2DE977BE23E6FFE800E1BA98 /* LoginViewReactor.swift in Sources */,
 				2D7EC43B23D5E8C400D4C775 /* MyPageCoordinator.swift in Sources */,
@@ -1360,8 +1400,12 @@
 				2DE977C323E709DD00E1BA98 /* LaunchViewController.swift in Sources */,
 				2DE977CD23E70F8800E1BA98 /* LoginCoordinator.swift in Sources */,
 				2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift in Sources */,
+				2D05E30723F0325700FC058D /* IntroduceCellReactor.swift in Sources */,
+				2D05E30123F0312E00FC058D /* ProfileCell.swift in Sources */,
 				2D8253A123EB05F3007EBDD2 /* LoginButton.swift in Sources */,
 				2D7EC44D23D5EA7400D4C775 /* MyPageModuleFactoryType.swift in Sources */,
+				2D05E30523F0321400FC058D /* IntroduceCell.swift in Sources */,
+				2D05E2FE23F02E9900FC058D /* MyPageViewSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

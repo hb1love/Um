@@ -20,6 +20,8 @@
 		2D05E2EF23EEA39500FC058D /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E2EE23EEA39500FC058D /* CategoryView.swift */; };
 		2D05E2F523F00D7400FC058D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E2F423F00D7400FC058D /* SearchBar.swift */; };
 		2D05E2F723F00DC500FC058D /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D05E2F623F00DC500FC058D /* SearchBar.xib */; };
+		2D05E31923F0721A00FC058D /* BrowsingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E31823F0721A00FC058D /* BrowsingHeaderView.swift */; };
+		2D05E31C23F0743600FC058D /* FeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E31623F0715C00FC058D /* FeedHeaderView.swift */; };
 		2D087D7823DDE6F8006AA5E7 /* ShareEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D087D7723DDE6F8006AA5E7 /* ShareEdit.storyboard */; };
 		2D087D7B23DDE90A006AA5E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D087D7A23DDE90A006AA5E7 /* Assets.xcassets */; };
 		2D087D7D23DDEDF4006AA5E7 /* ShareEditViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D087D7C23DDEDF4006AA5E7 /* ShareEditViewReactor.swift */; };
@@ -69,7 +71,6 @@
 		2D75B9B923E54FC70093A167 /* RecommendCategoriesCellSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D75B9B823E54FC70093A167 /* RecommendCategoriesCellSection.swift */; };
 		2D75B9BD23E550BC0093A167 /* RecommendCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D75B9BC23E550BC0093A167 /* RecommendCategoryCell.swift */; };
 		2D75B9BF23E550CA0093A167 /* RecommendCategoryCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D75B9BE23E550CA0093A167 /* RecommendCategoryCellReactor.swift */; };
-		2D894C3223E31835008991E1 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D894C3123E31835008991E1 /* CollectionHeaderView.swift */; };
 		2DD4293423CC982E00544117 /* Share.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4292A23CC982E00544117 /* Share.framework */; };
 		2DD4293923CC982E00544117 /* ShareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD4293823CC982E00544117 /* ShareTests.swift */; };
 		2DD4293B23CC982E00544117 /* Share.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD4292D23CC982E00544117 /* Share.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -198,6 +199,8 @@
 		2D05E2EE23EEA39500FC058D /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		2D05E2F423F00D7400FC058D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		2D05E2F623F00DC500FC058D /* SearchBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
+		2D05E31623F0715C00FC058D /* FeedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedHeaderView.swift; sourceTree = "<group>"; };
+		2D05E31823F0721A00FC058D /* BrowsingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowsingHeaderView.swift; sourceTree = "<group>"; };
 		2D087D7723DDE6F8006AA5E7 /* ShareEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareEdit.storyboard; sourceTree = "<group>"; };
 		2D087D7A23DDE90A006AA5E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D087D7C23DDEDF4006AA5E7 /* ShareEditViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareEditViewReactor.swift; sourceTree = "<group>"; };
@@ -375,6 +378,7 @@
 		2D05E2E723EEA0CF00FC058D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				2D05E31823F0721A00FC058D /* BrowsingHeaderView.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -399,7 +403,7 @@
 		2D087D8323DEA857006AA5E7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				2D894C3123E31835008991E1 /* CollectionHeaderView.swift */,
+				2D05E31623F0715C00FC058D /* FeedHeaderView.swift */,
 				2D087D8B23DEB0F2006AA5E7 /* PostCell.swift */,
 				2D087D9123DEB364006AA5E7 /* PostCellReactor.swift */,
 			);
@@ -730,6 +734,7 @@
 		2DF5E47823E47CA300DBE239 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2D894C3123E31835008991E1 /* CollectionHeaderView.swift */,
 				2D087D9323DEC860006AA5E7 /* ProfileThumbnailView.swift */,
 			);
 			path = Profile;
@@ -1305,13 +1310,13 @@
 				2D2BBC0B23CCA4FC0052394B /* ShareEditViewController.swift in Sources */,
 				2D05E2EF23EEA39500FC058D /* CategoryView.swift in Sources */,
 				2D2BBC2423CCBEF40052394B /* ShareUIInjector.swift in Sources */,
-				2D894C3223E31835008991E1 /* CollectionHeaderView.swift in Sources */,
 				2DF5E48023E47DE900DBE239 /* TalentCellReactor.swift in Sources */,
 				2D2BBC0F23CCA5DC0052394B /* ShareCoordinatorFactoryProtocol.swift in Sources */,
 				2D05E2E623EEA01A00FC058D /* BrowsingViewSection.swift in Sources */,
 				2D095AA623D4BB4200EA2161 /* ShareListViewReactor.swift in Sources */,
 				2D087D8823DEB023006AA5E7 /* TalentsCell.swift in Sources */,
 				2D087D8623DEAC0F006AA5E7 /* ShareListViewSection.swift in Sources */,
+				2D05E31C23F0743600FC058D /* FeedHeaderView.swift in Sources */,
 				2DE977AD23E5567300E1BA98 /* RecommendCategoryView.swift in Sources */,
 				2D75B9B523E54E890093A167 /* CategoriesCell.swift in Sources */,
 				2D087D9023DEB318006AA5E7 /* RecommendCategoriesCellReactor.swift in Sources */,
@@ -1320,6 +1325,7 @@
 				2DF5E47C23E47D5700DBE239 /* TalentCell.swift in Sources */,
 				2D2BBC0D23CCA5AE0052394B /* ShareCoordinatorFactory.swift in Sources */,
 				2D087D9423DEC860006AA5E7 /* ProfileThumbnailView.swift in Sources */,
+				2D05E31923F0721A00FC058D /* BrowsingHeaderView.swift in Sources */,
 				2D087D8E23DEB23C006AA5E7 /* TalentsCellReactor.swift in Sources */,
 				2D2BBC1B23CCA8240052394B /* ShareModuleFactory.swift in Sources */,
 				2D2BBC1723CCA7FF0052394B /* ShareEditModuleFactoryType.swift in Sources */,

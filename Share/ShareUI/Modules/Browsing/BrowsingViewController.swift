@@ -39,7 +39,7 @@ public final class BrowsingViewController: BaseViewController, StoryboardView {
     configureSupplementaryView: { dataSource, collectionView, kind, indexPath in
       switch dataSource[indexPath.section] {
       case .categories:
-        let headerView = collectionView.dequeue(CollectionHeaderView.self, kind: kind, for: indexPath)!
+        let headerView = collectionView.dequeue(BrowsingHeaderView.self, kind: kind, for: indexPath)!
         headerView.titleLabel.text = "카테고리"
         return headerView
       }
@@ -53,7 +53,7 @@ public final class BrowsingViewController: BaseViewController, StoryboardView {
 
   public override func setupSubviews() {
     super.setupSubviews()
-    browsingCollectionView.register(cell: CollectionHeaderView.self)
+    browsingCollectionView.register(cell: BrowsingHeaderView.self)
     browsingCollectionView.register(cell: CategoryCell.self)
     let collectionEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 44, right: 0)
     browsingCollectionView.contentInset = collectionEdgeInsets

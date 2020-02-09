@@ -30,6 +30,7 @@ def ui
   pod 'ReactorKit'
   pod 'SnapKit'
   pod 'Kingfisher'
+  pod 'UICollectionViewLeftAlignedLayout'
 end
 
 def networking
@@ -148,6 +149,7 @@ target 'Common' do
   project 'Common/Common'
   common
   rx
+  ui
   networking
 
   target 'CommonTests' do

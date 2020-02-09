@@ -54,7 +54,10 @@ public final class AccountModuleFactory
       authUseCase: authUseCase,
       userUseCase: userUseCase
     )
-    let myPageViewController = MyPageViewController()
+    let myPageViewController = MyPageViewController.controllerFromStoryboard(
+      "MyPage",
+      bundleIdentifier: "com.depromeet.um.accountui"
+    )
     myPageViewController.reactor = myPageViewReactor
     return myPageViewController
   }

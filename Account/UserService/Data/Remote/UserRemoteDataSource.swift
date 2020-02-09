@@ -16,9 +16,9 @@ final class UserRemoteDataSource: UserDataSource {
     self.networking = networking
   }
 
-  func me() -> Single<User> {
+  func me() -> Single<Member> {
     networking
       .request(.me)
-      .map(User.self)
+      .map(Member.self)
   }
 }
