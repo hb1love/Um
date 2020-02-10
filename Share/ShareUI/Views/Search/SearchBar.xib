@@ -60,7 +60,7 @@
     <resources>
         <image name="ic_browsing_search" width="24" height="24"/>
         <namedColor name="search_bg">
-            <color red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.22699999809265137" green="0.22699999809265137" blue="0.22699999809265137" alpha="0.05000000074505806" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

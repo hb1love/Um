@@ -18,11 +18,13 @@ final class ProfileCellReactor: Reactor {
   }
 
   let initialState: State
+  let member: Member
 
   init(member: Member) {
     self.initialState = State(
       photoUrl: member.photoUrl,
       nickname: member.nickname
     )
+    self.member = member
   }
 }

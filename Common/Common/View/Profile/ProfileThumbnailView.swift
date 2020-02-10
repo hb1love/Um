@@ -1,17 +1,16 @@
 //
 //  ProfileThumbnailView.swift
-//  ShareUI
+//  Common
 //
 //  Created by hb1love on 2020/01/27.
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 
 import UIKit
-import Common
 import Kingfisher
 import SnapKit
 
-final class ProfileThumbnailView: BaseView {
+public final class ProfileThumbnailView: BaseView {
 
   // MARK: - Subviews
 
@@ -19,7 +18,7 @@ final class ProfileThumbnailView: BaseView {
 
   // MARK: - Properties
 
-  var imageUrl: String? {
+  public var imageUrl: String? {
     didSet {
       guard let imageUrl = imageUrl else { return }
       profileImage.kf.setImage(with: URL(string: imageUrl))
@@ -28,18 +27,18 @@ final class ProfileThumbnailView: BaseView {
     }
   }
 
-  override func awakeFromNib() {
+  public override func awakeFromNib() {
     super.awakeFromNib()
     self.backgroundColor = .clear
   }
 
-  override func setupSubviews() {
+  public override func setupSubviews() {
     profileImage = UIImageView().also {
       addSubview($0)
     }
   }
 
-  override func setupConstraints() {
+  public override func setupConstraints() {
     profileImage.snp.makeConstraints {
       $0.edges.equalToSuperview()
     }

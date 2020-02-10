@@ -15,7 +15,7 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0GE-oz-VkV">
                     <rect key="frame" x="0.0" y="0.0" width="96" height="135"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4i-3g-7U3" customClass="ProfileThumbnailView" customModule="ShareUI" customModuleProvider="target">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4i-3g-7U3" customClass="ProfileThumbnailView" customModule="Common">
                             <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>

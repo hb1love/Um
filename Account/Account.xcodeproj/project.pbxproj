@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0A156ECFD4D1D91B0FC0EF85 /* Pods_UserServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FCC4632DDE5B8F51D59E95 /* Pods_UserServiceTests.framework */; };
+		2D05BF9523F19D2500316406 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05BF9423F19D2500316406 /* ProfileView.swift */; };
+		2D05BF9D23F1A0F400316406 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D05BF9C23F1A0F400316406 /* ProfileView.xib */; };
+		2D05BFA023F1B6B000316406 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D05BF9F23F1B6B000316406 /* Assets.xcassets */; };
+		2D05BFA523F1BAC400316406 /* Assets+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05BFA423F1BAC400316406 /* Assets+Extension.swift */; };
 		2D05E2D523EDC83200FC058D /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */; };
 		2D05E2D623EDC83200FC058D /* KakaoOpenSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D05E2FB23F02D4600FC058D /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D05E2FA23F02D4600FC058D /* MyPage.storyboard */; };
@@ -71,7 +75,6 @@
 		2DE977B923E6FD5000E1BA98 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977B823E6FD5000E1BA98 /* LoginViewController.swift */; };
 		2DE977BC23E6FFD300E1BA98 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE977BB23E6FFD300E1BA98 /* Login.storyboard */; };
 		2DE977BE23E6FFE800E1BA98 /* LoginViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977BD23E6FFE800E1BA98 /* LoginViewReactor.swift */; };
-		2DE977C123E7079D00E1BA98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE977C023E7079D00E1BA98 /* Assets.xcassets */; };
 		2DE977C323E709DD00E1BA98 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977C223E709DD00E1BA98 /* LaunchViewController.swift */; };
 		2DE977C523E709EF00E1BA98 /* LaunchViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE977C423E709EF00E1BA98 /* LaunchViewReactor.swift */; };
 		2DE977C723E709FA00E1BA98 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE977C623E709FA00E1BA98 /* Launch.storyboard */; };
@@ -197,6 +200,10 @@
 		17081E6C5C0EF6621DDEC761 /* Pods_AuthServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AuthServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B01164D87CF37DDF719F7E1 /* Pods-UserServiceTests.debug(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserServiceTests.debug(prod).xcconfig"; path = "Target Support Files/Pods-UserServiceTests/Pods-UserServiceTests.debug(prod).xcconfig"; sourceTree = "<group>"; };
 		21FD95EC0C148BA339B242F4 /* Pods-Account.debug(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Account.debug(dev).xcconfig"; path = "Target Support Files/Pods-Account/Pods-Account.debug(dev).xcconfig"; sourceTree = "<group>"; };
+		2D05BF9423F19D2500316406 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2D05BF9C23F1A0F400316406 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		2D05BF9F23F1B6B000316406 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D05BFA423F1BAC400316406 /* Assets+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Extension.swift"; sourceTree = "<group>"; };
 		2D05E2D423EDC83100FC058D /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = ../lib/KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		2D05E2FA23F02D4600FC058D /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		2D05E2FD23F02E9900FC058D /* MyPageViewSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewSection.swift; sourceTree = "<group>"; };
@@ -261,7 +268,6 @@
 		2DE977B823E6FD5000E1BA98 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2DE977BB23E6FFD300E1BA98 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2DE977BD23E6FFE800E1BA98 /* LoginViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewReactor.swift; sourceTree = "<group>"; };
-		2DE977C023E7079D00E1BA98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DE977C223E709DD00E1BA98 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		2DE977C423E709EF00E1BA98 /* LaunchViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewReactor.swift; sourceTree = "<group>"; };
 		2DE977C623E709FA00E1BA98 /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
@@ -450,6 +456,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2D05BF9E23F1B63C00316406 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D05BF9F23F1B6B000316406 /* Assets.xcassets */,
+				2D05BFA423F1BAC400316406 /* Assets+Extension.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2D05E2FC23F02E6C00FC058D /* Section */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,7 +492,7 @@
 				2D7EC43723D5E84900D4C775 /* Coordinators */,
 				2D7EC43823D5E85400D4C775 /* Factories */,
 				2D7EC43923D5E85D00D4C775 /* Modules */,
-				2DE977BF23E7077D00E1BA98 /* Resources */,
+				2D05BF9E23F1B63C00316406 /* Resources */,
 				2D82539F23EB05C6007EBDD2 /* Views */,
 				2D7EC45123D5EEE900D4C775 /* AccountUIInjector.swift */,
 			);
@@ -715,6 +730,8 @@
 			isa = PBXGroup;
 			children = (
 				2D8253A023EB05F3007EBDD2 /* LoginButton.swift */,
+				2D05BF9423F19D2500316406 /* ProfileView.swift */,
+				2D05BF9C23F1A0F400316406 /* ProfileView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -789,14 +806,6 @@
 				2DE977C623E709FA00E1BA98 /* Launch.storyboard */,
 			);
 			path = Launch;
-			sourceTree = "<group>";
-		};
-		2DE977BF23E7077D00E1BA98 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2DE977C023E7079D00E1BA98 /* Assets.xcassets */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1069,10 +1078,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE977C123E7079D00E1BA98 /* Assets.xcassets in Resources */,
+				2D05BF9D23F1A0F400316406 /* ProfileView.xib in Resources */,
 				2DE977BC23E6FFD300E1BA98 /* Login.storyboard in Resources */,
 				2DE977C723E709FA00E1BA98 /* Launch.storyboard in Resources */,
 				2D05E2FB23F02D4600FC058D /* MyPage.storyboard in Resources */,
+				2D05BFA023F1B6B000316406 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1399,6 +1409,8 @@
 				2D7EC44623D5E98E00D4C775 /* AccountCoordinatorFactory.swift in Sources */,
 				2DE977C323E709DD00E1BA98 /* LaunchViewController.swift in Sources */,
 				2DE977CD23E70F8800E1BA98 /* LoginCoordinator.swift in Sources */,
+				2D05BF9523F19D2500316406 /* ProfileView.swift in Sources */,
+				2D05BFA523F1BAC400316406 /* Assets+Extension.swift in Sources */,
 				2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift in Sources */,
 				2D05E30723F0325700FC058D /* IntroduceCellReactor.swift in Sources */,
 				2D05E30123F0312E00FC058D /* ProfileCell.swift in Sources */,

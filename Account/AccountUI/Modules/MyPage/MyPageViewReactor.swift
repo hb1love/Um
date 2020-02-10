@@ -39,9 +39,6 @@ public final class MyPageViewReactor: Reactor {
     switch action {
     case .refresh:
       let fetchMe = userUseCase.currentMember
-        .do(onNext: { member in
-          log.debug("fetch member: " + member.debugDescription)
-        })
         .map(Mutation.setMember)
       return fetchMe
     }

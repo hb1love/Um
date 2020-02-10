@@ -15,25 +15,27 @@ final class ProfileCell: BaseCollectionViewCell, View {
 
   // MARK: - Subviews
 
-
+  var profileView: ProfileView!
 
   // MARK: - Properties
 
-  static var defaultHeight = 78.f
+  static var defaultWidth = 300.f
+  static var defaultHeight = 100.f
 
   override func setupSubviews() {
     super.setupSubviews()
-//    postView = PostView.loadNib()
-//    contentView.addSubview(postView)
+    profileView = ProfileView.loadNib()
+    contentView.addSubview(profileView)
   }
 
   override func setupConstraints() {
-//    postView.snp.makeConstraints {
-//      $0.edges.equalToSuperview()
-//    }
+    profileView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+      $0.width.equalTo(ProfileCell.defaultWidth)
+    }
   }
 
   func bind(reactor: ProfileCellReactor) {
-//    postView.post = reactor.post
+    profileView.member = reactor.member
   }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D05BF9B23F19E1000316406 /* ProfileThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05BF9A23F19E1000316406 /* ProfileThumbnailView.swift */; };
 		2D05E2F923F0179B00FC058D /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E2F823F0179B00FC058D /* XibView.swift */; };
 		2D05E30B23F0335D00FC058D /* SkillTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E30A23F0335D00FC058D /* SkillTagCell.swift */; };
 		2D05E30D23F0336900FC058D /* SkillTagCellReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D05E30C23F0336900FC058D /* SkillTagCellReactor.swift */; };
@@ -68,11 +69,11 @@
 		0908EA7CCB176F760B2A8C69 /* Pods_CommonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CommonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C84AE00ABCC40C8100A316F /* Pods-CommonTests.debug(dev).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CommonTests.debug(dev).xcconfig"; path = "Target Support Files/Pods-CommonTests/Pods-CommonTests.debug(dev).xcconfig"; sourceTree = "<group>"; };
 		1F00B2C8F308BA19C77413AB /* Pods-Common.debug(prod).xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Common.debug(prod).xcconfig"; path = "Target Support Files/Pods-Common/Pods-Common.debug(prod).xcconfig"; sourceTree = "<group>"; };
+		2D05BF9A23F19E1000316406 /* ProfileThumbnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileThumbnailView.swift; sourceTree = "<group>"; };
 		2D05E2F823F0179B00FC058D /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		2D05E30A23F0335D00FC058D /* SkillTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTagCell.swift; sourceTree = "<group>"; };
 		2D05E30C23F0336900FC058D /* SkillTagCellReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillTagCellReactor.swift; sourceTree = "<group>"; };
 		2D05E31023F0452700FC058D /* TagFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagFlowLayout.swift; sourceTree = "<group>"; };
-		2D05E31223F0460C00FC058D /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionHeaderView.swift; path = ../../../../Account/AccountUI/Modules/MyPage/CollectionHeaderView.swift; sourceTree = "<group>"; };
 		2D087D8123DE0F48006AA5E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D0959E123D43A6200EA2161 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		2D0959E423D43B0F00EA2161 /* UmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmError.swift; sourceTree = "<group>"; };
@@ -145,10 +146,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D05BF9923F19E1000316406 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2D05BF9A23F19E1000316406 /* ProfileThumbnailView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		2D05E30823F0333A00FC058D /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				2D05E31223F0460C00FC058D /* CollectionHeaderView.swift */,
 				2D095A9E23D4B6D800EA2161 /* BaseView.swift */,
 				2D095A9C23D4B5AA00EA2161 /* BaseViewController.swift */,
 				2D894C2D23E30135008991E1 /* BaseCollectionViewCell.swift */,
@@ -201,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				2D05E30823F0333A00FC058D /* Base */,
+				2D05BF9923F19E1000316406 /* Profile */,
 				2D05E30923F0334800FC058D /* SkillTag */,
 			);
 			path = View;
@@ -555,6 +564,7 @@
 				2D6F73EE23E46153005612B7 /* Member.swift in Sources */,
 				2D05E30D23F0336900FC058D /* SkillTagCellReactor.swift in Sources */,
 				2D75328223D42BE000E94D78 /* Date+Extension.swift in Sources */,
+				2D05BF9B23F19E1000316406 /* ProfileThumbnailView.swift in Sources */,
 				2D05E30B23F0335D00FC058D /* SkillTagCell.swift in Sources */,
 				2D75328323D42BE000E94D78 /* ImageLoader.swift in Sources */,
 				2D8745A223E9AB8F006CF795 /* Sound.swift in Sources */,

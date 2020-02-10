@@ -28,15 +28,14 @@ public final class MyPageViewController: BaseViewController, StoryboardView {
 
   // MARK: - Properties
 
-  var sizingCell: SkillTagCell?
   var didLogout: (() -> Void)?
 
   private lazy var dataSource = RxCollectionViewSectionedReloadDataSource<MyPageViewSection>(
     configureCell: { dataSource, collectionView, indexPath, sectionItem in
       switch sectionItem {
-      case .profile:
+      case .profile(let reactor):
         let cell = collectionView.dequeue(ProfileCell.self, for: indexPath)!
-        //        cell.reactor = reactor
+        cell.reactor = reactor
         return cell
       case .introduce:
         let cell = collectionView.dequeue(IntroduceCell.self, for: indexPath)!
@@ -83,8 +82,11 @@ public final class MyPageViewController: BaseViewController, StoryboardView {
     let collectionEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 44, right: 0)
     myPageCollectionView.contentInset = collectionEdgeInsets
     myPageCollectionView.scrollIndicatorInsets = collectionEdgeInsets
+  }
 
-    self.sizingCell = SkillTagCell()
+  public override func setupConstraints() {
+    super.setupConstraints()
+    ProfileCell.defaultWidth = view.frame.width
   }
 
   public func bind(reactor: MyPageViewReactor) {
@@ -117,13 +119,12 @@ extension MyPageViewController: UICollectionViewDelegate, UICollectionViewDelega
   ) -> UIEdgeInsets {
     switch dataSource[section] {
     case .profile:
-      return UIEdgeInsets(top: 0, left: Metric.leading, bottom: 0, right: Metric.leading)
+      return .zero
     case .introduce:
       return UIEdgeInsets(top: 0, left: Metric.leading, bottom: 30, right: Metric.leading)
     case .mySkills:
       return UIEdgeInsets(top: 0, left: Metric.leading, bottom: 39, right: Metric.leading)
     case .wannaSkills:
-      //return .zero
       return UIEdgeInsets(top: 0, left: Metric.leading, bottom: 39, right: Metric.leading)
     }
   }
@@ -162,9 +163,11 @@ extension MyPageViewController: UICollectionViewDelegate, UICollectionViewDelega
 //    layout collectionViewLayout: UICollectionViewLayout,
 //    sizeForItemAt indexPath: IndexPath
 //  ) -> CGSize {
+
+//    return .zero
 //    switch dataSource[indexPath.section] {
 //    case .profile:
-//      return CGSize(width: collectionView.frame.width, height: 44)
+//      return CGSize(width: collectionView.frame.width, height: 100)
 //    case .introduce:
 //      return CGSize(width: collectionView.frame.width, height: 44)
 //    case .mySkills:
@@ -177,7 +180,7 @@ extension MyPageViewController: UICollectionViewDelegate, UICollectionViewDelega
 //        return self.sizingCell!.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
 //      default:
 //        return .zero
-//      }
+////      }
 //    }
 //  }
 //
