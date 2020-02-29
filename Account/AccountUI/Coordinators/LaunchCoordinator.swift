@@ -15,14 +15,14 @@ public protocol LaunchCoordinatorOutput: AnyObject {
 
 public final class LaunchCoordinator: BaseCoordinator, LaunchCoordinatorOutput {
 
-  private let coordinatorFactory: AccountCoordinatorFactoryProtocol
+  private let coordinatorFactory: AccountCoordinatorFactoryType
   private let moduleFactory: LaunchModuleFactoryType
   private let router: Routable
 
   public var finishFlow: ((Bool) -> Void)?
 
   init(
-    coordinatorFactory: AccountCoordinatorFactoryProtocol,
+    coordinatorFactory: AccountCoordinatorFactoryType,
     moduleFactory: LaunchModuleFactoryType,
     router: Routable
     ) {

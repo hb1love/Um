@@ -20,7 +20,8 @@ public protocol MainTabCoordinatorOutput: AnyObject {
 final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorInput, MainTabCoordinatorOutput {
 
   private let mainModuleFactory: MainModuleFactoryType
-  private let shareModuleFactory: ShareEditModuleFactoryType
+  private let shareCoordinatorFactory: ShareCoordinatorFactoryType
+//  private let shareModuleFactory: ShareEditModuleFactoryType
   private let router: Routable
 
   public var isAuthorized: Bool?
@@ -28,11 +29,13 @@ final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorInput, MainTa
 
   init(
     mainModuleFactory: MainModuleFactoryType,
-    shareModuleFactory: ShareEditModuleFactoryType,
+    shareCoordinatorFactory: ShareCoordinatorFactoryType,
+//    shareModuleFactory: ShareEditModuleFactoryType,
     router: Routable
     ) {
     self.mainModuleFactory = mainModuleFactory
-    self.shareModuleFactory = shareModuleFactory
+    self.shareCoordinatorFactory = shareCoordinatorFactory
+//    self.shareModuleFactory = shareModuleFactory
     self.router = router
   }
 
@@ -43,7 +46,7 @@ final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorInput, MainTa
   private func showMainTab() {
     let mainTabModule = mainModuleFactory.makeMainTabModule(isAuthorized: isAuthorized ?? false)
     mainTabModule.onNewPost = { [weak self] in
-      self?.showEdit()
+      self?.runEditFlow()
     }
     mainTabModule.onSignUp = { [weak self] in
       self?.router.dismiss()
@@ -52,8 +55,9 @@ final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorInput, MainTa
     router.setRoot(mainTabModule)
   }
 
-  private func showEdit() {
-    let signUpModule = shareModuleFactory.makeShareEditModule()
+  private func runEditFlow() {
+//    let (coordinator, module) = shareModuleFactory.makeShareEditModule()
+//    let signUpModule = shareModuleFactory.makeShareEditModule()
 //    signUpModule.onCompleteSignUp = { [weak self] in
 //      self?.router.dismiss()
 //      self?.finishFlow?()
@@ -61,6 +65,15 @@ final class MainTabCoordinator: BaseCoordinator, MainTabCoordinatorInput, MainTa
 //    signUpModule.onCancel = { [weak self] in
 //      self?.router.dismiss()
 //    }
-    router.present(signUpModule)
+//    router.present(signUpModule)
+
+    let (coordinator, module) = shareCoordinatorFactory.makeEditCoordinatorBox()
+    coordinator.finishFlow = { [weak self, weak coordinator] in
+      self?.router.dismiss()
+      self?.removeDependency(coordinator)
+    }
+    addDependency(coordinator)
+    router.present(module)
+    coordinator.start()
   }
 }

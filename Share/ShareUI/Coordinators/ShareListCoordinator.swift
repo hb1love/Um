@@ -15,7 +15,7 @@ public protocol ShareListCoordinatorOutput: AnyObject {
 
 public final class ShareListCoordinator: BaseCoordinator, ShareListCoordinatorOutput, RootCoordinator {
 
-  private let coordinatorFactory: ShareCoordinatorFactoryProtocol
+  private let coordinatorFactory: ShareCoordinatorFactoryType
   private let moduleFactory: ShareListModuleFactoryType
   private let router: Routable
 
@@ -24,7 +24,7 @@ public final class ShareListCoordinator: BaseCoordinator, ShareListCoordinatorOu
   public let rootViewController: UINavigationController
 
   init(
-    coordinatorFactory: ShareCoordinatorFactoryProtocol,
+    coordinatorFactory: ShareCoordinatorFactoryType,
     moduleFactory: ShareListModuleFactoryType,
     router: Routable
     ) {

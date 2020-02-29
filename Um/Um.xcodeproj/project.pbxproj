@@ -35,7 +35,7 @@
 		2D7795C923CCCEA0005B84A9 /* MainModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795C823CCCEA0005B84A9 /* MainModuleFactory.swift */; };
 		2D7795CB23CCCEBF005B84A9 /* MainModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795CA23CCCEBF005B84A9 /* MainModuleFactoryType.swift */; };
 		2D7795CE23CCCF2B005B84A9 /* MainCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795CD23CCCF2B005B84A9 /* MainCoordinatorFactory.swift */; };
-		2D7795D023CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift */; };
+		2D7795D023CCCF45005B84A9 /* MainCoordinatorFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryType.swift */; };
 		2D91E7EC23CA3C2E00446794 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D01333023CA1A1B003C3DCA /* GoogleService-Info.plist */; };
 		2DD4294623CC98A900544117 /* Share.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4294523CC98A900544117 /* Share.framework */; };
 		2DD4294723CC98A900544117 /* Share.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD4294523CC98A900544117 /* Share.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -111,7 +111,7 @@
 		2D7795C823CCCEA0005B84A9 /* MainModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactory.swift; sourceTree = "<group>"; };
 		2D7795CA23CCCEBF005B84A9 /* MainModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleFactoryType.swift; sourceTree = "<group>"; };
 		2D7795CD23CCCF2B005B84A9 /* MainCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactory.swift; sourceTree = "<group>"; };
-		2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
+		2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorFactoryType.swift; sourceTree = "<group>"; };
 		2D8253A623EB0D1C007EBDD2 /* Um.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Um.entitlements; sourceTree = "<group>"; };
 		2DD4294523CC98A900544117 /* Share.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Share.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD4297123CC995A00544117 /* Account.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Account.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				2D7795CD23CCCF2B005B84A9 /* MainCoordinatorFactory.swift */,
-				2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift */,
+				2D7795CF23CCCF45005B84A9 /* MainCoordinatorFactoryType.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -535,7 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D7795CE23CCCF2B005B84A9 /* MainCoordinatorFactory.swift in Sources */,
-				2D7795D023CCCF45005B84A9 /* MainCoordinatorFactoryProtocol.swift in Sources */,
+				2D7795D023CCCF45005B84A9 /* MainCoordinatorFactoryType.swift in Sources */,
 				2D01332F23CA1156003C3DCA /* ApplicationCoordinator.swift in Sources */,
 				2D7795CB23CCCEBF005B84A9 /* MainModuleFactoryType.swift in Sources */,
 				2D087D7423DDB054006AA5E7 /* FloatingTabBar.swift in Sources */,

@@ -15,10 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9um-hd-DX8">
-                                <rect key="frame" x="159" y="418" width="80" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXI-S8-mxK">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
@@ -26,10 +22,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_launch_logo" translatesAutoresizingMaskIntoConstraints="NO" id="uVF-Dy-S2Z">
-                                                <rect key="frame" x="167" y="379" width="80" height="60"/>
+                                                <rect key="frame" x="164" y="387" width="86" height="44"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="DD9-JQ-uOZ"/>
-                                                    <constraint firstAttribute="height" constant="60" id="Tmb-6z-ehI"/>
+                                                    <constraint firstAttribute="width" constant="86" id="DD9-JQ-uOZ"/>
+                                                    <constraint firstAttribute="height" constant="44" id="Tmb-6z-ehI"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
@@ -92,7 +88,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_launch_logo" width="21" height="20"/>
-        <image name="ic_logo" width="21" height="20"/>
+        <image name="ic_launch_logo" width="82" height="40"/>
     </resources>
 </document>

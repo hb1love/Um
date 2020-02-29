@@ -15,7 +15,7 @@ public protocol MyPageCoordinatorOutput: AnyObject {
 
 public final class MyPageCoordinator: BaseCoordinator, MyPageCoordinatorOutput, RootCoordinator {
 
-  private let coordinatorFactory: AccountCoordinatorFactoryProtocol
+  private let coordinatorFactory: AccountCoordinatorFactoryType
   private let moduleFactory: MyPageModuleFactoryType
   private let router: Routable
 
@@ -24,7 +24,7 @@ public final class MyPageCoordinator: BaseCoordinator, MyPageCoordinatorOutput, 
   public let rootViewController: UINavigationController
 
   init(
-    coordinatorFactory: AccountCoordinatorFactoryProtocol,
+    coordinatorFactory: AccountCoordinatorFactoryType,
     moduleFactory: MyPageModuleFactoryType,
     router: Routable
     ) {

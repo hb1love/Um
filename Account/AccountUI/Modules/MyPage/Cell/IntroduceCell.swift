@@ -15,7 +15,7 @@ final class IntroduceCell: BaseCollectionViewCell, View {
 
   // MARK: - Subviews
 
-//  var postView: PostView!
+  var introduceView: UITextView!
 
   // MARK: - Properties
 
@@ -23,17 +23,22 @@ final class IntroduceCell: BaseCollectionViewCell, View {
 
   override func setupSubviews() {
     super.setupSubviews()
-//    postView = PostView.loadNib()
-//    contentView.addSubview(postView)
+    introduceView = UITextView().also {
+      $0.isScrollEnabled = false
+      contentView.addSubview($0)
+    }
   }
 
   override func setupConstraints() {
-//    postView.snp.makeConstraints {
-//      $0.edges.equalToSuperview()
-//    }
+    introduceView.snp.makeConstraints {
+      $0.edges.equalToSuperview()
+    }
   }
 
   func bind(reactor: IntroduceCellReactor) {
-//    postView.post = reactor.post
+    reactor.state.map { $0.introduce }
+      .distinctUntilChanged()
+      .bind(to: introduceView.rx.text)
+      .disposed(by: disposeBag)
   }
 }

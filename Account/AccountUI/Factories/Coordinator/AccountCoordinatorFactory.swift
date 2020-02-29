@@ -8,7 +8,7 @@
 
 import Common
 
-public final class AccountCoordinatorFactory: AccountCoordinatorFactoryProtocol {
+public final class AccountCoordinatorFactory: AccountCoordinatorFactoryType {
 
   private let moduleFactory: AccountModuleFactory
 

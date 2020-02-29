@@ -10,25 +10,28 @@ import Common
 import ShareUI
 import AccountUI
 
-final class MainCoordinatorFactory: MainCoordinatorFactoryProtocol {
+final class MainCoordinatorFactory: MainCoordinatorFactoryType {
   private let mainModuleFactory: MainModuleFactoryType
-  private let shareModuleFactory: ShareEditModuleFactoryType
+  private let shareCoordinatorFactory: ShareCoordinatorFactoryType
+//  private let shareModuleFactory: ShareEditModuleFactoryType
 
   public var isAuthorized: Bool?
 
   init(
     mainModuleFactory: MainModuleFactoryType,
-    shareModuleFactory: ShareEditModuleFactoryType
+    shareCoordinatorFactory: ShareCoordinatorFactoryType
+//    shareModuleFactory: ShareEditModuleFactoryType
   ) {
     self.mainModuleFactory = mainModuleFactory
-    self.shareModuleFactory = shareModuleFactory
+    self.shareCoordinatorFactory = shareCoordinatorFactory
   }
 
   func makeMainCoordinator(router: Routable) ->
     Coordinator & MainTabCoordinatorInput & MainTabCoordinatorOutput {
     return MainTabCoordinator(
       mainModuleFactory: mainModuleFactory,
-      shareModuleFactory: shareModuleFactory,
+      shareCoordinatorFactory: shareCoordinatorFactory,
+//      shareModuleFactory: shareModuleFactory,
       router: router
     )
   }

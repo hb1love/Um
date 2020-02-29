@@ -12,20 +12,13 @@ import ReactorKit
 final class IntroduceCellReactor: Reactor {
   typealias Action = NoAction
 
-  struct State {}
+  struct State {
+    var introduce: String?
+  }
 
   let initialState: State
 
   init(member: Member) {
-//    let sectionItems = type(of: self).talentSectionItems(with: members)
-    self.initialState = State()
+    self.initialState = State(introduce: member.introduce)
   }
-}
-
-extension IntroduceCellReactor {
-//  static func talentSectionItems(with members: [Member]) -> [TalentsCellSectionItem] {
-//    members
-//      .map(TalentCellReactor.init)
-//      .map(TalentsCellSectionItem.talent)
-//  }
 }

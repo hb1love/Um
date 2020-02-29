@@ -1,5 +1,5 @@
 //
-//  MainCoordinatorFactoryProtocol.swift
+//  MainCoordinatorFactoryType.swift
 //  Um
 //
 //  Created by hb1love on 2020/01/14.
@@ -8,7 +8,7 @@
 
 import Common
 
-protocol MainCoordinatorFactoryProtocol {
+protocol MainCoordinatorFactoryType {
   func makeMainCoordinator(router: Routable) ->
     Coordinator & MainTabCoordinatorInput & MainTabCoordinatorOutput
 }

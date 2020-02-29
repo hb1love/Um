@@ -15,7 +15,7 @@ public protocol BrowsingCoordinatorOutput: AnyObject {
 
 public final class BrowsingCoordinator: BaseCoordinator, BrowsingCoordinatorOutput, RootCoordinator {
 
-  private let coordinatorFactory: ShareCoordinatorFactoryProtocol
+  private let coordinatorFactory: ShareCoordinatorFactoryType
   private let moduleFactory: BrowsingModuleFactoryType
   private let router: Routable
 
@@ -24,7 +24,7 @@ public final class BrowsingCoordinator: BaseCoordinator, BrowsingCoordinatorOutp
   public let rootViewController: UINavigationController
 
   init(
-    coordinatorFactory: ShareCoordinatorFactoryProtocol,
+    coordinatorFactory: ShareCoordinatorFactoryType,
     moduleFactory: BrowsingModuleFactoryType,
     router: Routable
     ) {

@@ -36,7 +36,7 @@ public struct ShareUIDependency {
 public class ShareUIInjector {
   public static func resolve(
     with config: ShareUIConfiguration.Type
-  ) -> (ShareCoordinatorFactoryProtocol, ShareEditModuleFactoryType) {
+  ) -> (ShareCoordinatorFactoryType, ShareEditModuleFactoryType) {
     let shareUseCase = config.shareUIDependency.shareUseCase
     let userUseCase = config.shareUIDependency.userUseCase
     let factory = ShareModuleFactory(shareUseCase: shareUseCase, userUseCase: userUseCase)

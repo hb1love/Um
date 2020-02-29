@@ -37,9 +37,9 @@ final class ShareEditCoordinator: BaseCoordinator, ShareEditCoordinatorOutput, R
 
   private func showShareEdit() {
     let editModule = moduleFactory.makeShareEditModule()
-//    editModule.onFinish = {
-//
+//    editModule.onFinish = { [weak self] in
+//      self?.finishFlow?()
 //    }
-    router.present(editModule, animated: true)
+    router.setRoot(editModule)
   }
 }

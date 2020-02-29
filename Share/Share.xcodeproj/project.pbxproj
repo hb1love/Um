@@ -57,7 +57,7 @@
 		2D2BBC0723CCA4C10052394B /* ShareListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC0623CCA4C10052394B /* ShareListViewController.swift */; };
 		2D2BBC0B23CCA4FC0052394B /* ShareEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC0A23CCA4FC0052394B /* ShareEditViewController.swift */; };
 		2D2BBC0D23CCA5AE0052394B /* ShareCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC0C23CCA5AE0052394B /* ShareCoordinatorFactory.swift */; };
-		2D2BBC0F23CCA5DC0052394B /* ShareCoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC0E23CCA5DC0052394B /* ShareCoordinatorFactoryProtocol.swift */; };
+		2D2BBC0F23CCA5DC0052394B /* ShareCoordinatorFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC0E23CCA5DC0052394B /* ShareCoordinatorFactoryType.swift */; };
 		2D2BBC1223CCA68A0052394B /* ShareEditCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC1123CCA68A0052394B /* ShareEditCoordinator.swift */; };
 		2D2BBC1723CCA7FF0052394B /* ShareEditModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC1623CCA7FF0052394B /* ShareEditModuleFactoryType.swift */; };
 		2D2BBC1923CCA8130052394B /* ShareListModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBC1823CCA8130052394B /* ShareListModuleFactoryType.swift */; };
@@ -226,7 +226,7 @@
 		2D2BBC0623CCA4C10052394B /* ShareListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListViewController.swift; sourceTree = "<group>"; };
 		2D2BBC0A23CCA4FC0052394B /* ShareEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareEditViewController.swift; sourceTree = "<group>"; };
 		2D2BBC0C23CCA5AE0052394B /* ShareCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCoordinatorFactory.swift; sourceTree = "<group>"; };
-		2D2BBC0E23CCA5DC0052394B /* ShareCoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
+		2D2BBC0E23CCA5DC0052394B /* ShareCoordinatorFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCoordinatorFactoryType.swift; sourceTree = "<group>"; };
 		2D2BBC1123CCA68A0052394B /* ShareEditCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareEditCoordinator.swift; sourceTree = "<group>"; };
 		2D2BBC1623CCA7FF0052394B /* ShareEditModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareEditModuleFactoryType.swift; sourceTree = "<group>"; };
 		2D2BBC1823CCA8130052394B /* ShareListModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareListModuleFactoryType.swift; sourceTree = "<group>"; };
@@ -551,7 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				2D2BBC0C23CCA5AE0052394B /* ShareCoordinatorFactory.swift */,
-				2D2BBC0E23CCA5DC0052394B /* ShareCoordinatorFactoryProtocol.swift */,
+				2D2BBC0E23CCA5DC0052394B /* ShareCoordinatorFactoryType.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1298,7 +1298,7 @@
 				2D05E2EF23EEA39500FC058D /* CategoryView.swift in Sources */,
 				2D2BBC2423CCBEF40052394B /* ShareUIInjector.swift in Sources */,
 				2DF5E48023E47DE900DBE239 /* TalentCellReactor.swift in Sources */,
-				2D2BBC0F23CCA5DC0052394B /* ShareCoordinatorFactoryProtocol.swift in Sources */,
+				2D2BBC0F23CCA5DC0052394B /* ShareCoordinatorFactoryType.swift in Sources */,
 				2D05E2E623EEA01A00FC058D /* BrowsingViewSection.swift in Sources */,
 				2D095AA623D4BB4200EA2161 /* ShareListViewReactor.swift in Sources */,
 				2D087D8823DEB023006AA5E7 /* TalentsCell.swift in Sources */,

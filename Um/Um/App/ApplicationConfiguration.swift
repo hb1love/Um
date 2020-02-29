@@ -44,7 +44,7 @@ struct ApplicationConfiguration:
 
   static let mainCoordinatorFactory = MainCoordinatorFactory(
     mainModuleFactory: MainModuleFactory(serviceMap: serviceMap),
-    shareModuleFactory: shareModuleFactory
+    shareCoordinatorFactory: shareCoordinatorFactory
   )
 
   static let authPlugin = AuthPlugin(authUseCase: authUseCase)

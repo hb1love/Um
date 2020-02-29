@@ -1,5 +1,5 @@
 //
-//  AccountCoordinatorFactoryProtocol.swift
+//  AccountCoordinatorFactoryType.swift
 //  AccountUI
 //
 //  Created by hb1love on 2020/01/20.
@@ -8,7 +8,7 @@
 
 import Common
 
-public protocol AccountCoordinatorFactoryProtocol {
+public protocol AccountCoordinatorFactoryType {
   func makeLaunchCoordinator(router: Routable) ->
     Coordinator & LaunchCoordinatorOutput
 

@@ -33,9 +33,9 @@ enum LaunchInstructor {
 
 final class ApplicationCoordinator: BaseCoordinator {
 
-  private let mainCoordinatorFactory: MainCoordinatorFactoryProtocol
-  private let accountCoordinatorFactory: AccountCoordinatorFactoryProtocol
-  private let shareCoordinatorFactory: ShareCoordinatorFactoryProtocol
+  private let mainCoordinatorFactory: MainCoordinatorFactoryType
+  private let accountCoordinatorFactory: AccountCoordinatorFactoryType
+  private let shareCoordinatorFactory: ShareCoordinatorFactoryType
   private let router: Routable
 
   private var instructor: LaunchInstructor {
@@ -43,9 +43,9 @@ final class ApplicationCoordinator: BaseCoordinator {
   }
 
   init(
-    mainCoordinatorFactory: MainCoordinatorFactoryProtocol,
-    accountCoordinatorFactory: AccountCoordinatorFactoryProtocol,
-    shareCoordinatorFactory: ShareCoordinatorFactoryProtocol,
+    mainCoordinatorFactory: MainCoordinatorFactoryType,
+    accountCoordinatorFactory: AccountCoordinatorFactoryType,
+    shareCoordinatorFactory: ShareCoordinatorFactoryType,
     router: Routable
     ) {
     self.mainCoordinatorFactory = mainCoordinatorFactory

@@ -6,10 +6,11 @@
 //  Copyright © 2020 depromeet. All rights reserved.
 //
 
+import UIKit
 import Common
 import ShareService
 
-public final class ShareCoordinatorFactory: ShareCoordinatorFactoryProtocol {
+public final class ShareCoordinatorFactory: ShareCoordinatorFactoryType {
 
   private let moduleFactory: ShareModuleFactory
 
@@ -17,16 +18,25 @@ public final class ShareCoordinatorFactory: ShareCoordinatorFactoryProtocol {
     self.moduleFactory = moduleFactory
   }
 
-  public func makeEditCoordinator(router: Routable)
-    -> RootCoordinator & ShareEditCoordinatorOutput {
+  public func makeEditCoordinator(router: Routable) ->
+    RootCoordinator & ShareEditCoordinatorOutput {
       return ShareEditCoordinator(
         with: moduleFactory,
         router: router
       )
   }
 
-  public func makeListCoordinator(router: Routable)
-    -> RootCoordinator & ShareListCoordinatorOutput {
+  public func makeEditCoordinatorBox() -> (
+    coordinator: RootCoordinator & ShareEditCoordinatorOutput,
+    router: Routable
+    ) {
+      let router = self.router(nil)
+      let coordinator = makeEditCoordinator(router: router)
+      return (coordinator, router)
+  }
+
+  public func makeListCoordinator(router: Routable) ->
+    RootCoordinator & ShareListCoordinatorOutput {
       return ShareListCoordinator(
         coordinatorFactory: self,
         moduleFactory: moduleFactory,
@@ -34,12 +44,16 @@ public final class ShareCoordinatorFactory: ShareCoordinatorFactoryProtocol {
       )
   }
 
-  public func makeBrowsingCoordinator(router: Routable)
-    -> RootCoordinator & BrowsingCoordinatorOutput {
+  public func makeBrowsingCoordinator(router: Routable) ->
+    RootCoordinator & BrowsingCoordinatorOutput {
       return BrowsingCoordinator(
         coordinatorFactory: self,
         moduleFactory: moduleFactory,
         router: router
       )
+  }
+
+  private func router(_ navController: UINavigationController?) -> Routable {
+    return Router(rootController: navController ?? UINavigationController())
   }
 }

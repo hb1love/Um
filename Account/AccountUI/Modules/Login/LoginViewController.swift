@@ -41,7 +41,7 @@ public final class LoginViewController: BaseViewController, StoryboardView {
   }
 
   public override func setupSubviews() {
-    appleLogin = AppleLogin(type: .continue, style: .black).also {
+    appleLogin = AppleLogin(type: .signIn, style: .black).also {
       $0.cornerRadius = 12
       loginProviderStackView.insertArrangedSubview($0, at: 0)
     }

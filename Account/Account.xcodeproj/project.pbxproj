@@ -60,7 +60,7 @@
 		2D7EC44023D5E8EF00D4C775 /* UserService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A5023D44B6B00EA2161 /* UserService.framework */; };
 		2D7EC44123D5E8EF00D4C775 /* UserService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A5023D44B6B00EA2161 /* UserService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D7EC44623D5E98E00D4C775 /* AccountCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */; };
-		2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift */; };
+		2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */; };
 		2D7EC44B23D5EA0000D4C775 /* AccountModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44A23D5EA0000D4C775 /* AccountModuleFactory.swift */; };
 		2D7EC44D23D5EA7400D4C775 /* MyPageModuleFactoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44C23D5EA7400D4C775 /* MyPageModuleFactoryType.swift */; };
 		2D7EC45023D5EAB700D4C775 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC44F23D5EAB700D4C775 /* MyPageViewController.swift */; };
@@ -251,7 +251,7 @@
 		2D095AAE23D4C71300EA2161 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7EC43A23D5E8C400D4C775 /* MyPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCoordinator.swift; sourceTree = "<group>"; };
 		2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactory.swift; sourceTree = "<group>"; };
-		2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
+		2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactoryType.swift; sourceTree = "<group>"; };
 		2D7EC44A23D5EA0000D4C775 /* AccountModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModuleFactory.swift; sourceTree = "<group>"; };
 		2D7EC44C23D5EA7400D4C775 /* MyPageModuleFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModuleFactoryType.swift; sourceTree = "<group>"; };
 		2D7EC44F23D5EAB700D4C775 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
@@ -698,7 +698,7 @@
 			isa = PBXGroup;
 			children = (
 				2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */,
-				2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift */,
+				2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1411,7 +1411,7 @@
 				2DE977CD23E70F8800E1BA98 /* LoginCoordinator.swift in Sources */,
 				2D05BF9523F19D2500316406 /* ProfileView.swift in Sources */,
 				2D05BFA523F1BAC400316406 /* Assets+Extension.swift in Sources */,
-				2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryProtocol.swift in Sources */,
+				2D7EC44823D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift in Sources */,
 				2D05E30723F0325700FC058D /* IntroduceCellReactor.swift in Sources */,
 				2D05E30123F0312E00FC058D /* ProfileCell.swift in Sources */,
 				2D8253A123EB05F3007EBDD2 /* LoginButton.swift in Sources */,

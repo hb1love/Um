@@ -15,14 +15,14 @@ public protocol LoginCoordinatorOutput: AnyObject {
 
 public final class LoginCoordinator: BaseCoordinator, LoginCoordinatorOutput {
 
-  private let coordinatorFactory: AccountCoordinatorFactoryProtocol
+  private let coordinatorFactory: AccountCoordinatorFactoryType
   private let moduleFactory: LoginModuleFactoryType
   private let router: Routable
 
   public var finishFlow: ((Bool) -> Void)?
 
   init(
-    coordinatorFactory: AccountCoordinatorFactoryProtocol,
+    coordinatorFactory: AccountCoordinatorFactoryType,
     moduleFactory: LoginModuleFactoryType,
     router: Routable
     ) {
