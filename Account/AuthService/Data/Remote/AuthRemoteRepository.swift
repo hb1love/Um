@@ -1,5 +1,5 @@
 //
-//  AuthRemoteDataSource.swift
+//  AuthRemoteRepository.swift
 //  AuthService
 //
 //  Created by hb1love on 2020/01/19.

@@ -24,4 +24,12 @@ public enum AuthProvider: RawRepresentable {
       return "kakao"
     }
   }
+
+  public var getEmail: String? {
+    switch self {
+    case .apple(let param),
+         .kakao(let param):
+      return param.email
+    }
+  }
 }

@@ -31,7 +31,7 @@
 		2D095A5E23D44B6C00EA2161 /* UserServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A5D23D44B6C00EA2161 /* UserServiceTests.swift */; };
 		2D095A6023D44B6C00EA2161 /* UserService.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D095A5223D44B6B00EA2161 /* UserService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D095A6A23D44C1600EA2161 /* UserRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A6923D44C1600EA2161 /* UserRemoteDataSource.swift */; };
-		2D095A6E23D44C3700EA2161 /* AuthRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A6D23D44C3700EA2161 /* AuthRemoteDataSource.swift */; };
+		2D095A6E23D44C3700EA2161 /* AuthRemoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A6D23D44C3700EA2161 /* AuthRemoteRepository.swift */; };
 		2D095A7023D44CBE00EA2161 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A6F23D44CBE00EA2161 /* Auth.swift */; };
 		2D095A7123D44D2C00EA2161 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A2623D4495200EA2161 /* AuthService.swift */; };
 		2D095A7323D44E4500EA2161 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D095A7223D44E4500EA2161 /* AuthRepository.swift */; };
@@ -56,6 +56,8 @@
 		2D095AB023D4C71300EA2161 /* Common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095AAE23D4C71300EA2161 /* Common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D7D5FAA240ACBAA006D963C /* AuthLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D5FA9240ACBAA006D963C /* AuthLocalRepository.swift */; };
 		2D7D5FAF240AE068006D963C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D5FAE240AE068006D963C /* SignUpViewController.swift */; };
+		2D7D5FB1240D139F006D963C /* SignUpViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D5FB0240D139F006D963C /* SignUpViewReactor.swift */; };
+		2D7D5FB5240D26F9006D963C /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D5FB4240D26F9006D963C /* SignUp.storyboard */; };
 		2D7EC43B23D5E8C400D4C775 /* MyPageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7EC43A23D5E8C400D4C775 /* MyPageCoordinator.swift */; };
 		2D7EC43C23D5E8EF00D4C775 /* AuthService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A3123D44AD800EA2161 /* AuthService.framework */; };
 		2D7EC43D23D5E8EF00D4C775 /* AuthService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D095A3123D44AD800EA2161 /* AuthService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -237,7 +239,7 @@
 		2D095A5D23D44B6C00EA2161 /* UserServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceTests.swift; sourceTree = "<group>"; };
 		2D095A5F23D44B6C00EA2161 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D095A6923D44C1600EA2161 /* UserRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRemoteDataSource.swift; sourceTree = "<group>"; };
-		2D095A6D23D44C3700EA2161 /* AuthRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteDataSource.swift; sourceTree = "<group>"; };
+		2D095A6D23D44C3700EA2161 /* AuthRemoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteRepository.swift; sourceTree = "<group>"; };
 		2D095A6F23D44CBE00EA2161 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		2D095A7223D44E4500EA2161 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		2D095A7423D44E7300EA2161 /* AuthDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataSource.swift; sourceTree = "<group>"; };
@@ -253,6 +255,8 @@
 		2D095AAE23D4C71300EA2161 /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D5FA9240ACBAA006D963C /* AuthLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthLocalRepository.swift; sourceTree = "<group>"; };
 		2D7D5FAE240AE068006D963C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2D7D5FB0240D139F006D963C /* SignUpViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewReactor.swift; sourceTree = "<group>"; };
+		2D7D5FB4240D26F9006D963C /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		2D7EC43A23D5E8C400D4C775 /* MyPageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCoordinator.swift; sourceTree = "<group>"; };
 		2D7EC44523D5E98E00D4C775 /* AccountCoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactory.swift; sourceTree = "<group>"; };
 		2D7EC44723D5E9AF00D4C775 /* AccountCoordinatorFactoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCoordinatorFactoryType.swift; sourceTree = "<group>"; };
@@ -632,7 +636,7 @@
 			isa = PBXGroup;
 			children = (
 				2D095A7623D48F0600EA2161 /* Api */,
-				2D095A6D23D44C3700EA2161 /* AuthRemoteDataSource.swift */,
+				2D095A6D23D44C3700EA2161 /* AuthRemoteRepository.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -673,6 +677,8 @@
 			isa = PBXGroup;
 			children = (
 				2D7D5FAE240AE068006D963C /* SignUpViewController.swift */,
+				2D7D5FB0240D139F006D963C /* SignUpViewReactor.swift */,
+				2D7D5FB4240D26F9006D963C /* SignUp.storyboard */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -1102,6 +1108,7 @@
 			files = (
 				2D05BF9D23F1A0F400316406 /* ProfileView.xib in Resources */,
 				2DE977BC23E6FFD300E1BA98 /* Login.storyboard in Resources */,
+				2D7D5FB5240D26F9006D963C /* SignUp.storyboard in Resources */,
 				2DE977C723E709FA00E1BA98 /* Launch.storyboard in Resources */,
 				2D05E2FB23F02D4600FC058D /* MyPage.storyboard in Resources */,
 				2D05BFA023F1B6B000316406 /* Assets.xcassets in Resources */,
@@ -1418,6 +1425,7 @@
 				2DE977C923E70E3100E1BA98 /* LaunchModuleFactoryType.swift in Sources */,
 				2DE977CF23E70F9C00E1BA98 /* LaunchCoordinator.swift in Sources */,
 				2D05E31B23F072EB00FC058D /* MyPageHeaderView.swift in Sources */,
+				2D7D5FB1240D139F006D963C /* SignUpViewReactor.swift in Sources */,
 				2DE977C523E709EF00E1BA98 /* LaunchViewReactor.swift in Sources */,
 				2DE977B923E6FD5000E1BA98 /* LoginViewController.swift in Sources */,
 				2D7EC45423D5F45200D4C775 /* MyPageViewReactor.swift in Sources */,
@@ -1459,7 +1467,7 @@
 				2D7D5FAA240ACBAA006D963C /* AuthLocalRepository.swift in Sources */,
 				2D095A7123D44D2C00EA2161 /* AuthService.swift in Sources */,
 				2D095A7323D44E4500EA2161 /* AuthRepository.swift in Sources */,
-				2D095A6E23D44C3700EA2161 /* AuthRemoteDataSource.swift in Sources */,
+				2D095A6E23D44C3700EA2161 /* AuthRemoteRepository.swift in Sources */,
 				2D095A7923D4909D00EA2161 /* AuthServiceInjector.swift in Sources */,
 				2D095A7C23D493DE00EA2161 /* AuthPlugin.swift in Sources */,
 				2D095A7523D44E7300EA2161 /* AuthDataSource.swift in Sources */,
@@ -1606,10 +1614,6 @@
 					"\"RxSwiftExt\"",
 					"-framework",
 					"\"SnapKit\"",
-					"-framework",
-					"\"SwiftyBeaver\"",
-					"-framework",
-					"\"Umbrella\"",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
@@ -1672,10 +1676,6 @@
 					"\"RxSwiftExt\"",
 					"-framework",
 					"\"SnapKit\"",
-					"-framework",
-					"\"SwiftyBeaver\"",
-					"-framework",
-					"\"Umbrella\"",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
@@ -2299,10 +2299,6 @@
 					"\"RxSwiftExt\"",
 					"-framework",
 					"\"SnapKit\"",
-					"-framework",
-					"\"SwiftyBeaver\"",
-					"-framework",
-					"\"Umbrella\"",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;
@@ -2590,10 +2586,6 @@
 					"\"RxSwiftExt\"",
 					"-framework",
 					"\"SnapKit\"",
-					"-framework",
-					"\"SwiftyBeaver\"",
-					"-framework",
-					"\"Umbrella\"",
 					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.depromeet.um.accountui;

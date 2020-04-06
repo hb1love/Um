@@ -90,7 +90,7 @@ struct ApplicationConfiguration:
   // MARK: - Common ServiceConfiguration
 
   static let baseUrl: String = {
-    return "http://test.team4.ryulth.com/"
+    return "http://test.woom.ryulth.com/"
   }()
 
   // MARK: - AuthServiceConfiguration

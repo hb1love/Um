@@ -18,7 +18,7 @@ enum UserAPI {
 
 extension UserAPI: TargetType {
   var baseURL: URL {
-    return URL(string: "")!
+    return URL(string: userServiceConfig.baseUrl)!
   }
 
   var path: String {

@@ -48,7 +48,9 @@ public final class AuthCoordinator: BaseCoordinator, AuthCoordinatorOutput {
 
   private func showSignUp(authProvider: AuthProvider) {
     let signUpModule = moduleFactory.makeSignUpModule(authProvider: authProvider)
-
+    signUpModule.onCompleteSignUp = { [weak self] in
+      self?.finishFlow?(true)
+    }
     router.setRoot(signUpModule)
   }
 }

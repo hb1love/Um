@@ -7,7 +7,26 @@
 //
 
 import UIKit
+import Common
+import ReactorKit
+import SnapKit
+import RxCocoa
+import RxGesture
+import RxSwift
 
-public final class SignUpViewController: UIViewController {
+public final class SignUpViewController: BaseViewController, StoryboardView {
 
+  var onCompleteSignUp: (() -> Void)?
+
+  public override func setupSubviews() {
+
+  }
+
+  public override func setupConstraints() {
+    
+  }
+
+  public func bind(reactor: SignUpViewReactor) {
+
+  }
 }

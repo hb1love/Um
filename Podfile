@@ -5,10 +5,13 @@ inhibit_all_warnings!
 use_frameworks!
 
 def common
+  pod 'KeychainAccess'
+end
+
+def logging
   pod 'SwiftyBeaver'
   pod 'Umbrella'
   pod 'Umbrella/Firebase'
-  pod 'KeychainAccess'
 end
 
 def sdk
@@ -48,6 +51,7 @@ target 'Um' do
   ui
   networking
   sdk
+  logging
 
   target 'UmTests' do
     inherit! :search_paths
@@ -117,7 +121,6 @@ target 'AccountUI' do
   common
   rx
   ui
-  sdk
 
   target 'AccountUITests' do
     inherit! :search_paths
@@ -152,6 +155,7 @@ target 'Common' do
   rx
   ui
   networking
+  logging
 
   target 'CommonTests' do
     inherit! :search_paths

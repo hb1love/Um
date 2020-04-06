@@ -76,7 +76,29 @@ public final class LoginViewController: BaseViewController, StoryboardView {
       .subscribe(onNext: { [weak self] _ in
         self?.handleNoLoginRequest()
       }).disposed(by: disposeBag)
+
+    reactor.state.map { $0.event }
+      .observeOn(MainScheduler.instance)
+      .subscribe(onNext: { [weak self] event in
+        switch event {
+        case .authorized:
+          self?.onFinish?(true)
+        case .needSignUp(let authProvider):
+          self?.showSignUp?(authProvider)
+        default:
+          break
+        }
+      }).disposed(by: disposeBag)
   }
+
+  func handleNoLoginRequest() {
+    onFinish?(false)
+  }
+}
+
+// MARK: - Apple SignIn
+
+extension LoginViewController: ASAuthorizationControllerDelegate {
 
   func handleAppleLoginRequest() {
     let appleIDProvider = ASAuthorizationAppleIDProvider()
@@ -89,21 +111,6 @@ public final class LoginViewController: BaseViewController, StoryboardView {
     authorizationController.performRequests()
   }
 
-  func handleKakaoLoginRequest() {
-    getkakaoSession { [weak self] token in
-      guard let `self` = self else { return }
-      guard let token = token else { return }
-      log.debug("token : " + token)
-    }
-//    self.onFinish?(true, true)
-  }
-
-  func handleNoLoginRequest() {
-//    onFinish?(false, false)
-  }
-}
-
-extension LoginViewController: ASAuthorizationControllerDelegate {
   public func authorizationController(
     controller: ASAuthorizationController,
     didCompleteWithAuthorization authorization: ASAuthorization
@@ -161,10 +168,11 @@ extension LoginViewController: ASAuthorizationControllerPresentationContextProvi
   }
 }
 
+// MARK: - Kakao SignIn
+
 extension LoginViewController {
-  func getkakaoSession(_ completion: @escaping (String?) -> Void) {
+  func handleKakaoLoginRequest() {
     guard let session = KOSession.shared() else {
-      completion(nil)
       log.debug("Invalid kakao session")
       return
     }
@@ -176,7 +184,6 @@ extension LoginViewController {
     session.open { error in
       guard session.isOpen(), let accessToken = session.token?.accessToken else {
         log.debug("Invoked kakao login")
-        completion(nil)
         return
       }
 
@@ -192,7 +199,7 @@ extension LoginViewController {
         }
 
         let authProvider = AuthProvider.kakao((id: id, accessToken: accessToken, email: email))
-
+        self?.reactor?.action.onNext(.kakaoLogin(authProvider))
       }
     }
   }

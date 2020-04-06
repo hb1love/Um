@@ -17,13 +17,19 @@ public final class LoginViewReactor: Reactor {
     case kakaoLogin(AuthProvider)
   }
 
+  public enum Event {
+    case none
+    case authorized
+    case needSignUp(AuthProvider)
+  }
+
   public enum Mutation {
     case isAuthorized(Bool)
-    case setEndLaunching(Bool)
+    case needSignUp(AuthProvider)
   }
 
   public struct State {
-
+    var event: Event = .none
   }
 
   public let initialState: State
@@ -45,9 +51,20 @@ public final class LoginViewReactor: Reactor {
           guard let `self` = self else { return .empty() }
           return self.userUseCase.fetchMe().asObservable()
             .map { true }
-            .catchErrorJustReturn(false)
             .map(Mutation.isAuthorized)
-        }
+          }
+        .catchError { _ in .just(.needSignUp(provider)) }
     }
+  }
+
+  public func reduce(state: State, mutation: Mutation) -> State {
+    var state = state
+    switch mutation {
+    case .isAuthorized:
+      state.event = .authorized
+    case .needSignUp(let authProvider):
+      state.event = .needSignUp(authProvider)
+    }
+    return state
   }
 }

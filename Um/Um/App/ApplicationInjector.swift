@@ -11,8 +11,6 @@ import Common
 import ShareUI
 import Firebase
 import KakaoOpenSDK
-import SwiftyBeaver
-import Umbrella
 
 struct AppDependency {
   let window: UIWindow
@@ -44,13 +42,12 @@ struct ApplicationInjector {
   }
 
   static func configureSDKs() {
-    configureLogger()
+    configureCommonModule()
     configureAnalytics()
   }
 
-  static func configureLogger() {
-    let console = ConsoleDestination()
-    log.addDestination(console)
+  static func configureCommonModule() {
+    CommonInjector.resolve()
   }
 
   static func configureAnalytics() {

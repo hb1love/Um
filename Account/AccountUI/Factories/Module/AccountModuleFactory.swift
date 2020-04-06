@@ -50,10 +50,17 @@ public final class AccountModuleFactory
   }
 
   public func makeSignUpModule(authProvider: AuthProvider) -> SignUpViewController {
-//    let signUpViewReactor =
+    let signUpViewReactor = SignUpViewReactor(
+      authUseCase: authUseCase,
+      userUseCase: userUseCase,
+      authProvider: authProvider
+    )
 
-    let signUpViewController = SignUpViewController()
-
+    let signUpViewController = SignUpViewController.controllerFromStoryboard(
+      "SignUp",
+      bundleIdentifier: "com.depromeet.um.accountui"
+    )
+    signUpViewController.reactor = signUpViewReactor
     return signUpViewController
   }
 
